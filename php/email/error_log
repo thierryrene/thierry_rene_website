@@ -1,0 +1,8 @@
+[20-Dec-2016 16:56:48 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/a5297/public_html/email/send_email.php:28) in /home/a5297/public_html/email/send_email.php on line 30
+[20-Dec-2016 18:58:29 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/a5297/public_html/email/send_email.php:28) in /home/a5297/public_html/email/send_email.php on line 30
+[07-Jan-2017 03:43:38 America/Chicago] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/a5297/public_html/email/send_email.php on line 22
+[13-Jan-2017 21:34:48 America/Chicago] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/a5297/public_html/php/email/send_email.php on line 22
+[16-Jan-2017 20:09:08 America/Chicago] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/a5297/public_html/php/email/send_email.php on line 22
+[18-Jan-2017 07:18:34 America/Chicago] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/a5297/public_html/php/email/send_email.php on line 22
+[20-Jan-2017 04:58:20 America/Chicago] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/a5297/public_html/php/email/send_email.php on line 22
+[23-Feb-2017 15:22:10 America/Chicago] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/a5297/public_html/php/email/send_email.php on line 22

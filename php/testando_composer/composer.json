@@ -1,0 +1,17 @@
+{
+    "name": "root/testando_composer",
+    "require": {
+        "filp/whoops": "^2.1",
+        "laravel/lumen-installer": "^1.0",
+        "monolog/monolog": "^1.22",
+        "fzaninotto/faker": "^1.6",
+        "stefangabos/zebra_image": "^2.2",
+        "digitalnature/php-ref": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "thierry rene matos",
+            "email": "td_matos@terra.com.br"
+        }
+    ]
+}

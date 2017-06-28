@@ -1,0 +1,80 @@
+[22-Jul-2014 15:24:10] PHP Warning:  include_once(conecta/conecta.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 2
+[22-Jul-2014 15:24:10] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'conecta/conecta.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 2
+[22-Jul-2014 15:24:10] PHP Warning:  include_once(location: inserir.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 16
+[22-Jul-2014 15:24:10] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'location: inserir.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 16
+[22-Jul-2014 15:25:08] PHP Warning:  include_once(conecta/conecta.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 2
+[22-Jul-2014 15:25:08] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'conecta/conecta.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 2
+[22-Jul-2014 15:25:08] PHP Warning:  include_once(location: inserir.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 16
+[22-Jul-2014 15:25:08] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'location: inserir.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 16
+[22-Jul-2014 15:25:08] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'thier135'@'localhost' (using password: NO) in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 21
+[22-Jul-2014 15:25:08] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 21
+[22-Jul-2014 15:25:57] PHP Warning:  include_once(conecta/conecta.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 2
+[22-Jul-2014 15:25:57] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'conecta/conecta.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 2
+[22-Jul-2014 15:25:57] PHP Warning:  include_once(location: inserir.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 16
+[22-Jul-2014 15:25:57] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'location: inserir.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 16
+[22-Jul-2014 15:25:57] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'thier135'@'localhost' (using password: NO) in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 21
+[22-Jul-2014 15:25:57] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 21
+[22-Jul-2014 15:25:59] PHP Warning:  include_once(conecta/conecta.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 2
+[22-Jul-2014 15:25:59] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'conecta/conecta.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 2
+[22-Jul-2014 15:25:59] PHP Warning:  include_once(location: inserir.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 16
+[22-Jul-2014 15:25:59] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'location: inserir.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 16
+[22-Jul-2014 15:25:59] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'thier135'@'localhost' (using password: NO) in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 21
+[22-Jul-2014 15:25:59] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/thier135/public_html/selecionar_incluir_alterar_excluir.php on line 21
+[02-Jan-2017 16:50:27 America/Chicago] PHP Warning:  include(php/template.skills.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 181
+[02-Jan-2017 16:50:27 America/Chicago] PHP Warning:  include(php/template.skills.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 181
+[02-Jan-2017 16:50:27 America/Chicago] PHP Warning:  include(): Failed opening 'php/template.skills.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 181
+[02-Jan-2017 19:19:22 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/a5297/public_html/php/template/footer.php on line 90
+[03-Jan-2017 09:44:51 America/Chicago] PHP Warning:  include(/home/a5297/public_htmlphp/template/header.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 3
+[03-Jan-2017 09:44:51 America/Chicago] PHP Warning:  include(/home/a5297/public_htmlphp/template/header.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 3
+[03-Jan-2017 09:44:51 America/Chicago] PHP Warning:  include(): Failed opening '/home/a5297/public_htmlphp/template/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 3
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/header.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 3
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 3
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/skills.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 11
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/skills.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 11
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/about.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 12
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/about.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 12
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/svg.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 13
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/svg.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 13
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/contact.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 21
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/contact.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 21
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/footer.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 22
+[03-Jan-2017 09:45:12 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/footer.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 22
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/header.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 3
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/header.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 3
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/skills.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 11
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/skills.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 11
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/about.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 12
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/about.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 12
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/svg.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 13
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/svg.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 13
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/contact.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 21
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/contact.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 21
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(/home/a5297/public_htmlphp/template/footer.php): failed to open stream: No such file or directory in /home/a5297/public_html/index.php on line 22
+[03-Jan-2017 09:45:14 America/Chicago] PHP Warning:  include_once(): Failed opening '/home/a5297/public_htmlphp/template/footer.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/a5297/public_html/index.php on line 22
+[07-Jan-2017 17:59:55 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' CURRENT_TIMESTAMP)' at line 1' in /home/a5297/public_html/php/c.php:24
+Stack trace:
+#0 /home/a5297/public_html/php/c.php(24): PDO->query('INSERT INTO acc...')
+#1 /home/a5297/public_html/index.php(3): include_once('/home/a5297/pub...')
+#2 {main}
+  thrown in /home/a5297/public_html/php/c.php on line 24
+[07-Jan-2017 18:06:12 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' CURRENT_TIMESTAMP)' at line 1' in /home/a5297/public_html/php/c.php:25
+Stack trace:
+#0 /home/a5297/public_html/php/c.php(25): PDO->query('INSERT INTO acc...')
+#1 /home/a5297/public_html/index.php(3): include_once('/home/a5297/pub...')
+#2 {main}
+  thrown in /home/a5297/public_html/php/c.php on line 25
+[07-Jan-2017 14:14:51 America/Chicago] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in /home/a5297/public_html/php/c.php on line 11
+[07-Jan-2017 14:14:54 America/Chicago] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in /home/a5297/public_html/php/c.php on line 11
+[07-Jan-2017 18:15:19 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.135.50, CURRENT_TIMESTAMP)' at line 1' in /home/a5297/public_html/php/c.php:25
+Stack trace:
+#0 /home/a5297/public_html/php/c.php(25): PDO->query('INSERT INTO acc...')
+#1 /home/a5297/public_html/index.php(3): include_once('/home/a5297/pub...')
+#2 {main}
+  thrown in /home/a5297/public_html/php/c.php on line 25
+[07-Jan-2017 18:15:31 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'thierryrenewebdev.com' in 'field list'' in /home/a5297/public_html/php/c.php:25
+Stack trace:
+#0 /home/a5297/public_html/php/c.php(25): PDO->query('INSERT INTO acc...')
+#1 /home/a5297/public_html/index.php(3): include_once('/home/a5297/pub...')
+#2 {main}
+  thrown in /home/a5297/public_html/php/c.php on line 25
+[08-Feb-2017 12:56:28 America/Chicago] PHP Fatal error:  Call to a member function query() on null in /home/a5297/public_html/php/c.php on line 18
