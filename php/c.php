@@ -7,12 +7,14 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
   define('PASSWORD', 'umdoistres');
   define('DB', 'thierryrenedb');
   define('DEBUG', true);
+  define('HOST', $_SERVER['SERVER_NAME']);
 } else {
   define('SERVERNAME', 'localhost');
   define('USERNAME', 'thierryrenematos');
   define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
   define('DEBUG', false);
+  define('HOST', $_SERVER['SERVER_NAME']);
 }
 
 session_start();
@@ -50,11 +52,11 @@ function loginAdmin ($username, $password) {
   $r = $a->execute(array($username, $password));
   $obj = $a->fetchObject();
   if ($obj) {    
-    header('Location:http://localhost/thierryrenewebdev/php/admin/index.php');
+    header("Location:http://localhost/thierryrenewebdev/php/admin/index.php");
     $_SESSION['login'] = $_POST['uid'];
     die();
   }
-  header('Location:http://localhost/thierryrenewebdev/php/');
+  header("Location:http://localhost/thierryrenewebdev/php/");
 }
 
 function createUser ($name, $lastname, $username, $password) {
