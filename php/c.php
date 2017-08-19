@@ -52,11 +52,11 @@ function loginAdmin ($username, $password) {
   $r = $a->execute(array($username, $password));
   $obj = $a->fetchObject();
   if ($obj) {    
-    header("Location:http://localhost/thierryrenewebdev/php/admin/index.php");
+    header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/index.php");
     $_SESSION['login'] = $_POST['uid'];
     die();
   }
-  header("Location:http://localhost/thierryrenewebdev/php/");
+  header("Location:http://" . HOST . "/thierryrenewebdev/php/");
 }
 
 function createUser ($name, $lastname, $username, $password) {
