@@ -56,7 +56,7 @@ function loginAdmin ($username, $password) {
       header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
-    } else { 
+    } elseif (HOST == 'localhost') { 
       header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
