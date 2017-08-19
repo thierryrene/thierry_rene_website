@@ -1,12 +1,11 @@
 <?php
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-  require_once 'testando_composer/vendor/autoload.php';
   define('SERVERNAME', 'db');
   define('USERNAME', 'root');
   define('PASSWORD', 'umdoistres');
   define('DB', 'thierryrenedb');
-  define('DEBUG', false);
+  define('DEBUG', true);
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
   define('SERVERNAME', 'localhost');
@@ -56,8 +55,8 @@ function loginAdmin ($username, $password) {
       header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
-    } elseif (HOST == 'localhost') { 
-      header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/");
+    } else { 
+      header("Location:http://localhost/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
     }   
@@ -138,10 +137,8 @@ function deleteUser($userId) {
 }
 
 function checkLogin() {
-  if (!$_SESSION['login'] && $_SERVER['SERVER_NAME'] = 'localhost') {
+  if (!$_SESSION['login']) {
     header('location:http://' . HOST . '/thierryrenewebdev/php/?login_deny=1');
-  } elseif ($_SERVER['SERVER_NAME'] != 'thierryrenewebdev.com') {
-    header('location:http://thierryrenewebdev.com/beta/thierryrenewebdev/php/?login_deny=1');
   }
 }
 
@@ -162,6 +159,7 @@ logAccess();
 // checkLogin();
 
 if (DEBUG == true) {
+  require_once 'testando_composer/vendor/autoload.php';
   r($GLOBALS);
 }
 
