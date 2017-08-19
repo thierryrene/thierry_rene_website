@@ -1,8 +1,8 @@
 <?php
 
-// if ($_SERVER['SERVER_NAME'] == 'localhost') {
-//   require_once 'testando_composer/vendor/autoload.php';
-// }
+if ($_SERVER['SERVER_NAME'] == 'localhost') {
+  require_once 'testando_composer/vendor/autoload.php';
+}
 
 session_start();
 
