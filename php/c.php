@@ -133,7 +133,7 @@ function deleteUser($userId) {
 
 function checkLogin() {
   if (!$_SESSION['login']) {
-    header('location:http://{HOST}/thierryrenewebdev/php/?login_deny=1');
+    header('location:http://' . HOST . '/thierryrenewebdev/php/?login_deny=1');
   }
 }
 
