@@ -66,6 +66,7 @@ function loginAdmin ($username, $password) {
   } else {
     header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/");    
   }
+  header("Location:http://" . HOST);
 }
 
 function createUser ($name, $lastname, $username, $password) {
@@ -164,7 +165,7 @@ function fileOpen($a) {
 
 logAccess();
 
-checkLogin();
+// checkLogin();
 
 if (DEBUG == true) {
   r($GLOBALS);
