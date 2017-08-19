@@ -51,12 +51,21 @@ function loginAdmin ($username, $password) {
   $a = $pdo->prepare("SELECT * FROM user WHERE uid = ? AND pwd = ? AND status = 1");
   $r = $a->execute(array($username, $password));
   $obj = $a->fetchObject();
-  if ($obj) {    
-    header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/index.php");
-    $_SESSION['login'] = $_POST['uid'];
-    die();
+  if ($obj) {
+    if(HOST == 'localhost') {
+      header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/index.php");
+      $_SESSION['login'] = $_POST['uid'];
+      die();
+    } elseif (HOST == 'thierryrenewebdev.com') {
+      header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/index.php");
+      $_SESSION['login'] = $_POST['uid'];
+    }   
   }
-  header("Location:http://" . HOST . "/thierryrenewebdev/php/");
+  if(HOST == 'localhost') {  
+    header("Location:http://" . HOST . "/thierryrenewebdev/php/");    
+  } else {
+    header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/");    
+  }
 }
 
 function createUser ($name, $lastname, $username, $password) {
