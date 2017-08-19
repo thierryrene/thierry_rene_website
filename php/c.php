@@ -94,7 +94,19 @@ function listActiveUsers () {
                     <th>update</th>
                   </tr>";
       foreach ($r as $row) {
-        echo "<tr>
+        if(HOST == 'thierryrenewebdev.com') {
+          echo "<tr>
+                  <td>{$row['id']}</td>
+                  <td>{$row['uid']}</td>
+                  <td>{$row['first']}</td>
+                  <td>{$row['last']}</td>
+                  <td>{$row['status']}</td>
+                  <td><a href='http://" . HOST . "/beta/thierryrenewebdev/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger'>delete</button></a></td>
+                  <td></td>
+                </tr>";
+
+        } else {
+          echo "<tr>
                   <td>{$row['id']}</td>
                   <td>{$row['uid']}</td>
                   <td>{$row['first']}</td>
@@ -103,6 +115,7 @@ function listActiveUsers () {
                   <td><a href='http://localhost/thierryrenewebdev/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger'>delete</button></a></td>
                   <td></td>
                 </tr>";
+        }        
       }
       echo "</table>";
     }
