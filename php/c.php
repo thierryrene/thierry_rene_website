@@ -2,15 +2,20 @@
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
   require_once 'testando_composer/vendor/autoload.php';
+  define('SERVERNAME', 'db');
+  define('USERNAME', 'root');
+  define('PASSWORD', 'umdoistres');
+  define('DB', 'thierryrenedb');
+  define('DEBUG', true);
+} else {
+  define('SERVERNAME', 'localhost');
+  define('USERNAME', 'thierryrenematos');
+  define('PASSWORD', '*casa123');
+  define('DB', 'thierryrenedb');
+  define('DEBUG', false);
 }
 
 session_start();
-
-define('SERVERNAME', 'db');
-define('USERNAME', 'root');
-define('PASSWORD', 'umdoistres');
-define('DB', 'thierryrenedb');
-define('DEBUG', true);
 
 try {
   $pdo = new PDO('mysql:host=' . SERVERNAME . ';dbname=' . DB, USERNAME, PASSWORD);
