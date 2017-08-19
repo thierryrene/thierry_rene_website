@@ -135,7 +135,7 @@ function checkLogin() {
   if (!$_SESSION['login'] && $_SERVER['SERVER_NAME'] == 'localhost') {
     header('location:http://' . HOST . '/thierryrenewebdev/php/?login_deny=1');
   } elseif ($_SERVER['SERVER_NAME'] != 'localhost') {
-    header('location:http://thierryrenewebdev.com/beta/thierry_rene_website/php/?login_deny=1');
+    header('location:http://thierryrenewebdev.com/beta/thierryrenewebdev/php/?login_deny=1');
   }
 }
 
