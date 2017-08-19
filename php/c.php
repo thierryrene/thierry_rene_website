@@ -132,8 +132,10 @@ function deleteUser($userId) {
 }
 
 function checkLogin() {
-  if (!$_SESSION['login']) {
+  if (!$_SESSION['login'] && $_SERVER['SERVER_NAME'] == 'localhost') {
     header('location:http://' . HOST . '/thierryrenewebdev/php/?login_deny=1');
+  } else {
+    header('location:http://' . HOST . '/thierry_rene_website/beta/php/?login_deny=1');
   }
 }
 
