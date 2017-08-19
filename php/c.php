@@ -6,7 +6,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
   define('USERNAME', 'root');
   define('PASSWORD', 'umdoistres');
   define('DB', 'thierryrenedb');
-  define('DEBUG', true);
+  define('DEBUG', false);
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
   define('SERVERNAME', 'localhost');
@@ -53,11 +53,11 @@ function loginAdmin ($username, $password) {
   $obj = $a->fetchObject();
   if ($obj) {
     if(HOST == 'localhost') {
-      header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/index.php");
+      header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
     } elseif (HOST == 'thierryrenewebdev.com') {
-      header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/index.php");
+      header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
     }   
   }
@@ -143,8 +143,10 @@ function deleteUser($userId) {
 function checkLogin() {
   if (!$_SESSION['login'] && $_SERVER['SERVER_NAME'] == 'localhost') {
     header('location:http://' . HOST . '/thierryrenewebdev/php/?login_deny=1');
-  } elseif ($_SERVER['SERVER_NAME'] != 'localhost') {
+  } elseif ($_SERVER['SERVER_NAME'] != 'thierryrenewebdev.com') {
     header('location:http://thierryrenewebdev.com/beta/thierryrenewebdev/php/?login_deny=1');
+  } else {
+    header('location:http://thierryrenewebdev.com/beta/thierryrenewebdev/php/admin/');
   }
 }
 
