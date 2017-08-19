@@ -1,6 +1,9 @@
 <?php
 	
 	include_once "php/c.php";
+
+	logAccess();
+	
 	include_once "php/template/header.php";
 
 ?>

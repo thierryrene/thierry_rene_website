@@ -2,14 +2,9 @@
 
 require 'c.php';
 
-$first = $_GET['first'];
-$last = $_GET['last'];
-$uid = $_GET['uid'];
-$pwd = $_GET['pwd'];
+$first = $_POST['first'];
+$last = $_POST['last'];
+$uid = $_POST['uid'];
+$pwd = $_POST['pwd'];
 
-$insertUser = "INSERT INTO user (first, last, uid, pwd) VALUES ('{$first}', '{$last}', '{$uid}', '{$pwd}')";
-
-$resultUser = $mysqli->query($insertUser);
-
-header("Location: index.php");
-
+createUser($first, $last, $uid, $pwd);
