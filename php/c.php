@@ -56,15 +56,11 @@ function loginAdmin ($username, $password) {
       header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
-    } elseif (HOST == 'thierryrenewebdev.com') {
+    } elseif (HOST != 'localhost') {
       header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
+      die();
     }   
-  }
-  if(HOST == 'localhost') {  
-    header("Location:http://" . HOST . "/thierryrenewebdev/php/");    
-  } else {
-    header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/");    
   }
   header("Location:http://" . HOST);
 }
@@ -146,8 +142,6 @@ function checkLogin() {
     header('location:http://' . HOST . '/thierryrenewebdev/php/?login_deny=1');
   } elseif ($_SERVER['SERVER_NAME'] != 'thierryrenewebdev.com') {
     header('location:http://thierryrenewebdev.com/beta/thierryrenewebdev/php/?login_deny=1');
-  } else {
-    header('location:http://thierryrenewebdev.com/beta/thierryrenewebdev/php/admin/');
   }
 }
 
