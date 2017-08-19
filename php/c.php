@@ -7,7 +7,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
   define('USERNAME', 'root');
   define('PASSWORD', 'umdoistres');
   define('DB', 'thierryrenedb');
-  define('DEBUG', false);
+  define('DEBUG', true);
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
   define('SERVERNAME', 'localhost');
@@ -61,15 +61,18 @@ function loginAdmin ($username, $password) {
   $r = $a->execute(array($username, $password));
   $obj = $a->fetchObject();
   if ($obj) {
-    if(HOST == 'thierryrenewebdev.com') {
-      checkHost('admin/');
-      $_SESSION['login'] = $_POST['uid'];
-      die();
-    } else { 
-      checkHost('admin/');
-      $_SESSION['login'] = $_POST['uid'];
-      die();
-    }   
+    // if(HOST == 'thierryrenewebdev.com') {
+    //   checkHost('admin/');
+    //   $_SESSION['login'] = $_POST['uid'];
+    //   die();
+    // } else { 
+    //   checkHost('admin/');
+    //   $_SESSION['login'] = $_POST['uid'];
+    //   die();
+    // }
+    checkHost('admin/');
+    $_SESSION['login'] = $_POST['uid'];
+    die();   
   }
   header("Location:http://" . HOST);
 }
@@ -165,7 +168,8 @@ function deleteUser($userId) {
 
 function checkLogin() {
   if (!$_SESSION['login']) {
-    header('location:http://' . HOST . '/thierryrenewebdev/php/?login_deny=1');
+    checkHost('');
+    $_SESSION['true_login'] = "OK!";
   }
 }
 
@@ -183,7 +187,7 @@ function fileOpen($a) {
 
 logAccess();
 
-// checkLogin();
+checkLogin();
 
 if (DEBUG == true) {
   require_once 'testando_composer/vendor/autoload.php';
