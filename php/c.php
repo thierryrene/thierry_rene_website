@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('America/Sao_Paulo');
+
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
   define('SERVERNAME', 'db');
   define('USERNAME', 'root');
