@@ -52,12 +52,12 @@ function loginAdmin ($username, $password) {
   $r = $a->execute(array($username, $password));
   $obj = $a->fetchObject();
   if ($obj) {
-    if(HOST == 'localhost') {
-      header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/");
+    if(HOST == 'thierryrenewebdev.com') {
+      header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
-    } elseif (HOST != 'localhost') {
-      header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/");
+    } else { 
+      header("Location:http://" . HOST . "/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
     }   
@@ -138,7 +138,7 @@ function deleteUser($userId) {
 }
 
 function checkLogin() {
-  if (!$_SESSION['login'] && $_SERVER['SERVER_NAME'] == 'localhost') {
+  if (!$_SESSION['login'] && $_SERVER['SERVER_NAME'] = 'localhost') {
     header('location:http://' . HOST . '/thierryrenewebdev/php/?login_deny=1');
   } elseif ($_SERVER['SERVER_NAME'] != 'thierryrenewebdev.com') {
     header('location:http://thierryrenewebdev.com/beta/thierryrenewebdev/php/?login_deny=1');
