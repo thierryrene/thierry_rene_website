@@ -5,7 +5,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
   define('USERNAME', 'root');
   define('PASSWORD', 'umdoistres');
   define('DB', 'thierryrenedb');
-  define('DEBUG', true);
+  define('DEBUG', false);
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
   define('SERVERNAME', 'localhost');
@@ -68,7 +68,11 @@ function createUser ($name, $lastname, $username, $password) {
   global $pdo;
   $a = $pdo->prepare("INSERT INTO user (first, last, uid, pwd, status) VALUES (?, ?, ?, ?, 1)");
   if( $a->execute(array($name, $lastname, $username, $password)) ) {
-    header("Location:http://localhost/thierryrenewebdev/php/admin/create_user.php?user_create={$username}");
+    if(HOST == 'thierryrenewebdev.com') {
+      header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/create_user.php?user_create={$username}");
+    } else {
+      header("Location:http://localhost/thierryrenewebdev/php/admin/create_user.php?user_create={$username}");    
+    }
   } else {
     echo 'ocorreu um erro ao criar o usuário';
   }  
