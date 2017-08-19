@@ -22,28 +22,19 @@ if ($pdo) {
 }
 
 function returnContent($table) {
-
   global $pdo;
-
-  $sql = "SELECT * FROM {$table} LIMIT 1";
-  
+  $sql = "SELECT * FROM {$table} LIMIT 1";  
   $r = $pdo->query($sql);
-
   foreach ($r as $row) {
     echo "{$row['content']}<br>";
   }
-
 }
 
 function logAccess() {
-
   global $pdo;
-
   $q = "INSERT INTO access_log (id, host, path, log) 
         VALUES (NULL, '{$_SERVER['SERVER_NAME']}', '{$_SERVER['PHP_SELF']}', CURRENT_TIMESTAMP)";
-
   $r = $pdo->query($q);
-
 }
 
 function loginAdmin ($username, $password) {
