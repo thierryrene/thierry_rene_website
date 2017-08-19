@@ -10,7 +10,7 @@ define('SERVERNAME', 'db');
 define('USERNAME', 'root');
 define('PASSWORD', 'umdoistres');
 define('DB', 'thierryrenedb');
-define('DEBUG', false);
+define('DEBUG', true);
 
 try {
   $pdo = new PDO('mysql:host=' . SERVERNAME . ';dbname=' . DB, USERNAME, PASSWORD);
