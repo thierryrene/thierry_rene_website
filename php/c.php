@@ -54,11 +54,13 @@ function loginAdmin ($username, $password) {
   $obj = $a->fetchObject();
   if ($obj) {
     if(HOST == 'thierryrenewebdev.com') {
-      header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/");
+      checkHost('admin/');
+      // header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/");
       $_SESSION['login'] = $_POST['uid'];
       die();
     } else { 
-      header("Location:http://localhost/thierryrenewebdev/php/admin/");
+      // header("Location:http://localhost/thierryrenewebdev/php/admin/");
+      checkHost('admin/');
       $_SESSION['login'] = $_POST['uid'];
       die();
     }   
@@ -170,6 +172,14 @@ function fileOpen($a) {
     echo $file;
   } else {
     echo "o arquivo <pre>{$file}</pre> foi carregado com sucesso!";
+  }
+}
+
+function checkHost($path) {
+  if(HOST == 'thierryrenewebdev.com') {
+    header("location:http://" . HOST . "/beta/thierryrenewebdev/php/{$path}");
+  } else {
+    header("location:http://localhost/thierryrenewebdev/php/{$path}");
   }
 }
 
