@@ -20,6 +20,11 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
 session_start();
 
+if (DEBUG == true) {
+  require_once 'testando_composer/vendor/autoload.php';
+  r($GLOBALS);
+}
+
 try {
   $pdo = new PDO('mysql:host=' . SERVERNAME . ';dbname=' . DB, USERNAME, PASSWORD);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -72,11 +77,6 @@ function createUser ($name, $lastname, $username, $password) {
   global $pdo;
   $a = $pdo->prepare("INSERT INTO user (first, last, uid, pwd, status) VALUES (?, ?, ?, ?, 1)");
   if( $a->execute(array($name, $lastname, $username, $password)) ) {
-    // if(HOST == 'thierryrenewebdev.com') {
-    //   header("Location:http://" . HOST . "/beta/thierryrenewebdev/php/admin/create_user.php?user_create={$username}");
-    // } else {
-    //   header("Location:http://localhost/thierryrenewebdev/php/admin/create_user.php?user_create={$username}");    
-    // }
     checkHost("admin/create_user.php?user_create={$username}");
   } else {
     echo 'ocorreu um erro ao criar o usuário';
@@ -117,7 +117,7 @@ function listActiveUsers () {
                   <td>{$row['first']}</td>
                   <td>{$row['last']}</td>
                   <td>{$row['status']}</td>
-                  <td><a href='http://localhost/thierryrenewebdev/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger'>delete</button></a></td>
+                  <td><a href='http://" . HOST . "/thierryrenewebdev/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger'>delete</button></a></td>
                   <td></td>
                 </tr>";
         }        
@@ -180,10 +180,3 @@ function fileOpen($a) {
 logAccess();
 
 checkLogin();
-
-if (DEBUG == true) {
-  require_once 'testando_composer/vendor/autoload.php';
-  r($GLOBALS);
-}
-
-
