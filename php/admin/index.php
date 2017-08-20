@@ -4,8 +4,6 @@ include_once('../c.php');
 
 checkLogin();
 
-// r($GLOBALS);
-
 ?>
 
   <?php include_once('template/header.php'); ?>

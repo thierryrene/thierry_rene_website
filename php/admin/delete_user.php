@@ -1,5 +1,8 @@
 <?php
+
 include_once('../c.php');
+
+checkLogin();
 
 if (isset($_GET['id'])) {
     $userId = $_GET['id'];
