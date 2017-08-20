@@ -83,6 +83,14 @@ function createUser ($name, $lastname, $username, $password) {
   }  
 }
 
+function checkUserStatus() {
+  if($row['status'] = 1) {
+    $row['status'] = '<span class="label label-success">ativo</span>';
+  } else {
+    $row['status'] = '<span class="label label-danger">desativado</span>';
+  }
+}
+
 function listActiveUsers () {
   global $pdo;
   $a = $pdo->prepare("SELECT * FROM user WHERE status = 1");
@@ -99,6 +107,11 @@ function listActiveUsers () {
                     <th>update</th>
                   </tr>";
       foreach ($r as $row) {
+        if($row['status'] == 1) {
+          $row['status'] = '<span class="label label-success">ativo</span>';
+        } else {
+          $row['status'] = '<span class="label label-danger">desativado</span>';
+        }
         if(HOST == 'thierryrenewebdev.com') {
           echo "<tr>
                   <td>{$row['id']}</td>
@@ -106,7 +119,7 @@ function listActiveUsers () {
                   <td>{$row['first']}</td>
                   <td>{$row['last']}</td>
                   <td>{$row['status']}</td>
-                  <td><a href='http://" . HOST . "/beta/thierryrenewebdev/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger'>delete</button></a></td>
+                  <td><a href='http://" . HOST . "/beta/thierryrenewebdev/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger btn-xs'>delete</button></a></td>
                   <td></td>
                 </tr>";
 
@@ -137,14 +150,21 @@ function listNonUsers () {
                     <th>username</th>
                     <th>name</th>
                     <th>last name</th>
+                    <th>status</th>
                     <th>update</th>
                   </tr>";
       foreach ($r as $row) {
+        if($row['status'] == 1) {
+          $row['status'] = '<span class="label label-success">ativo</span>';
+        } else {
+          $row['status'] = '<span class="label label-danger">desativado</span>';
+        }
         echo "<tr>
                   <td>{$row['id']}</td>
                   <td>{$row['uid']}</td>
                   <td>{$row['first']}</td>
                   <td>{$row['last']}</td>
+                  <td>{$row['status']}</td>
                   <td></td>
                 </tr>";
       }
@@ -161,7 +181,7 @@ function deleteUser($userId) {
 function checkLogin() {
   if (!$_SESSION['login']) {
     checkHost('');
-    $_SESSION['true_login'] = "OK!";
+    $_SESSION['login'] = false;
   }
 }
 
