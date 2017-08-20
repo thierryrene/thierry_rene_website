@@ -43,8 +43,6 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-  ]
-
   <header class="main-header">
     <!-- Logo -->
     <a href="<?php if (HOST == 'thierryrenewebdev.com') { echo 'http://thierryrenewebdev.com/beta/thierryrenewebdev/php/admin/'; } else { echo 'http://localhost/thierryrenewebdev/php/admin/'; } ?>" class="logo">
