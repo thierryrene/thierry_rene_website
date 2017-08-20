@@ -20,20 +20,12 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
 session_start();
 
-if (DEBUG == true) {
-  require_once 'testando_composer/vendor/autoload.php';
-  r($GLOBALS);
-}
-
 try {
   $pdo = new PDO('mysql:host=' . SERVERNAME . ';dbname=' . DB, USERNAME, PASSWORD);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $pdo->exec('set names utf8');
 } catch (PDOexception $e) {
   "erro: {$e->getMessage()}";
-}
-
-if ($pdo) {
-  $pdo->exec('set names utf8');
 }
 
 function returnContent($table) {
@@ -195,6 +187,11 @@ function fileOpen($a) {
   } else {
     echo "o arquivo <pre>{$file}</pre> foi carregado com sucesso!";
   }
+}
+
+if (DEBUG == true) {
+  require_once 'testando_composer/vendor/autoload.php';
+  r($GLOBALS);
 }
 
 logAccess();
