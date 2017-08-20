@@ -43,18 +43,11 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-  
+  ]
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="
-      <?php 
-          if (HOST == 'thierryrenewebdev.com') { 
-            echo 'http://thierryrenewebdev.com/beta/thierryrenewebdev/php/admin/'; 
-          } else { 
-            echo 'http://localhost/thierryrenewebdev/php/admin/'; 
-          } 
-      ?>" class="logo">
+    <a href="<?php if (HOST == 'thierryrenewebdev.com') { echo 'http://thierryrenewebdev.com/beta/thierryrenewebdev/php/admin/'; } else { echo 'http://localhost/thierryrenewebdev/php/admin/'; } ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
