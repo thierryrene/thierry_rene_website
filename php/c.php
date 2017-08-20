@@ -60,18 +60,18 @@ function checkHost($path) {
   }
 }
 
-// function loginAdmin ($username, $password) {
-//   global $pdo;
-//   $a = $pdo->prepare("SELECT * FROM user WHERE uid = ? AND pwd = ? AND status = 1");
-//   $r = $a->execute(array($username, $password));
-//   $obj = $a->fetchObject();
-//   if ($obj) {
-//     checkHost('admin/');
-//     $_SESSION['login'] = $_POST['uid'];
-//     die();   
-//   }
-//   header("Location:http://" . HOST);
-// }
+function loginAdmin ($username, $password) {
+  global $pdo;
+  $a = $pdo->prepare("SELECT * FROM user WHERE uid = ? AND pwd = ? AND status = 1");
+  $r = $a->execute(array($username, $password));
+  $obj = $a->fetchObject();
+  if ($obj) {
+    checkHost('admin/');
+    $_SESSION['login'] = $_POST['uid'];
+    die();   
+  }
+  header("Location:http://" . HOST);
+}
 
 function createUser ($name, $lastname, $username, $password) {
   global $pdo;
