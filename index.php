@@ -11,9 +11,10 @@
 
 	if(!is_dir($dir)) {
 		mkdir($dir, 777);
-	}
-
-	$cachefile = $_SERVER['SCRIPT_NAME'];
+		$cachefile = $_SERVER['SCRIPT_NAME'];
+	} else {
+		die;
+	}	
 
 	$cachetime = 120 * 60;
 	
