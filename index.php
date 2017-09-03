@@ -7,12 +7,10 @@
 	// 	fopen($cachefile, 'w');
 	// }	
 	
-	$dir = 'cache' . dirname($_SERVER['SCRIPT_NAME']) . '/';
+	$dir = 'cache/' ;
 
-	var_dump($dir);
-
-	if(!is_dir($dir)) {
-		mkdir($dir, 755);				
+	if(!is_dir($dir)) {	
+		mkdir($dir, 777);				
 	}
 
 	$cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
@@ -25,13 +23,13 @@
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		include_once($cachefilepath);
-		echo "<!-- Cached " . date('d-m-Y H:i:s', filemtime($cachefile)) . " -->";
+		echo "<!-- Cached " . date('d-m-Y H:i:s', filemtime($cachefilepath)) . " -->";
 		exit;
 	}
-
-	ob_start(); 	
-		
+	
 	include_once "php/c.php";
+
+	ob_start(); 		
 
 	logAccess();
 	
@@ -63,8 +61,6 @@
 	fwrite($fp, $content); 
 	
 	fclose($fp);
-
-	var_dump($cachefilepath);
 	 
 	ob_end_flush();
 
