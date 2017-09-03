@@ -1,6 +1,6 @@
 <?php
 
-require 'php/testando_composer/vendor/autoload.php';
+// require 'php/testando_composer/vendor/autoload.php';
 		
 	// if (!file_exists('cache' . $_SERVER['SCRIPT_NAME'])) {
 	// 	$cachefile = 'cache' . $_SERVER['SCRIPT_NAME'];
