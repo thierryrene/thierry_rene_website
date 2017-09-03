@@ -5,16 +5,19 @@
 	// if (!file_exists('cache' . $_SERVER['SCRIPT_NAME'])) {
 	// 	$cachefile = 'cache' . $_SERVER['SCRIPT_NAME'];
 	// 	fopen($cachefile, 'w');
-	// }
-
-	$dir = $_SERVER['SCRIPT_NAME'];
+	// }	
+	
+	$dir = dirname($_SERVER['SCRIPT_NAME']);
 
 	if(!is_dir($dir)) {
-		mkdir($dir, 777);
-		$cachefile = $_SERVER['SCRIPT_NAME'];
+		mkdir($dir, 777);				
 	} else {
 		die;
 	}	
+
+	$cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
+
+	$cachefile = $cachefile['2'];
 
 	$cachetime = 120 * 60;
 	
@@ -26,7 +29,7 @@
 
 	ob_start(); 	
 		
-	include_once "php/c.php";
+	require_once "php/c.php";
 
 	logAccess();
 	
