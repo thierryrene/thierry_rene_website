@@ -1,6 +1,4 @@
 <?php
-
-// require 'php/testando_composer/vendor/autoload.php';
 		
 	// if (!file_exists('cache' . $_SERVER['SCRIPT_NAME'])) {
 	// 	$cachefile = 'cache' . $_SERVER['SCRIPT_NAME'];
@@ -19,7 +17,7 @@
 
 	$cachefilepath = $dir . $cachefilename;
 
-	$cachetime = 1 * 60;
+	$cachetime = 0.1 * 60;
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		include_once($cachefilepath);
@@ -54,6 +52,8 @@
 	include_once "php/template/contact.php";
 	include_once "php/template/footer.php";
 
+	var_dump($cachefilepath);
+	
 	$fp = fopen($cachefilepath, 'w');
 
 	$content = ob_get_contents();
