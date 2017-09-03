@@ -7,29 +7,31 @@
 	// 	fopen($cachefile, 'w');
 	// }	
 	
-	$dir = dirname($_SERVER['SCRIPT_NAME']);
+	$dir = 'cache' . dirname($_SERVER['SCRIPT_NAME']) . '/';
+
+	var_dump($dir);
 
 	if(!is_dir($dir)) {
-		mkdir($dir, 777);				
-	} else {
-		die;
-	}	
+		mkdir($dir, 755);				
+	}
 
 	$cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
 
-	$cachefile = $cachefile['2'];
+	$cachefilename = $cachefile['2'];
+
+	$cachefilepath = $dir . $cachefilename;
 
 	$cachetime = 120 * 60;
 	
-	if (file_exists($cachefile) && (time() - $cachetime < filemtime($cachefile))) {
-		include_once($cachefile);
+	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
+		include_once($cachefilepath);
 		echo "<!-- Cached " . date('d-m-Y H:i:s', filemtime($cachefile)) . " -->";
 		exit;
 	}
 
 	ob_start(); 	
 		
-	require_once "php/c.php";
+	include_once "php/c.php";
 
 	logAccess();
 	
@@ -54,7 +56,7 @@
 	include_once "php/template/contact.php";
 	include_once "php/template/footer.php";
 
-	$fp = fopen($cachefile, 'w');
+	$fp = fopen($cachefilepath, 'w');
 
 	$content = ob_get_contents();
 		
@@ -62,7 +64,7 @@
 	
 	fclose($fp);
 
-	var_dump($cachefile);
+	var_dump($cachefilepath);
 	 
 	ob_end_flush();
 
