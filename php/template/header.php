@@ -164,7 +164,7 @@
           <div class="intro">
             <span id="name" class="name">Thierry Rene Matos</span>
             <hr id="star-hr" class="star-hr">
-            <span id="prof" class="skills">web developer de qualquer coisa</span>
+            <span id="prof" class="skills">web developer</span>
           </div>
 
         </div>

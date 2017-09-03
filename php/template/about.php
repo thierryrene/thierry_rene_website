@@ -11,7 +11,7 @@
 					<p class="lead">Hello!</p>
 
 					<p class="lead">My name is <strong>Thierry Rene</strong>.
-						<br>I'm a fullstack web developer, from <strong>São Paulo - SP</strong>.</p>
+						<br>I'm a web developer, from <strong>São Paulo - SP</strong>.</p>
 
 				</div>
 
