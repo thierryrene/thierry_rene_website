@@ -13,8 +13,11 @@
 
 	$cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
 
-	
-	$cachefilename = $cachefile['2'];
+	if($_SERVER['HTTP_HOST'] == 'thierryrenewebdev.com') {
+		$cachefilename = $cachefile['1'];
+	} else {
+		$cachefilename = $cachefile['2'];
+	}
 
 	$cachefilepath = $dir . $cachefilename;
 
@@ -22,7 +25,7 @@
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		include_once($cachefilepath);
-		echo "<!-- Cached " . date('d-m-Y H:i:s', filemtime($cachefilepath)) . " -->";
+		echo "<!-- cached " . date('d-m-Y H:i:s', filemtime($cachefilepath)) . " -->";
 		exit;
 	}
 	
