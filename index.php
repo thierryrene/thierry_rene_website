@@ -24,8 +24,9 @@
 	$cachetime = 0.1 * 60;
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
-		include_once($cachefilepath);
 		echo "<!-- cached " . date('d-m-Y H:i:s', filemtime($cachefilepath)) . " -->";
+		include_once($cachefilepath);
+		
 		exit;
 	}
 	
