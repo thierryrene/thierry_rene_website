@@ -21,7 +21,7 @@
 
 	$cachefilepath = $dir . $cachefilename;
 
-	$cachetime = 0.1 * 60;
+	$cachetime = 360 * 60;
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		
