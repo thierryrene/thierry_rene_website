@@ -57,6 +57,8 @@
 	fwrite($fp, $content); 
 	
 	fclose($fp);
+
+	var_dump($cachefile);
 	 
 	ob_end_flush();
 
