@@ -19,7 +19,7 @@
 
 	$cachefilepath = $dir . $cachefilename;
 
-	$cachetime = 120 * 60;
+	$cachetime = 1 * 60;
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		include_once($cachefilepath);
