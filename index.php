@@ -7,13 +7,13 @@
 	// 	fopen($cachefile, 'w');
 	// }
 
-	$dir = 'cache/thierryrenewebdev/';
+	$dir = $_SERVER['SCRIPT_NAME'];
 
 	if(!is_dir($dir)) {
-		mkdir('cache/thierryrenewebdev/', 777);
+		mkdir($dir, 777);
 	}
 
-	$cachefile = 'cache' . $_SERVER['SCRIPT_NAME'];
+	$cachefile = $_SERVER['SCRIPT_NAME'];
 
 	$cachetime = 120 * 60;
 	
