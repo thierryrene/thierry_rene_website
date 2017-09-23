@@ -15,9 +15,9 @@
 	$cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
 
 	if($_SERVER['HTTP_HOST'] == 'thierryrenematosdev.info') {
-		$cachefilename = $cachefile['0'];
-	} else {
 		$cachefilename = $cachefile['1'];
+	} else {
+		$cachefilename = 'index.php';
 	}
 
 	$cachefilepath = $dir . $cachefilename;
