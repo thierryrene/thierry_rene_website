@@ -32,11 +32,11 @@
 		exit;
 	}
 	
-	// include_once "php/c.php";
+	include_once "php/c.php";
 
 	ob_start(); 		
 
-	// logAccess();
+	logAccess();
 	
 	include_once "php/template/header.php";
 
