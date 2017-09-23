@@ -1,4 +1,8 @@
 <?php
+	
+	include_once "php/c.php";
+
+	logAccess();
 
 	$dir = 'cache/' ;
 
@@ -31,13 +35,9 @@
 		
 		exit;
 	}
-	
-	include_once "php/c.php";
 
 	ob_start(); 		
 
-	logAccess();
-	
 	include_once "php/template/header.php";
 
 ?>
