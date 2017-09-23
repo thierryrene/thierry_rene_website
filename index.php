@@ -1,8 +1,6 @@
 <?php
 	
-	include_once "php/c.php";
-
-	logAccess();
+	
 
 	$dir = 'cache/' ;
 
@@ -27,6 +25,10 @@
 
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		
+		include_once "php/c.php";
+
+		logAccess();
+		
 		$log = "<!-- cached " . date('d-m-Y H:i:s', filemtime($cachefilepath)) . " -->";
 
 		echo "<script> console.log('{$log}'); </script>";
@@ -36,7 +38,11 @@
 		exit;
 	}
 
-	ob_start(); 		
+	ob_start();
+	
+	include_once "php/c.php";
+
+	logAccess();
 
 	include_once "php/template/header.php";
 
