@@ -11,7 +11,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
   define('SERVERNAME', 'localhost');
-  define('USERNAME', 'thierryrenematos');
+  define('USERNAME', 'thierryrene');
   define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
   define('DEBUG', false);
