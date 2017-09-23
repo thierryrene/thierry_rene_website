@@ -59,7 +59,7 @@
 	include_once "php/template/contact.php";
 	include_once "php/template/footer.php";
 
-	var_dump($cachefilepath);
+	// var_dump($cachefilepath);
 	
 	$fp = fopen($cachefilepath, 'w');
 
