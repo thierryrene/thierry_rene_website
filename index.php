@@ -1,28 +1,25 @@
 <?php
-		
-	// if (!file_exists('cache' . $_SERVER['SCRIPT_NAME'])) {
-	// 	$cachefile = 'cache' . $_SERVER['SCRIPT_NAME'];
-	// 	fopen($cachefile, 'w');
-	// }
 
-	
 	$dir = 'cache/' ;
 
 	if(!is_dir($dir)) {	
-		mkdir($dir, 777);				
+		mkdir($dir, 755);				
 	}
 
 	$cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
 
 	if($_SERVER['HTTP_HOST'] == 'thierryrenematosdev.info') {
 		$cachefilename = $cachefile[1];
+	} else {
+		$cachefilename = 'index.html';
 	}
 
 	$cachefilepath = $dir . $cachefilename;
 
 	$cachetime = 360 * 60;
 	
-	var_dump($GLOBALS);
+	// echo "<pre>";
+	// var_dump($GLOBALS);
 
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		
@@ -35,11 +32,11 @@
 		exit;
 	}
 	
-	include_once "php/c.php";
+	// include_once "php/c.php";
 
 	ob_start(); 		
 
-	logAccess();
+	// logAccess();
 	
 	include_once "php/template/header.php";
 
@@ -62,16 +59,18 @@
 	include_once "php/template/contact.php";
 	include_once "php/template/footer.php";
 
-	// var_dump($cachefilepath);
+	var_dump($cachefilepath);
 	
 	$fp = fopen($cachefilepath, 'w');
 
 	$content = ob_get_contents();
 		
-	fwrite($fp, $content); 
+	if (fwrite($fp, $content)) {
+		echo "ok";
+	}
 	
 	fclose($fp);
-	 
+
 	ob_end_flush();
 
 ?>
