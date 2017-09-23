@@ -5,7 +5,6 @@
 	// 	fopen($cachefile, 'w');
 	// }
 
-	var_dump($GLOBALS);
 	
 	$dir = 'cache/' ;
 
@@ -25,6 +24,8 @@
 
 	$cachetime = 360 * 60;
 	
+	var_dump($GLOBALS);
+
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		
 		$log = "<!-- cached " . date('d-m-Y H:i:s', filemtime($cachefilepath)) . " -->";
