@@ -13,7 +13,7 @@
 
 	$cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
 
-	if($_SERVER['HTTP_HOST'] == 'thierryrenewebdev.com' or $_SERVER['HTTP_HOST'] == 'thierryrenematosdev.info') {
+	if($_SERVER['HTTP_HOST'] == 'thierryrenematosdev.info') {
 		$cachefilename = $cachefile['1'];
 	} else {
 		$cachefilename = $cachefile['2'];
