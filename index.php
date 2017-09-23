@@ -3,7 +3,9 @@
 	// if (!file_exists('cache' . $_SERVER['SCRIPT_NAME'])) {
 	// 	$cachefile = 'cache' . $_SERVER['SCRIPT_NAME'];
 	// 	fopen($cachefile, 'w');
-	// }	
+	// }
+
+	var_dump($GLOBALS);
 	
 	$dir = 'cache/' ;
 
