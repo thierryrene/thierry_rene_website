@@ -1,14 +1,14 @@
 <?php
 
-	// if($_GET['cache'] = 1) {
-	// 	$file = 'cache/index.html';
-	// 	if(!unlink($file)) {
-	// 		echo "<h1>erro</h1>";
-	// 	}
-	// 	unset($_GET['cache']);
-	// }
+	if($_REQUEST['cache'] = 1) {
+		$file = 'cache/index.html';
+		if(!unlink($file)) {
+			echo "<h1>erro</h1>";
+		}
+		unset($_REQUEST['cache']);
+	}
 	
-	// var_dump($_GET);
+	// var_dump($_REQUEST);
 	
 	$dir = 'cache/' ;
 
@@ -26,7 +26,7 @@
 
 	$cachefilepath = $dir . $cachefilename;
 
-	$cachetime = 360 * 60;
+	$cachetime = 5 * 60;
 	
 	// echo "<pre>";
 	// var_dump($GLOBALS);
@@ -78,7 +78,7 @@
 	$content = ob_get_contents();
 		
 	if (fwrite($fp, $content)) {
-		echo "ok";
+		echo "<script> console.log('page cached'); </script>";
 	}
 	
 	fclose($fp);

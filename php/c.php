@@ -7,7 +7,7 @@ if ($_SERVER['SERVER_NAME'] == 'thierryrenematosdev.info') {
   define('USERNAME', 'root');
   define('PASSWORD', 'umdoistres');
   define('DB', 'thierryrenedb');
-  define('DEBUG', true);
+  define('DEBUG', false);
   define('HOST', $_SERVER['SERVER_NAME']);
 } elseif ( $_SERVER['SERVER_NAME'] == 'thierryrenewebsite-thierryrene.c9users.io')  {
   define('SERVERNAME', '127.0.0.1');
@@ -33,6 +33,15 @@ try {
   $pdo->exec('set names utf8');
 } catch (PDOexception $e) {
   "erro: {$e->getMessage()}";
+}
+
+function getTableContents($table) {
+  global $pdo;
+  $sql = "SELECT * FROM {$table}";  
+  $r = $pdo->query($sql, PDO::FETCH_ASSOC);
+  foreach($r as $rs) {
+    return $rs;
+  }
 }
 
 function returnContent($table) {

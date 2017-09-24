@@ -1,3 +1,9 @@
+<?php
+
+$a = getTableContents('seo_content');
+
+?>
+
 <!doctype html>
 
 <html lang="pt-br">
@@ -19,13 +25,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>thierry rene - desenvolvedor web fullstack entusiasta em UI & UX</title>
+  <title><?php echo $a['title']; ?></title>
 
-  <meta name="author" content="thierry rene matos - @thierryrenne">
-  <meta name="title" content="thierry rene - desenvolvedor web fullstack entusiasta em ui & ux">
-  <meta name="description" content="desenvolvedor web fullstack, pai, devoro conteúdos da área, traduzo artigo para o Tuts+, compartilho o que aprendo, entusiasta em qualquer coisa digital e cabeça dura.">
-  <meta name="keywords" content="thierry rene, desenvolvedor web, tradutor, webdev, webdesign">
-  <meta name="copyright" content="2009-2016 Thierry Rene Web Dev.">
+  <meta name="author" content="<?php echo $a['author']; ?>">
+  <meta name="title" content="<?php echo $a['title']; ?>">
+  <meta name="description" content="<?php echo $a['description']; ?>">
+  <meta name="keywords" content="<?php echo $a['keywords']; ?>">
+  <meta name="copyright" content="<?php echo $a['copyright']; ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta http-equiv="cleartype" content="on">
