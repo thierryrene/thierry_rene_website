@@ -28,8 +28,8 @@
 
 	$cachetime = 5 * 60;
 	
-	// echo "<pre>";
-	// var_dump($GLOBALS);
+	echo "<pre>";
+	var_dump($GLOBALS);
 
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		
