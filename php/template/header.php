@@ -4,7 +4,7 @@
 <!--
   _________________________________
 / Desenvolvido por Thierry Rene Web \
-| Developer | thierryrenewebdev.com |
+| Developer | <?php echo $_SERVER['SERVER_NAME']; ?> |
 \ @thierryrenne                     /
   ---------------------------------
          \   ^__^
@@ -34,25 +34,25 @@
   <meta name="msvalidate.01" content="086C7B9115FFBAC3CA6EAF94F571BE8B" />
 
   <!-- Favicons meta tags -->
-  <link rel="shortcut icon" href="//thierryrenewebdev.com/favicon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="57x57" href="//thierryrenewebdev.com/favicon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="//thierryrenewebdev.com/favicon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="//thierryrenewebdev.com/favicon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="//thierryrenewebdev.com/favicon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="//thierryrenewebdev.com/favicon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="//thierryrenewebdev.com/favicon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="//thierryrenewebdev.com/favicon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="//thierryrenewebdev.com/favicon/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="//thierryrenewebdev.com/favicon/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="//thierryrenewebdev.com/favicon/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="//thierryrenewebdev.com/favicon/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="//thierryrenewebdev.com/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="//thierryrenewebdev.com/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-32x32.png" sizes="32x32">
   <meta name="apple-mobile-web-app-title" content="Thierry Rene Web Dev.">
 
   <!-- links -->
-  <link rel="author" type="text/plain" href="//thierryrenewebdev.com/humans.txt">
-  <link rel="canonical" href="//thierryrenewebdev.com/">
+  <link rel="author" type="text/plain" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/humans.txt">
+  <link rel="canonical" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/">
 
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="ZjrrHSVfP-yMddXTenY3nS4XmBFmJmJYMAx1tML0AtM" />
@@ -82,8 +82,8 @@
   <!-- Windows/MS meta tags -->
   <meta name="application-name" content="Thierry Rene Web Dev.">
   <meta name="msapplication-TileColor" content="#424242">
-  <meta name="msapplication-TileImage" content="//thierryrenewebdev.com/favicon/mstile-144x144.png">
-  <meta name="msapplication-config" content="//thierryrenewebdev.com/favicon/browserconfig.xml">
+  <meta name="msapplication-TileImage" content="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/mstile-144x144.png">
+  <meta name="msapplication-config" content="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/browserconfig.xml">
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary">
@@ -91,8 +91,8 @@
   <meta name="twitter:creator" content="@thierryrenne">
   <meta name="twitter:title" content="Thierry Rene Web Dev.">
   <meta name="twitter:description" content="Desenvolver Web Front End">
-  <meta name="twitter:url" content="//thierryrenewebdev.com">
-  <meta name="twitter:image" content="//thierryrenewebdev.com/favicon/favicon-196x196.png">
+  <meta name="twitter:url" content="//<?php echo $_SERVER['SERVER_NAME']; ?>">
+  <meta name="twitter:image" content="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-196x196.png">
 
   <!-- Facebook meta tags -->
   <meta property="og:type" content="article">
@@ -100,8 +100,8 @@
   <meta property="article:author" content="//www.facebook.com/thierryrenesantosmatos">
   <meta property="og:title" content="Thierry Rene Web Dev.">
   <meta property="og:description" content="Desenvolvedor Web Front End">
-  <meta property="og:url" content="//thierryrenewebdev.com">
-  <meta property="og:image" content="//thierryrenewebdev.com/favicon/favicon-196x196.png">
+  <meta property="og:url" content="//<?php echo $_SERVER['SERVER_NAME']; ?>">
+  <meta property="og:image" content="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-196x196.png">
 
   <!-- Pinterest meta tags -->
   <meta name="p:domain_verify" content="37bc592e8f3676b53f1bf7f2e686ba5b" />
@@ -140,7 +140,7 @@
 
           <li><a href="#scroll-about">About</a></li>
           <li><a href="//websocialdev.com" target="_blank">My blog</a></li>
-          <!--<li><a href="//expurgandodevaneios.thierryrenewebdev.com" target="_blank">@expurgandodevaneios</a></li>-->
+          <!--<li><a href="//expurgandodevaneios.<?php echo $_SERVER['SERVER_NAME']; ?>" target="_blank">@expurgandodevaneios</a></li>-->
           <li><a href="#scroll-contact">Contact</a></li>
 
         </ul>

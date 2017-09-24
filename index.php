@@ -1,7 +1,15 @@
 <?php
-	
-	
 
+	// if($_GET['cache'] = 1) {
+	// 	$file = 'cache/index.html';
+	// 	if(!unlink($file)) {
+	// 		echo "<h1>erro</h1>";
+	// 	}
+	// 	unset($_GET['cache']);
+	// }
+	
+	// var_dump($_GET);
+	
 	$dir = 'cache/' ;
 
 	if(!is_dir($dir)) {	
@@ -65,8 +73,6 @@
 	include_once "php/template/contact.php";
 	include_once "php/template/footer.php";
 
-	// var_dump($cachefilepath);
-	
 	$fp = fopen($cachefilepath, 'w');
 
 	$content = ob_get_contents();
@@ -76,7 +82,7 @@
 	}
 	
 	fclose($fp);
-
+	
 	ob_end_flush();
 
 ?>

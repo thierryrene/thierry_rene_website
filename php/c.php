@@ -2,10 +2,17 @@
 
 date_default_timezone_set('America/Sao_Paulo');
 
-if ($_SERVER['SERVER_NAME'] == 'localhost') {
+if ($_SERVER['SERVER_NAME'] == 'thierryrenematosdev.info') {
   define('SERVERNAME', 'db');
   define('USERNAME', 'root');
   define('PASSWORD', 'umdoistres');
+  define('DB', 'thierryrenedb');
+  define('DEBUG', true);
+  define('HOST', $_SERVER['SERVER_NAME']);
+} elseif ( $_SERVER['SERVER_NAME'] == 'thierryrenewebsite-thierryrene.c9users.io')  {
+  define('SERVERNAME', '127.0.0.1');
+  define('USERNAME', 'thierryrene');
+  define('PASSWORD', '');
   define('DB', 'thierryrenedb');
   define('DEBUG', false);
   define('HOST', $_SERVER['SERVER_NAME']);
@@ -45,8 +52,8 @@ function logAccess() {
 }
 
 function checkHost($path) {
-  if(HOST == 'thierryrenewebdev.com') {
-    header("location:http://" . HOST . "/beta/thierryrenewebdev/php/{$path}");
+  if(HOST == $_SERVER['SERVER_NAME']) {
+    header("location:http://" . HOST . "/php/{$path}");
   } else {
     header("location:http://localhost/thierryrenewebdev/php/{$path}");
   }
@@ -104,14 +111,14 @@ function listActiveUsers () {
         } else {
           $row['status'] = '<span class="label label-danger">desativado</span>';
         }
-        if(HOST == 'thierryrenewebdev.com') {
+        if(HOST == $_SERVER['SERVER_NAME']) {
           echo "<tr>
                   <td>{$row['id']}</td>
                   <td>{$row['uid']}</td>
                   <td>{$row['first']}</td>
                   <td>{$row['last']}</td>
                   <td>{$row['status']}</td>
-                  <td><a href='http://" . HOST . "/beta/thierryrenewebdev/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger btn-xs'>delete</button></a></td>
+                  <td><a href='http://" . HOST . "/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger btn-xs'>delete</button></a></td>
                   <td></td>
                 </tr>";
 
