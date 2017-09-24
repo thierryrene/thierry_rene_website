@@ -1,12 +1,12 @@
 <?php
 
-	if($_REQUEST['cache'] = 1) {
-		$file = 'cache/index.html';
-		if(!unlink($file)) {
-			echo "<h1>erro</h1>";
-		}
-		unset($_REQUEST['cache']);
-	}
+	// if($_REQUEST['cache'] = 1) {
+	// 	$file = 'cache/index.html';
+	// 	if(!unlink($file)) {
+	// 		echo "<h1>erro</h1>";
+	// 	}
+	// 	unset($_REQUEST['cache']);
+	// }
 	
 	// var_dump($_REQUEST);
 	
