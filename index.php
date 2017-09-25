@@ -16,17 +16,19 @@
 		mkdir($dir, 755);				
 	}
 
-	$cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
+	// $cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
 
-	if($_SERVER['HTTP_HOST'] == 'thierryrenematosdev.info') {
-		$cachefilename = $cachefile[1];
-	} else {
-		$cachefilename = 'index.html';
-	}
+	// if($_SERVER['HTTP_HOST'] == 'thierryrenematosdev.info') {
+	// 	$cachefilename = $cachefile[1];
+	// } else {
+	// 	$cachefilename = 'index.html';
+	// }
+	
+	$cachefilename = 'index.html';
 
 	$cachefilepath = $dir . $cachefilename;
 
-	$cachetime = 5 * 60;
+	$cachetime = 3000 * 60;
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		

@@ -25,8 +25,8 @@ ini_set('gd.jpeg_ignore_warning', true);
  *  Read more {@link https://github.com/stefangabos/Zebra_Image/ here}
  *
  *  @author     Stefan Gabos <contact@stefangabos.ro>
- *  @version    2.2.6 (last revision: May 22, 2017)
- *  @copyright  (c) 2006 - 2016 Stefan Gabos
+ *  @version    2.2.7 (last revision: August 21, 2017)
+ *  @copyright  (c) 2006 - 2017 Stefan Gabos
  *  @license    http://www.gnu.org/licenses/lgpl-3.0.txt GNU LESSER GENERAL PUBLIC LICENSE
  *  @package    Zebra_Image
  */
@@ -89,7 +89,7 @@ class Zebra_Image {
     public $error;
 
     /**
-     *  If set to TRUE, images will be auto-rotated according to the {@link http://keyj.emphy.de/exif-orientation-rant/ Exif Orientation Tag}
+     *  If set to TRUE, JPEG images will be auto-rotated according to the {@link http://keyj.emphy.de/exif-orientation-rant/ Exif Orientation Tag}
      *  so that they are always shown correctly.
      *
      *  <samp>If you set this to TRUE you must also enable exif-support with --enable-exif. Windows users must enable both
@@ -675,7 +675,7 @@ class Zebra_Image {
      *                                              filled with the color specified by the <b>bgcolor</b> argument. (the
      *                                              blank area will be filled only if the image is not transparent!)
      *
-     *                                          -   <b>ZEBRA_IMAGE_NOT_BOXED</b> - the image will be scalled so that it
+     *                                          -   <b>ZEBRA_IMAGE_NOT_BOXED</b> - the image will be scaled so that it
      *                                              <i>could</i> fit in a box with the given width and height but will
      *                                              not be enclosed in a box with given width and height. The new width/
      *                                              height will be both smaller or equal to the required width/height
@@ -1044,7 +1044,33 @@ class Zebra_Image {
             // if we get here it means that
             // smaller images than the given width/height are to be left untouched
             // therefore, we save the image as it is
-            } else return $this->_write_image($this->source_identifier);
+            } else {
+
+                // prepare the target image
+                $target_identifier = $this->_prepare_image($this->source_width, $this->source_height, $background_color);
+
+                imagecopyresampled(
+
+                    $target_identifier,
+                    $this->source_identifier,
+                    0,
+                    0,
+                    0,
+                    0,
+                    $this->source_width,
+                    $this->source_height,
+                    $this->source_width,
+                    $this->source_height
+
+                );
+
+                // previously to 2.2.7 I was simply calling the _write_images() method without the code from above this
+                // comment and therefore, when resizing transparent images to a format which doesn't support transparency
+                // and the "enlarge_smaller_images" property being set to FALSE, the "background_color" argument was not
+                // applied and lead to unexpected background colors for the resulting images
+                return $this->_write_image($target_identifier);
+
+            }
 
         }
 
@@ -1319,8 +1345,8 @@ class Zebra_Image {
         // make available the source image's identifier
         $this->source_identifier = $identifier;
 
-        // if we need to handle exif orientation automatically
-        if ($this->auto_handle_exif_orientation)
+        // for JPEG files, if we need to handle exif orientation automatically
+        if ($this->auto_handle_exif_orientation && $this->source_type === IMAGETYPE_JPEG)
 
             // if "exif_read_data" function is not available, return false
             if (!function_exists('exif_read_data')) {
