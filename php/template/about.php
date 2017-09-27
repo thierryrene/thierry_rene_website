@@ -68,7 +68,7 @@
 				$lasfmApiKey = "2f6af24843eea696c30ffcb0bb425bde";
 				$secret = "2dd6c019e21201dfac20a227bb66131f";
 				
-				$url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thiiiii&api_key=2f6af24843eea696c30ffcb0bb425bde&format=json&limit=6";
+				$url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thiiiii&api_key=2f6af24843eea696c30ffcb0bb425bde&format=json&limit=5";
 				
 				$result = file_get_contents($url);
 				
@@ -77,6 +77,7 @@
 				$tracks = $json['recenttracks']['track'];
 				
 				foreach($tracks as $data) {
+				    
 				    echo "<div class='col-md-2 col-xs-6 text-center'>";
 				    
 				    	echo "<div class='well'><img class='img-responsive' style='border:solid 1px #424242;' src='{$data['image'][2]['#text']}'></div>";
