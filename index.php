@@ -1,34 +1,20 @@
 <?php
-
-	// if($_REQUEST['cache'] = 1) {
-	// 	$file = 'cache/index.html';
-	// 	if(!unlink($file)) {
-	// 		echo "<h1>erro</h1>";
-	// 	}
-	// 	unset($_REQUEST['cache']);
-	// }
-	
-	// var_dump($_REQUEST);
 	
 	$dir = 'cache/' ;
 
 	if(!is_dir($dir)) {	
 		mkdir($dir, 755);				
 	}
-
-	// $cachefile = explode('/', $_SERVER['SCRIPT_NAME']);
-
-	// if($_SERVER['HTTP_HOST'] == 'thierryrenematosdev.info') {
-	// 	$cachefilename = $cachefile[1];
-	// } else {
-	// 	$cachefilename = 'index.html';
-	// }
 	
 	$cachefilename = 'index.html';
 
 	$cachefilepath = $dir . $cachefilename;
-
-	$cachetime = 3000 * 60;
+	
+	if ($_SERVER['SERVER_NAME'] != 'thierryrenematosdev.info') {
+		$cachetime = 0.1 * 60;	
+	} else {
+		$cachetime = 3000 * 60;
+	}
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		
