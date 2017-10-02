@@ -32,7 +32,9 @@ $a = getTableContents('seo_content');
   <meta name="description" content="<?php echo $a['description']; ?>">
   <meta name="keywords" content="<?php echo $a['keywords']; ?>">
   <meta name="copyright" content="<?php echo $a['copyright']; ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+  
+  <link rel="manifest" href="manifest.json" />
 
   <meta http-equiv="cleartype" content="on">
 
@@ -40,21 +42,12 @@ $a = getTableContents('seo_content');
   <meta name="msvalidate.01" content="086C7B9115FFBAC3CA6EAF94F571BE8B" />
 
   <!-- Favicons meta tags -->
-  <link rel="shortcut icon" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="57x57" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-32x32.png" sizes="32x32">
-  <meta name="apple-mobile-web-app-title" content="Thierry Rene Web Dev.">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/manifest.json">
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
 
   <!-- links -->
   <link rel="author" type="text/plain" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/humans.txt">
@@ -77,9 +70,6 @@ $a = getTableContents('seo_content');
 
   <!-- Animate.css -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
-  
-  <!-- Sweet Alert -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
 
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -88,8 +78,8 @@ $a = getTableContents('seo_content');
   <!-- Windows/MS meta tags -->
   <meta name="application-name" content="Thierry Rene Web Dev.">
   <meta name="msapplication-TileColor" content="#424242">
-  <meta name="msapplication-TileImage" content="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/mstile-144x144.png">
-  <meta name="msapplication-config" content="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/browserconfig.xml">
+  <meta name="msapplication-TileImage" content="favicons/mstile-150x150.png">
+  <meta name="msapplication-config" content="favicons/browserconfig.xml">
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary">
@@ -98,7 +88,7 @@ $a = getTableContents('seo_content');
   <meta name="twitter:title" content="Thierry Rene Web Dev.">
   <meta name="twitter:description" content="Desenvolver Web Front End">
   <meta name="twitter:url" content="//<?php echo $_SERVER['SERVER_NAME']; ?>">
-  <meta name="twitter:image" content="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-196x196.png">
+  <meta name="twitter:image" content="favicons/favicon-196x196.png">
 
   <!-- Facebook meta tags -->
   <meta property="og:type" content="article">
@@ -107,7 +97,7 @@ $a = getTableContents('seo_content');
   <meta property="og:title" content="Thierry Rene Web Dev.">
   <meta property="og:description" content="Desenvolvedor Web Front End">
   <meta property="og:url" content="//<?php echo $_SERVER['SERVER_NAME']; ?>">
-  <meta property="og:image" content="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon/favicon-196x196.png">
+  <meta property="og:image" content="favicons/favicon-196x196.png">
 
   <!-- Pinterest meta tags -->
   <meta name="p:domain_verify" content="37bc592e8f3676b53f1bf7f2e686ba5b" />
