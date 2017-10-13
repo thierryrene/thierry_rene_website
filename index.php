@@ -1,6 +1,4 @@
 <?php
-
-var_dump($_REQUEST);
 	
 	$dir = 'cache/' ;
 
