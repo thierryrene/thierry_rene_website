@@ -148,7 +148,7 @@ $a = getTableContents('seo_content', 'where id = 1');
 
         <div class="col-md-12">
 
-          <img id="thierry-photo" class="img-responsive img-circle" src="img/photo.webp" alt="Thierry Rene Web Developer">
+          <img id="thierry-photo" class="img-responsive img-circle" src="https://avatars1.githubusercontent.com/u/1225308?s=400&u=5b7f93504bc654c9f6076e1b1b4a249a2a0ab697&v=4" alt="Thierry Rene Web Developer">
 
           <div class="intro">
             <span id="name" class="name">Thierry Rene Matos</span>
