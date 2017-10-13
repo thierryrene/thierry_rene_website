@@ -1,4 +1,6 @@
 <?php
+
+var_dump($_REQUEST);
 	
 	$dir = 'cache/' ;
 
@@ -10,7 +12,12 @@
 
 	$cachefilepath = $dir . $cachefilename;
 	
-	$cachetime = ($_SERVER['SERVER_NAME'] != 'thierryrenematosdev.info' ? 0.1 : (3000 * 60));
+	if ($_REQUEST['drop'] == 1) {
+		$cachetime = 1;
+	} else {
+		$cachetime = 3000 * 60;
+	}
+	// $cachetime = ( $_REQUEST['drop'] = 1 ? 1 : (3000 * 60) );
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		

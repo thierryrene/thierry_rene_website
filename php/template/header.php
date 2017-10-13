@@ -10,7 +10,7 @@ $a = getTableContents('seo_content', 'where id = 1');
 <!--
   _________________________________
 / Desenvolvido por Thierry Rene Web \
-| Developer | <?php echo $_SERVER['SERVER_NAME']; ?> |
+| Developer | <?= $_SERVER['SERVER_NAME']; ?> |
 \ @thierryrenne                     /
   ---------------------------------
          \   ^__^
@@ -25,13 +25,13 @@ $a = getTableContents('seo_content', 'where id = 1');
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title><?php echo $a['title']; ?></title>
+  <title><?= $a['title']; ?></title>
 
-  <meta name="author" content="<?php echo $a['author']; ?>">
-  <meta name="title" content="<?php echo $a['title']; ?>">
-  <meta name="description" content="<?php echo $a['description']; ?>">
-  <meta name="keywords" content="<?php echo $a['keywords']; ?>">
-  <meta name="copyright" content="<?php echo $a['copyright']; ?>">
+  <meta name="author" content="<?= $a['author']; ?>">
+  <meta name="title" content="<?= $a['title']; ?>">
+  <meta name="description" content="<?= $a['description']; ?>">
+  <meta name="keywords" content="<?= $a['keywords']; ?>">
+  <meta name="copyright" content="<?= $a['copyright']; ?>">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
   
   <link rel="manifest" href="manifest.json" />
@@ -50,8 +50,8 @@ $a = getTableContents('seo_content', 'where id = 1');
   <link rel="shortcut icon" href="favicons/favicon.ico">
 
   <!-- links -->
-  <link rel="author" type="text/plain" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/humans.txt">
-  <link rel="canonical" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/">
+  <link rel="author" type="text/plain" href="//<?= $_SERVER['SERVER_NAME']; ?>/humans.txt">
+  <link rel="canonical" href="//<?= $_SERVER['SERVER_NAME']; ?>/">
 
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="ZjrrHSVfP-yMddXTenY3nS4XmBFmJmJYMAx1tML0AtM" />
@@ -76,7 +76,7 @@ $a = getTableContents('seo_content', 'where id = 1');
   <![endif]-->
 
   <!-- Windows/MS meta tags -->
-  <meta name="application-name" content="<?= echo $a['author']; ?>">
+  <meta name="application-name" content="<?= $a['author']; ?>">
   <meta name="msapplication-TileColor" content="#424242">
   <meta name="msapplication-TileImage" content="favicons/mstile-150x150.png">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
@@ -85,18 +85,18 @@ $a = getTableContents('seo_content', 'where id = 1');
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@thierryrenne">
   <meta name="twitter:creator" content="@thierryrenne">
-  <meta name="twitter:title" content="<?= echo $a['author']; ?>">
+  <meta name="twitter:title" content="<?= $a['author']; ?>">
   <meta name="twitter:description" content="Desenvolver Web Front End">
-  <meta name="twitter:url" content="//<?php echo $_SERVER['SERVER_NAME']; ?>">
+  <meta name="twitter:url" content="//<?= $_SERVER['SERVER_NAME']; ?>">
   <meta name="twitter:image" content="favicons/favicon-196x196.png">
 
   <!-- Facebook meta tags -->
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="<?= echo $a['author']; ?>">
+  <meta property="og:site_name" content="<?= $a['author']; ?>">
   <meta property="article:author" content="//www.facebook.com/thierryrenesantosmatos">
-  <meta property="og:title" content="<?= echo $a['title']; ?>">
-  <meta property="og:description" content="<?= echo $a['description']; ?>">
-  <meta property="og:url" content="//<?php echo $_SERVER['SERVER_NAME']; ?>">
+  <meta property="og:title" content="<?= $a['title']; ?>">
+  <meta property="og:description" content="<?= $a['description']; ?>">
+  <meta property="og:url" content="//<?= $_SERVER['SERVER_NAME']; ?>">
   <meta property="og:image" content="favicons/favicon-196x196.png">
 
   <!-- Pinterest meta tags -->
@@ -136,7 +136,7 @@ $a = getTableContents('seo_content', 'where id = 1');
 
           <li><a href="#scroll-about">About</a></li>
           <li><a href="//websocialdev.com" target="_blank">My blog</a></li>
-          <!--<li><a href="//expurgandodevaneios.<?php echo $_SERVER['SERVER_NAME']; ?>" target="_blank">@expurgandodevaneios</a></li>-->
+          <!--<li><a href="//expurgandodevaneios.<?= $_SERVER['SERVER_NAME']; ?>" target="_blank">@expurgandodevaneios</a></li>-->
           <li><a href="#scroll-contact">Contact</a></li>
 
         </ul>
