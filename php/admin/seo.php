@@ -1,82 +1,165 @@
 <?php
+
 include_once('../c.php');
 include_once('template/header.php');
+
+$pageTitle = 'Web Page Infos & SEO';
+$pageDesc  = 'Edit Seo and Info Settings of the Page';
+
+$seoContent = getTableContents('seo_content', 'where id = 2');
+
 ?>
 
   <!-- =============================================== -->
-
-
+  
+  
 
   <!-- =============================================== -->
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Blank page
-        <small>it all starts here</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Blank page</li>
-      </ol>
-    </section>
+    
+    <?php
+    
+      if (isset($pageTitle)) {
+        include 'template/pageHeader.php';
+      }
+      
+    ?>
 
     <!-- Main content -->
     <section class="content">
+      
+      <?php
+        if ($seoContent) :
+      ?>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Actual Infos</h3>
+            </div>
+            <div class="well">
+              <table class="table table-bordered">
+                <tr>
+                  <th>Author:</th>
+                  <th>Title:</th>
+                  <th>Description:</th>
+                  <th>Keywords:</th>
+                  <th>Canonical:</th>
+                  <th>Copyright:</th>
+                </tr>
+                <tr>
+                  <td><?= $seoContent['author']; ?></td>
+                  <td><?= $seoContent['title']; ?></td>
+                  <td><?= $seoContent['description']; ?></td>
+                  <td><?= $seoContent['keywords']; ?></td>
+                  <td><?= $seoContent['canonical']; ?></td>
+                  <td><?= $seoContent['copyright']; ?></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <?php
+        endif;
+      ?>
 
       <div class="row">
 
         <!-- left column -->
-        <div class="col-md-6">
+        <div class="col-md-5">
 
           <!-- general form elements -->
           <div class="box box-primary">
 
             <div class="box-header with-border">
-              <h3 class="box-title">Web Page SEO</h3>
+              <h3 class="box-title">Site SEO</h3>
             </div>
             <!-- /.box-header -->
 
             <!-- form start -->
-            <form role="form">
+            <form role="form" action="class/siteSeoUpdate.php" method="POST">
 
               <div class="box-body">
-
+                
                 <div class="form-group">
-                  <label>title</label>
-                  <input name="site-title" type="email" class="form-control" placeholder="Enter email">
+                  <label>Site Author</label>
+                  <input name="site-author" type="text" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                  <label>Email address</label>
-                  <input type="email" class="form-control" placeholder="Enter email">
-                </div>
-
-                <div class="form-group">
-                  <label>Password</label>
-                  <input type="password" class="form-control" placeholder="Password">
+                  <label>Site Title</label>
+                  <input name="site-title" type="text" class="form-control" required>
                 </div>
                 
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox"> Check me out
-                  </label>
+                <div class="form-group">
+                  <label>Site Description</label>
+                  <input name="site-desc" type="text" class="form-control" required>
                 </div>
-
+                
+                <div class="form-group">
+                  <label>Site Keywords</label>
+                  <input name="site-keywords" type="text" class="form-control" required>
+                </div>
+                
               </div>
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Atualizar Dados</button>
               </div>
 
             </form>
 
           </div>
           <!-- /.box -->
+          
+      </div>
+      
+      <div class="row">
+          
+        <!-- left column -->
+        <div class="col-md-5">
+
+          <!-- general form elements -->
+          <div class="box box-primary">
+
+            <div class="box-header with-border">
+              <h3 class="box-title">Site Info</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <!-- form start -->
+            <form role="form" action="class/siteInfoUpdate.php" method="POST">
+
+              <div class="box-body">
+                
+                <div class="form-group">
+                  <label>Site Canonical</label>
+                  <input name="site-canonical" type="text" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                  <label>Copyright</label>
+                  <input name="site-copy" type="text" class="form-control" required>
+                </div>
+
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Atualizar Dados</button>
+              </div>
+
+            </form>
+
+          </div>
+          <!-- /.box -->
+          
 
         </div>
 

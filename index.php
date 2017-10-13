@@ -10,23 +10,22 @@
 
 	$cachefilepath = $dir . $cachefilename;
 	
-	if ($_SERVER['SERVER_NAME'] != 'thierryrenematosdev.info') {
-		$cachetime = 0.1 * 60;	
-	} else {
-		$cachetime = 3000 * 60;
-	}
+	$cachetime = ($_SERVER['SERVER_NAME'] != 'thierryrenematosdev.info' ? 0.1 : (3000 * 60));
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		
 		include_once "php/c.php";
-
+		
 		logAccess();
 		
 		$log = "<!-- cached " . date('d-m-Y H:i:s', filemtime($cachefilepath)) . " -->";
-
+		
 		echo "<script> console.log('{$log}'); </script>";
-
+		
 		include_once($cachefilepath);
+		
+		// unset variables to release php memory
+		unset($cachefilepath, $cachetime, $cachefilename, $dir);
 		
 		exit;
 	}
@@ -69,5 +68,7 @@
 	fclose($fp);
 	
 	ob_end_flush();
+	
+	unset($fp, $content, $cachefilename);
 
 ?>

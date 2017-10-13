@@ -1,5 +1,7 @@
 <?php
 
+require 'env.php';
+
 date_default_timezone_set('America/Sao_Paulo');
 
 if ($_SERVER['SERVER_NAME'] == "thierryrenematosdev.info") {
@@ -14,7 +16,7 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematosdev.info") {
   define('USERNAME', 'thierryrene');
   define('PASSWORD', '');
   define('DB', 'thierryrenedb');
-  define('DEBUG', false);
+  define('DEBUG', true);
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
   define('SERVERNAME', '127.0.0.1');
@@ -27,6 +29,11 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematosdev.info") {
 
 session_start();
 
+if (DEBUG == true) {
+  require_once 'testando_composer/vendor/autoload.php';
+  // r($GLOBALS);
+}
+
 try {
   $pdo = new PDO('mysql:host=' . SERVERNAME . ';dbname=' . DB, USERNAME, PASSWORD);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -35,9 +42,9 @@ try {
   "erro: {$e->getMessage()}";
 }
 
-function getTableContents($table) {
+function getTableContents($table, $where = '') {
   global $pdo;
-  $sql = "SELECT * FROM {$table}";  
+  $sql = "SELECT * FROM {$table} {$where};";  
   $r = $pdo->query($sql, PDO::FETCH_ASSOC);
   foreach($r as $rs) {
     return $rs;
@@ -205,7 +212,3 @@ function fileOpen($a) {
   }
 }
 
-if (DEBUG == true) {
-  require_once 'testando_composer/vendor/autoload.php';
-  r($GLOBALS);
-}

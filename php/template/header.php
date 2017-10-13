@@ -1,6 +1,6 @@
 <?php
 
-$a = getTableContents('seo_content');
+$a = getTableContents('seo_content', 'where id = 1');
 
 ?>
 
@@ -76,7 +76,7 @@ $a = getTableContents('seo_content');
   <![endif]-->
 
   <!-- Windows/MS meta tags -->
-  <meta name="application-name" content="Thierry Rene Web Dev.">
+  <meta name="application-name" content="<?= echo $a['author']; ?>">
   <meta name="msapplication-TileColor" content="#424242">
   <meta name="msapplication-TileImage" content="favicons/mstile-150x150.png">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
@@ -85,17 +85,17 @@ $a = getTableContents('seo_content');
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@thierryrenne">
   <meta name="twitter:creator" content="@thierryrenne">
-  <meta name="twitter:title" content="Thierry Rene Web Dev.">
+  <meta name="twitter:title" content="<?= echo $a['author']; ?>">
   <meta name="twitter:description" content="Desenvolver Web Front End">
   <meta name="twitter:url" content="//<?php echo $_SERVER['SERVER_NAME']; ?>">
   <meta name="twitter:image" content="favicons/favicon-196x196.png">
 
   <!-- Facebook meta tags -->
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Thierry Rene Web Developer">
+  <meta property="og:site_name" content="<?= echo $a['author']; ?>">
   <meta property="article:author" content="//www.facebook.com/thierryrenesantosmatos">
-  <meta property="og:title" content="Thierry Rene Web Dev.">
-  <meta property="og:description" content="Desenvolvedor Web Front End">
+  <meta property="og:title" content="<?= echo $a['title']; ?>">
+  <meta property="og:description" content="<?= echo $a['description']; ?>">
   <meta property="og:url" content="//<?php echo $_SERVER['SERVER_NAME']; ?>">
   <meta property="og:image" content="favicons/favicon-196x196.png">
 
