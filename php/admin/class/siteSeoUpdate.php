@@ -28,4 +28,5 @@ try {
 
 unset($c);
 
-header("location: http://thierryrenewebsite-thierryrene.c9users.io/php/admin/seo.php");
+header("location: http://" . HOST . "/php/admin/seo.php");
+
