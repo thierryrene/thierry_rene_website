@@ -31,7 +31,6 @@ session_start();
 
 if (DEBUG == true) {
   require_once 'testando_composer/vendor/autoload.php';
-  // r($GLOBALS);
 }
 
 try {
