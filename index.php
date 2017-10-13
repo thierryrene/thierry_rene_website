@@ -10,12 +10,7 @@
 
 	$cachefilepath = $dir . $cachefilename;
 	
-	if ($_REQUEST['drop'] == 1) {
-		$cachetime = 1;
-	} else {
-		$cachetime = 3000 * 60;
-	}
-	// $cachetime = ( $_REQUEST['drop'] = 1 ? 1 : (3000 * 60) );
+	$cachetime = ( $_REQUEST['drop'] == 1 ? 0.1 : (3000 * 60) );
 	
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		

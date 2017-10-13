@@ -84,9 +84,9 @@ $a = getTableContents('seo_content', 'where id = 1');
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@thierryrenne">
-  <meta name="twitter:creator" content="@thierryrenne">
+  <meta name="twitter:creator" content="<?= $a['author']; ?>">
   <meta name="twitter:title" content="<?= $a['author']; ?>">
-  <meta name="twitter:description" content="Desenvolver Web Front End">
+  <meta name="twitter:description" content="<?= $a['description']; ?>">
   <meta name="twitter:url" content="//<?= $_SERVER['SERVER_NAME']; ?>">
   <meta name="twitter:image" content="favicons/favicon-196x196.png">
 
@@ -106,13 +106,6 @@ $a = getTableContents('seo_content', 'where id = 1');
 
 <body>
 
-  <div id="loading" style="#loading {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('img/spinner.gif') no-repeat center center;
-  }"></div>
-
   <!--[if lt IE 7]>
             <p class="chromeframe">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor <a href="//browsehappy.com/">atualize o seu navegador</a> ou <a href="//www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar a navegação.</p>
   <![endif]-->
@@ -129,7 +122,7 @@ $a = getTableContents('seo_content', 'where id = 1');
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a id="home-bt" class="navbar-brand" href="/">Thierry Rene</a>
+        <a id="home-bt" class="navbar-brand" href="/">thierry rene matos</a>
       </div>
       <div class="collapse navbar-collapse" id="thierry-portfolio-navbar">
         <ul class="nav navbar-nav navbar-right nav-tabs" role="tablist">

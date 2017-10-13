@@ -87,7 +87,7 @@
 
 			<div class="row">
 				<div class="col-lg-12">
-					<h5>Copyright &copy; <br class="visible-xs">Thierry Rene Web Dev. 2009 / <?= date('Y'); ?></h5>
+					<h5>Copyright &copy; <br class="visible-xs"><a style="color:snow; text-decoration:none;" href="/?drop=1"><?= $a['author']; ?> 2009 / <?= date('Y'); ?></a></h5>
 				</div>
 			</div>
 
