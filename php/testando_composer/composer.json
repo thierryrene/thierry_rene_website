@@ -6,7 +6,8 @@
         "monolog/monolog": "^1.22",
         "fzaninotto/faker": "^1.6",
         "stefangabos/zebra_image": "^2.2",
-        "digitalnature/php-ref": "dev-master"
+        "digitalnature/php-ref": "dev-master",
+        "twig/twig": "~2.0"
     },
     "authors": [
         {

@@ -49,4 +49,6 @@ echo "</table>";
 
 // curl_close($curl);
 
+phpinfo();
+
 ?>
