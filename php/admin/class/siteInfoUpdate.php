@@ -11,7 +11,7 @@ try {
                         SET 
                             canonical = :canonical, copyright = :copyright
                         WHERE 
-                            id = 2");
+                            id = 1");
                         
     $c->bindParam(':canonical',   $canonical);
     $c->bindParam(':copyright',   $copyright);

@@ -94,9 +94,7 @@
 		</div>
 
 	</div>
-
-
-
+	
 </footer>
 
 <!-- content ends here -->

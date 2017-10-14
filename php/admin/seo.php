@@ -6,7 +6,7 @@ include_once('template/header.php');
 $pageTitle = 'Web Page Infos & SEO';
 $pageDesc  = 'Edit Seo and Info Settings of the Page';
 
-$seoContent = getTableContents('seo_content', 'where id = 2');
+$seoContent = getTableContents('seo_content', 'where id = 1');
 
 ?>
 
