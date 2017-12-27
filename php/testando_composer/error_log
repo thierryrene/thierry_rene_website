@@ -1,2 +1,0 @@
-[22-Jan-2017 10:05:53 America/Chicago] PHP Warning:  is_file() expects parameter 1 to be a valid path, array given in /home/a5297/public_html/php/testando_composer/vendor/stefangabos/zebra_image/Zebra_Image.php on line 1246
-[22-Jan-2017 10:17:56 America/Chicago] PHP Parse error:  syntax error, unexpected '$imagem' (T_VARIABLE) in /home/a5297/public_html/php/testando_composer/index.php on line 23
