@@ -29,8 +29,23 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
 
 session_start();
 
-if (DEBUG == true) {
+if (DEBUG) {
+  
   require_once 'testando_composer/vendor/autoload.php';
+  
+  Raven_Autoloader::register();
+  
+  $sentryClient = new Raven_Client('https://584b987b7f1840e89f65d278f417f1a7:caf4d05187b7403f92270e415fd62746@sentry.io/264306');
+  
+  $sentryClient->install();
+  
+  // $error_handler = new Raven_ErrorHandler($sentryClient);
+  // $error_handler->registerExceptionHandler();
+  // $error_handler->registerErrorHandler();
+  // $error_handler->registerShutdownFunction();
+  
+  // r($sentryClient);
+  
 }
 
 try {

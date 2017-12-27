@@ -68,7 +68,7 @@
 				$lasfmApiKey = "2f6af24843eea696c30ffcb0bb425bde";
 				$secret = "2dd6c019e21201dfac20a227bb66131f";
 				
-				$url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thiiiii&api_key=2f6af24843eea696c30ffcb0bb425bde&format=json&limit=5";
+				$url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thiiiii&api_key=2f6af24843eea696c30ffcb0bb425bde&format=json&limit=6";
 				
 				$result = file_get_contents($url);
 				
