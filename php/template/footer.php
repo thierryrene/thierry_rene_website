@@ -40,7 +40,7 @@
                 </span>
 						</a>
 
-						<a target="_blank" href="//twitter.com/thierryrenne" class="twitter">
+						<a target="_blank" href="//twitter.com/thierryrenemts" class="twitter">
 							<span class="fa-stack fa-lg">
                   <i class="fa fa-square-o fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x"></i>
