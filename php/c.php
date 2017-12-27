@@ -5,21 +5,21 @@ require 'env.php';
 date_default_timezone_set('America/Sao_Paulo');
 
 if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
-  define('SERVERNAME', $_SERVER['SERVER_NAME']);
+  define('SERVERNAME', '127.0.0.1');
   define('USERNAME', 'thierryrene');
   define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
   define('DEBUG', false);
   define('HOST', $_SERVER['SERVER_NAME']);
 } elseif ( $_SERVER['SERVER_NAME'] == 'thierryrenewebsite-thierryrene.c9users.io')  {
-  define('SERVERNAME', $_SERVER['SERVER_NAME']);
+  define('SERVERNAME', '127.0.0.1');
   define('USERNAME', 'thierryrene');
   define('PASSWORD', '');
   define('DB', 'thierryrenedb');
   define('DEBUG', true);
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
-  define('SERVERNAME', 'localhost');
+  define('SERVERNAME', '127.0.0.1');
   define('USERNAME', 'thierryrene');
   define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
