@@ -33,6 +33,7 @@ class DebugClassLoader
     private static $deprecated = array();
     private static $internal = array();
     private static $internalMethods = array();
+    private static $php7Reserved = array('int', 'float', 'bool', 'string', 'true', 'false', 'null');
     private static $darwinCache = array('/' => array('/', array()));
 
     public function __construct(callable $classLoader)
@@ -249,6 +250,10 @@ class DebugClassLoader
                         self::${$annotation.'Methods'}[$name][$method->name] = array($name, $message);
                     }
                 }
+            }
+
+            if (in_array(strtolower($refl->getShortName()), self::$php7Reserved)) {
+                @trigger_error(sprintf('The "%s" class uses the reserved name "%s", it will break on PHP 7 and higher', $name, $refl->getShortName()), E_USER_DEPRECATED);
             }
         }
 

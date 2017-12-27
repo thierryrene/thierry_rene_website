@@ -12,7 +12,7 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('DEBUG', false);
   define('HOST', $_SERVER['SERVER_NAME']);
 } elseif ( $_SERVER['SERVER_NAME'] == 'thierryrenewebsite-thierryrene.c9users.io')  {
-  define('SERVERNAME', '127.0.0.1');
+  define('SERVERNAME', $_SERVER['SERVER_NAME']);
   define('USERNAME', 'thierryrene');
   define('PASSWORD', '');
   define('DB', 'thierryrenedb');
