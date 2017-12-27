@@ -3,23 +3,34 @@
  * User: thierryrene
  * Date: 2014-09-09
  * Time: 09:31 PM
- * To change this template use Tools | Templates.
  */
 
 $(document).ready(function() {
-	$('#thierry-photo, #name, #prof, #star-hr').addClass('animated flipInX')
+	
+	$('#thierry-photo, #name, #prof, #star-hr')
+		.addClass('animated flipInX')
 		.css({
 			'animation-duration': '3s'
 		});
 
-	$('#skills, #custom-navbar').addClass('animated fadeInUp')
+	$('#skills, #custom-navbar')
+		.addClass('animated fadeInUp')
 		.css({
 			'animation-duration': '3s'
 		});
 		
-	navigator.serviceWorker && navigator.serviceWorker.register('./js/sw.js').then(function(registration) {
-	  console.log('Excellent, registered with scope: ', registration.scope);
-	});
-	
-});
+	$('.music-link').hover(
+		function() {
+			$(this).addClass('animated fadeInUp');
+			console.log("AAAAAAAAH");
+		},
+		function() {
+			$(this).removeClass('animated fadeInUp');
+		}
+	);
 
+	navigator.serviceWorker && navigator.serviceWorker.register('./js/sw.js').then(function(registration) {
+		console.log('Excellent, registered with scope: ', registration.scope);
+	});
+
+});

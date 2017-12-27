@@ -1,4 +1,6 @@
 <?php
+
+	// created in 2014 and continuosly developed until now | date('d/m/Y');
 	
 	$dir = 'cache/' ;
 

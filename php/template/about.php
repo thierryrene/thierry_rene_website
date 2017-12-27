@@ -68,13 +68,15 @@
 				
 				$tracks = getLastFmSongs(6);
 				
-				foreach($tracks as $data) {
-				    
+				foreach($tracks as $key => $data) {
+					
+					
+					
 				    echo "<div class='col-md-2 col-xs-6 text-center'>";
 				    
 				    	echo "<div class='well'><img class='img-responsive' style='border:solid 1px #424242;' src='{$data['image'][2]['#text']}'></div>";
-				        echo "<p>" . $data['name'] . '</p>';
-				        echo "<p>" . $data['artist']['#text'] . "</p>";
+				        echo "<p><a class='music-link' href='{$data['url']}' target='_blank'>{$data['name']}</a></p>";
+				        echo "<p>{$data['artist']['#text']}</p>";
 				        
 				    echo "</div>";    
 				}
