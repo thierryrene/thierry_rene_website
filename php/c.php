@@ -4,8 +4,8 @@ require 'env.php';
 
 date_default_timezone_set('America/Sao_Paulo');
 
-if ($_SERVER['SERVER_NAME'] == "thierryrenematosdev.info") {
-  define('SERVERNAME', '127.0.0.1');
+if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
+  define('SERVERNAME', $_SERVER['SERVER_NAME']);
   define('USERNAME', 'thierryrene');
   define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
@@ -19,7 +19,7 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematosdev.info") {
   define('DEBUG', true);
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
-  define('SERVERNAME', '127.0.0.1');
+  define('SERVERNAME', 'localhost');
   define('USERNAME', 'thierryrene');
   define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
