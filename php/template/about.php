@@ -78,6 +78,28 @@
 				        
 				    echo "</div>";    
 				}
+				
+				$photos = getInsta();
+				
+			?>
+			
+			<style type="text/css">
+				.flex-container {
+					display: grid;
+					
+				}
+			</style>
+			
+			<?php
+		
+				foreach($photos as $photo) {
+					
+				    echo "<div class='flex-container'>";
+				    
+				    	echo "<div class='well'><img class='img-responsive' src='{$photo['url']}'></div>";
+				        
+				    echo "</div>";    
+				}
 			
 			?>
 			
