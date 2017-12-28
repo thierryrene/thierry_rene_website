@@ -79,8 +79,6 @@
 				    echo "</div>";    
 				}
 				
-				$photos = getInsta();
-				
 			?>
 			
 			<style type="text/css">
@@ -91,7 +89,9 @@
 			</style>
 			
 			<?php
-		
+				
+				$photos = getInsta(5);
+				
 				foreach($photos as $photo) {
 					
 				    echo "<div class='flex-container'>";
@@ -100,7 +100,6 @@
 				        
 				    echo "</div>";    
 				}
-			
 			?>
 			
 		</div>
