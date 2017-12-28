@@ -1,33 +1,16 @@
 @charset "UTF-8";
 /* Google Fonts */
-@import url(http://fonts.googleapis.com/css?family=Raleway|Quicksand);
-
+@import url(//fonts.googleapis.com/css?family=Raleway|Quicksand);
 /* Font Variables */
 /* brand colors */
 /* background e HR background icons color */
 /* powered by icons */
-
-img.emoji {
-   height: 1em;
-   width: 1em;
-   margin: 0 .05em 0 .1em;
-   vertical-align: -0.1em;
-}
-
-.svg-icons {
-  margin-bottom: 15px;
-}
-
 .html5:hover {
   color: #e34f26;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
   transition: 0.5s; }
 
 .css3:hover {
   color: #016FBA;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
   transition: 0.5s; }
 
 /* social styles */
@@ -69,14 +52,10 @@ img.emoji {
 @media (min-width: 768px) {
   body {
     padding-top: 80px;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
     transition: 1s; } }
 @media (min-width: 1250px) {
   body {
     padding-top: 100px;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
     transition: 1s; } }
 header {
   text-align: center; }
@@ -87,19 +66,19 @@ header .container {
 
 header img {
   margin: 0px auto 40px auto;
-  width: 20em; }
+  width: em(320px); }
 
 header .intro .name {
   display: block;
   text-transform: uppercase;
-  font-family: "Quicksand", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Quicksand";
   font-size: 3em;
   font-weight: 700; }
 
 header .intro .skills {
   font-size: 1.25em;
   font-weight: 700;
-  font-family: "Quicksand", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Quicksand"; }
 
 section#about {
   background-color: #EEE;
@@ -141,8 +120,6 @@ footer .footer-col {
     border-left: 0px;
     border-right: 0px; }
     .form-test input:hover, .form-test textarea:hover {
-      -webkit-transition: 0.5s;
-      -moz-transition: 0.5s;
       transition: 0.5s; }
     .form-test input:focus, .form-test textarea:focus {
       border-bottom: 2px solid #b3b3b3;
@@ -159,91 +136,77 @@ footer .footer-col {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  font-family: "Quicksand", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Quicksand"; }
 
 h2 {
   padding-bottom: 10px; }
 
 p {
   line-height: 150%;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Raleway"; }
 
 /* bootstrap changes */
 .btn {
   border-radius: 0px;
   border: 2px solid;
   text-transform: uppercase;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
   transition: 0.5s; }
 
 a {
   color: #424242;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
   transition: 0.5s; }
   a:hover {
     color: #000000; }
 
 hr {
-  border-top: solid 2px #333;
-  padding-bottom: 10px; }
+  border-top: solid 1px #333;
+  padding-bottom: 10px;
+  font-family: FontAwesome;
+  font-size: 2em; }
 
 hr.star-hr {
-  margin: 25px auto 30px; }
+  margin: 50px 0; }
   hr.star-hr:after {
-    color: #333;
-    background-color: #fff;
     content: "";
-    display: inline-block;
-    position: relative;
-    top: -0.8em;
-    padding: 0 10px 0 10px;
-    font-family: FontAwesome;
-    font-size: 2em; }
+    left: 50%;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 20px;
+    background: #fff; }
 
 hr.pencil-hr {
-  margin: 25px auto 30px; }
+  margin: 50px 0; }
   hr.pencil-hr:after {
-    color: #333;
-    background-color: #fff;
     content: "";
-    display: inline-block;
-    position: relative;
-    top: -0.8em;
-    padding: 0 10px 0 10px;
-    font-family: FontAwesome;
-    font-size: 2em; }
+    left: 50%;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 20px;
+    background: #fff; }
 
 hr.book-hr {
-  margin: 25px auto 30px; }
+  margin: 50px 0; }
   hr.book-hr:after {
-    color: #333;
-    background-color: #fff;
     content: "";
-    display: inline-block;
-    position: relative;
-    top: -0.8em;
-    padding: 0 10px 0 10px;
-    font-family: FontAwesome;
-    font-size: 2em; }
+    left: 50%;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 20px;
+    background: #fff; }
 
 hr.phone-hr {
-  margin: 25px auto 30px; }
+  margin: 50px 0; }
   hr.phone-hr:after {
-    color: #333;
-    background-color: #fff;
     content: "";
-    display: inline-block;
-    position: relative;
-    top: -0.8em;
-    padding: 0 10px 0 10px;
-    font-family: FontAwesome;
-    font-size: 2em; }
+    left: 50%;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 20px;
+    background: #fff; }
 
 .navbar {
   text-transform: uppercase;
-  font-family: "Quicksand", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Quicksand";
   font-weight: 700;
   border-bottom: 1px solid #EEE; }
 

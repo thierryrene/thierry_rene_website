@@ -1,14 +1,11 @@
 /* Google Fonts */
-
 @import url(//fonts.googleapis.com/css?family=Raleway|Quicksand)
 	
 /* Font Variables */
-
 $google-fonts: 'Quicksand'
 $google-fonts2: 'Raleway'
 
 /* brand colors */
-
 $linkedin: #0976b4 
 $facebook: #3b5998
 $pinterest: #cc2127
@@ -29,12 +26,12 @@ $hr-bg-color: #fff
 .html5
 	&:hover
 		color: $html5
-		+transition(0.5s)
+		transition: 0.5s
 
 .css3
 	&:hover
 		color: $css3
-		+transition(0.5s)
+		transition: 0.5s
 
 /* social styles */
 
@@ -86,12 +83,12 @@ $hr-bg-color: #fff
 @media (min-width: 768px)
 	body
 		padding-top: 80px
-		+transition(1s)
+		transition: 1s
 	
 @media (min-width: 1250px)
 	body
 		padding-top: 100px		
-		+transition(1s)
+		transition: 1s
 
 header
 	text-align: center
@@ -157,7 +154,7 @@ footer .footer-col
 		border-left: 0px
 		border-right: 0px		
 		&:hover
-			+transition(0.5s)
+			transition: 0.5s
 		&:focus
 			border-bottom: 2px solid #b3b3b3
 			border-top: 0px
@@ -189,70 +186,60 @@ p
 	border-radius: 0px
 	border: 2px solid
 	text-transform: uppercase
-	+transition(0.5s)
+	transition: 0.5s
 
 a
 	color: #424242
-	+transition(0.5s)
+	transition: 0.5s
 	&:hover
 		color: #000000
 
 hr		
-	border-top: solid 2px #333
+	border-top: solid 1px #333
 	padding-bottom: 10px
+	font-family: FontAwesome
+	font-size: 2em
 
 hr.star-hr
-	margin: 25px auto 30px
+	margin: 50px 0
 	&:after
-		color: #333
-		background-color: $hr-bg-color
 		content: "\f209"
-		display: inline-block
-		position: relative
-		top: -0.8em
-		padding: 0 10px 0 10px
-		font-family: FontAwesome
-		font-size: 2em	
-
+		left: 50%
+		position: absolute
+		transform: translateY(-50%) translateX(-50%)
+		padding: 20px
+		background: #fff
+		
 hr.pencil-hr
-	margin: 25px auto 30px
+	margin: 50px 0
 	&:after
-		color: #333
-		background-color: $hr-bg-color
 		content: "\f0ad"
-		display: inline-block
-		position: relative
-		top: -0.8em
-		padding: 0 10px 0 10px
-		font-family: FontAwesome
-		font-size: 2em
-	
+		left: 50%
+		position: absolute
+		transform: translateY(-50%) translateX(-50%)
+		padding: 20px
+		background: #fff
+		
 hr.book-hr
-	margin: 25px auto 30px
+	margin: 50px 0
 	&:after
-		color: #333
-		background-color: $hr-bg-color
 		content: "\f1b3"
-		display: inline-block
-		position: relative
-		top: -0.8em
-		padding: 0 10px 0 10px
-		font-family: FontAwesome
-		font-size: 2em
-
+		left: 50%
+		position: absolute
+		transform: translateY(-50%) translateX(-50%)
+		padding: 20px
+		background: #fff
+		
 hr.phone-hr
-	margin: 25px auto 30px
+	margin: 50px 0
 	&:after
-		color: #333
-		background-color: $hr-bg-color
 		content: "\f095"
-		display: inline-block
-		position: relative
-		top: -0.8em
-		padding: 0 10px 0 10px
-		font-family: FontAwesome
-		font-size: 2em
-
+		left: 50%
+		position: absolute
+		transform: translateY(-50%) translateX(-50%)
+		padding: 20px
+		background: #fff
+		
 .navbar
 	text-transform: uppercase
 	font-family: $google-fonts
