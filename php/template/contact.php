@@ -1,6 +1,6 @@
-<section id="contact">
+<!--<section id="contact">-->
 
-	<div class="container">
+<!--	<div class="container">-->
 
 <!--		<div class="row">-->
 
@@ -61,6 +61,6 @@
 
 <!--		</div>-->
 
-	</div>
+<!--	</div>-->
 
-</section>
+<!--</section>-->

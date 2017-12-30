@@ -62,7 +62,7 @@ checkLogin();
                 <div class="col-sm-4">
                   <input type="text" name="last" class="form-control" id="" placeholder="last name">
                 </div>
-              </div>adminlte.io
+              </div>
 
               <div class="form-group">
                 <label for="" class="col-sm-2 control-label">Username</label>
