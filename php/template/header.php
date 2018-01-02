@@ -141,7 +141,7 @@ $a = getTableContents('seo_content', 'where id = 1');
         <ul class="nav navbar-nav navbar-right nav-tabs" role="tablist">
 
           <li><a href="#scroll-about">About</a></li>
-          <li><a href="//websocialdev.com" target="_blank">My blog</a></li>
+          <!--<li><a href="//websocialdev.com" target="_blank">My blog</a></li>-->
           <!--<li><a href="//expurgandodevaneios.<?= $_SERVER['SERVER_NAME']; ?>" target="_blank">@expurgandodevaneios</a></li>-->
           <li><a href="#scroll-contact">Contact</a></li>
 

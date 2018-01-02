@@ -14,7 +14,7 @@ try {
                             title = :title, author = :author, description = :description, keywords = :keywords
                         WHERE 
                             id = 2");
-                        
+                      
     $c->bindParam(':title',       $title);
     $c->bindParam(':author',      $author);
     $c->bindParam(':description', $desc); 
