@@ -1,7 +1,7 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1514914540,
+    'timestamp' => 1514917383,
     'checksum' => '7f4030abf0cc966b99f1fa83577758f3',
     'files' => [
         'system/blueprints/config' => [

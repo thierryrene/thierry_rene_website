@@ -788,6 +788,9 @@ ul.pagination {
 #body > script:first-child + .grav-lightslider {
   margin-top: -3rem; }
 
+* {
+  transition: 1s; }
+
 .modular.header-image #header {
   background-color: rgba(255, 255, 255, 0);
   box-shadow: none; }

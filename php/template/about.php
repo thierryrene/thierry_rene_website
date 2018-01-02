@@ -66,7 +66,7 @@
 			
 			<?php
 				
-				$tracks = getLastFmSongs(6);
+				$tracks = getLastFmSongs(5);
 				
 				foreach($tracks as $key => $data) {
 					
