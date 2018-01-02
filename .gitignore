@@ -5,6 +5,8 @@ error_log
 node_modules
 bower_components
 testando_composer
+blog/cache
+blog/vendor
 cache
 vendor
-
+logs
