@@ -1,0 +1,11 @@
+email: td_matos@msn.com
+fullname: 'thierry rene matos'
+title: 'web developer'
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$eSjWVX.FW3HB2IrbbocHsOFjLY1gcy6y47SzQN1p5ESqryNZMJ0y.
