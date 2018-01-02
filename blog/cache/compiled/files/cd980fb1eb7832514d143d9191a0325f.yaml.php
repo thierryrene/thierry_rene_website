@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/home/ubuntu/workspace/blog/system/blueprints/config/system.yaml',
-    'modified' => 1512532072,
+    'modified' => 1514862129,
     'data' => [
         'title' => 'PLUGIN_ADMIN.SYSTEM',
         'form' => [
