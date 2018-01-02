@@ -1,13 +1,29 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1514913583,
-    'checksum' => 'df74b3bb576664e55b9b403d092d91d8',
+    'timestamp' => 1514914540,
+    'checksum' => '023b475ac446c5420ecea1782fd2ee04',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1514912906
+            ],
+            'plugins/adminidenticons' => [
+                'file' => 'user/config/plugins/adminidenticons.yaml',
+                'modified' => 1514914337
+            ],
+            'plugins/advanced-pagecache' => [
+                'file' => 'user/config/plugins/advanced-pagecache.yaml',
+                'modified' => 1514914499
+            ],
+            'plugins/seo' => [
+                'file' => 'user/config/plugins/seo.yaml',
+                'modified' => 1514914459
+            ],
+            'plugins/view-source' => [
+                'file' => 'user/config/plugins/view-source.yaml',
+                'modified' => 1514914016
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -45,6 +61,10 @@ return [
             ]
         ],
         'user/plugins' => [
+            'plugins/assets' => [
+                'file' => 'user/plugins/assets/assets.yaml',
+                'modified' => 1514914059
+            ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
                 'modified' => 1514912898
@@ -53,13 +73,33 @@ return [
                 'file' => 'user/plugins/email/email.yaml',
                 'modified' => 1514912895
             ],
+            'plugins/seo' => [
+                'file' => 'user/plugins/seo/seo.yaml',
+                'modified' => 1514914438
+            ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
                 'modified' => 1514912780
             ],
+            'plugins/view-source' => [
+                'file' => 'user/plugins/view-source/view-source.yaml',
+                'modified' => 1514914005
+            ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
                 'modified' => 1514912780
+            ],
+            'plugins/advanced-pagecache' => [
+                'file' => 'user/plugins/advanced-pagecache/advanced-pagecache.yaml',
+                'modified' => 1514914480
+            ],
+            'plugins/count-views' => [
+                'file' => 'user/plugins/count-views/count-views.yaml',
+                'modified' => 1514914099
+            ],
+            'plugins/devtools' => [
+                'file' => 'user/plugins/devtools/devtools.yaml',
+                'modified' => 1514914299
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
@@ -69,6 +109,10 @@ return [
                 'file' => 'user/plugins/form/form.yaml',
                 'modified' => 1514912891
             ],
+            'plugins/custom-css' => [
+                'file' => 'user/plugins/custom-css/custom-css.yaml',
+                'modified' => 1514914540
+            ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
                 'modified' => 1514912780
@@ -77,6 +121,9 @@ return [
     ],
     'data' => [
         'plugins' => [
+            'assets' => [
+                'enabled' => true
+            ],
             'admin' => [
                 'enabled' => true,
                 'route' => '/admin',
@@ -157,15 +204,51 @@ return [
                 'content_type' => 'text/html',
                 'debug' => false
             ],
+            'seo' => [
+                'enabled' => true,
+                'article' => true,
+                'restaurant' => true,
+                'event' => true,
+                'organization' => true,
+                'musicevent' => true,
+                'person' => true,
+                'musicalbum' => true,
+                'product' => true,
+                'twitterid' => '@thierryrenemts'
+            ],
             'error' => [
                 'enabled' => true,
                 'routes' => [
                     404 => '/error'
                 ]
             ],
+            'view-source' => [
+                'enabled' => true,
+                'header' => true,
+                'header_interpolated' => true,
+                'body' => true,
+                'body_interpolated' => true
+            ],
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
+            ],
+            'advanced-pagecache' => [
+                'enabled' => true,
+                'enabled_with_params' => true,
+                'enabled_with_query' => true,
+                'whitelist' => false,
+                'blacklist' => [
+                    0 => '/error',
+                    1 => '/random'
+                ]
+            ],
+            'count-views' => [
+                'enabled' => true,
+                'datafile' => 'count-views.yaml'
+            ],
+            'devtools' => [
+                'enabled' => true
             ],
             'login' => [
                 'enabled' => true,
@@ -236,6 +319,9 @@ return [
                     ]
                 ]
             ],
+            'custom-css' => [
+                'enabled' => true
+            ],
             'markdown-notices' => [
                 'enabled' => true,
                 'built_in_css' => true,
@@ -245,6 +331,20 @@ return [
                     2 => 'blue',
                     3 => 'green'
                 ]
+            ],
+            'adminidenticons' => [
+                'enabled' => false,
+                'type' => 'identicon',
+                'border_radius' => 100,
+                'background' => '#f8f8f8',
+                'foreground' => '#64F0FF',
+                'varied' => true,
+                'padding' => 40,
+                'spacing' => 0,
+                'rows' => 0,
+                'columns' => 0,
+                'tiles' => 6,
+                'colors' => 2
             ]
         ],
         'media' => [

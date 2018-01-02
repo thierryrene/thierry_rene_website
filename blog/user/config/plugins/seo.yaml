@@ -1,0 +1,10 @@
+enabled: true
+article: true
+restaurant: true
+event: true
+organization: true
+musicevent: true
+person: true
+musicalbum: true
+product: true
+twitterid: '@thierryrenemts'
