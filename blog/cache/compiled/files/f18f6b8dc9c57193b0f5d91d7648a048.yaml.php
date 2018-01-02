@@ -2,15 +2,36 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/home/ubuntu/workspace/blog/user/config/site.yaml',
-    'modified' => 1514862129,
+    'modified' => 1514913545,
     'data' => [
-        'title' => 'Grav',
+        'title' => 'thierry rene web dev blog',
+        'default_lang' => 'en',
         'author' => [
-            'name' => 'Joe Bloggs',
-            'email' => 'joe@test.com'
+            'name' => 'Thierry Rene Matos',
+            'email' => 'td_matos@terra.com.br'
+        ],
+        'taxonomies' => [
+            0 => 'webdev',
+            1 => 'frontend',
+            2 => 'backend',
+            3 => 'php',
+            4 => 'js',
+            5 => 'html',
+            6 => 'css',
+            7 => 'jquery'
         ],
         'metadata' => [
-            'description' => 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+            'site-author' => '@thierryrenemts',
+            'description' => 'compartilhar é aprender'
+        ],
+        'summary' => [
+            'enabled' => true,
+            'format' => 'short',
+            'size' => 300,
+            'delimiter' => '==='
+        ],
+        'blog' => [
+            'route' => '/blog'
         ]
     ]
 ];

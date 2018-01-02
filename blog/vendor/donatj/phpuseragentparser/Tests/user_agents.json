@@ -149,11 +149,6 @@
 		"browser": "Firefox",
 		"version": "25.0"
 	},
-	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10.13; rv:57.0) Gecko\/20100101 Firefox\/57.0": {
-		"platform": "Macintosh",
-		"browser": "Firefox",
-		"version": "57.0"
-	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.1.5) Gecko\/20091102 Firefox\/3.5.5 (.NET CLR 3.5.21022)": {
 		"platform": "Windows",
 		"browser": "Firefox",
@@ -253,11 +248,6 @@
 		"platform": "Windows",
 		"browser": "MSIE",
 		"version": "9.0"
-	},
-	"Mozilla\/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident\/6.0)": {
-		"platform": "Windows",
-		"browser": "MSIE",
-		"version": "10.0"
 	},
 	"Mozilla\/5.0 (Windows NT 6.3; Trident\/7.0; rv:11.0) like Gecko": {
 		"platform": "Windows",
@@ -434,16 +424,6 @@
 		"browser": "BlackBerry Browser",
 		"version": "10.0.9.2372"
 	},
-	"Mozilla\/5.0 (X11; FreeBSD amd64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/38.0.2125.104 Safari\/537.36": {
-		"platform": "FreeBSD",
-		"browser": "Chrome",
-		"version": "38.0.2125.104"
-	},
-	"Mozilla\/5.0 (X11; FreeBSD amd64; rv:43.0) Gecko\/20100101 Firefox\/43.0": {
-		"platform": "FreeBSD",
-		"browser": "Firefox",
-		"version": "43.0"
-	},
 	"Mozilla\/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit\/534.46 (KHTML, like Gecko) CriOS\/29.0.1547.11 Mobile\/9B206 Safari\/7534.48.3": {
 		"platform": "iPad",
 		"browser": "Chrome",
@@ -569,16 +549,6 @@
 		"browser": "Silk",
 		"version": "3.22"
 	},
-	"Mozilla\/5.0 (X11; NetBSD i386) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.124 Safari\/537.36": {
-		"platform": "NetBSD",
-		"browser": "Chrome",
-		"version": "43.0.2357.124"
-	},
-	"Mozilla\/5.0 (X11; NetBSD amd64; rv:42.0) Gecko\/20100101 Firefox\/42.0": {
-		"platform": "NetBSD",
-		"browser": "Firefox",
-		"version": "42.0"
-	},
 	"Mozilla\/5.0 (New Nintendo 3DS like iPhone) AppleWebKit\/536.30 (KHTML, like Gecko) NX\/3.0.0.5.8 Mobile NintendoBrowser\/1.0.9934.JP": {
 		"platform": "New Nintendo 3DS",
 		"browser": "NintendoBrowser",
@@ -599,11 +569,6 @@
 		"browser": "Bunjalloo",
 		"version": "0.7.6"
 	},
-	"Mozilla\/5.0 (Nintendo Switch; ShareApplet) AppleWebKit\/601.6 (KHTML, like Gecko) NF\/4.0.0.5.9 NintendoBrowser\/5.1.0.13341": {
-		"platform": "Nintendo Switch",
-		"browser": "NintendoBrowser",
-		"version": "5.1.0.13341"
-	},
 	"Opera\/9.00 (Nintendo Wii; U; ; 1038-58; Wii Shop Channel\/1.0; en)": {
 		"platform": "Nintendo Wii",
 		"browser": "Opera",
@@ -618,16 +583,6 @@
 		"platform": "Nintendo WiiU",
 		"browser": "NintendoBrowser",
 		"version": "1.0.0.7494.US"
-	},
-	"Mozilla\/5.0 (X11; OpenBSD i386) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.81 Safari\/537.36": {
-		"platform": "OpenBSD",
-		"browser": "Chrome",
-		"version": "43.0.2357.81"
-	},
-	"Mozilla\/5.0 (X11; OpenBSD amd64; rv:43.0) Gecko\/20100101 Firefox\/43.0 SeaMonkey\/2.40": {
-		"platform": "OpenBSD",
-		"browser": "Firefox",
-		"version": "43.0"
 	},
 	"Mozilla\/5.0 (PlayBook; U; RIM Tablet OS 2.0.1; en-US) AppleWebKit\/535.8+ (KHTML, like Gecko) Version\/7.2.0.1 Safari\/535.8+": {
 		"platform": "PlayBook",

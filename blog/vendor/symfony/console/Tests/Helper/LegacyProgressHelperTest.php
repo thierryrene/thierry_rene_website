@@ -214,7 +214,7 @@ class LegacyProgressHelperTest extends TestCase
     {
         $expectedout = $expected;
 
-        if (null !== $this->lastMessagesLength) {
+        if ($this->lastMessagesLength !== null) {
             $expectedout = str_pad($expected, $this->lastMessagesLength, "\x20", STR_PAD_RIGHT);
         }
 

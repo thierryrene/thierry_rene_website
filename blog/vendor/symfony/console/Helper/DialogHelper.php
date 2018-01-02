@@ -161,7 +161,7 @@ class DialogHelper extends InputAwareHelper
                         $output->write("\033[1D");
                     }
 
-                    if (0 === $i) {
+                    if ($i === 0) {
                         $ofs = -1;
                         $matches = $autocomplete;
                         $numMatches = count($matches);
@@ -326,7 +326,7 @@ class DialogHelper extends InputAwareHelper
 
         if (false !== $shell = $this->getShell()) {
             $output->write($question);
-            $readCmd = 'csh' === $shell ? 'set mypassword = $<' : 'read -r mypassword';
+            $readCmd = $shell === 'csh' ? 'set mypassword = $<' : 'read -r mypassword';
             $command = sprintf("/usr/bin/env %s -c 'stty -echo; %s; stty echo; echo \$mypassword'", $shell, $readCmd);
             $value = rtrim(shell_exec($command));
             $output->writeln('');
@@ -464,7 +464,7 @@ class DialogHelper extends InputAwareHelper
 
         exec('stty 2>&1', $output, $exitcode);
 
-        return self::$stty = 0 === $exitcode;
+        return self::$stty = $exitcode === 0;
     }
 
     /**

@@ -55,6 +55,8 @@ interface InputInterface
 
     /**
      * Binds the current Input instance with the given arguments and options.
+     *
+     * @param InputDefinition $definition A InputDefinition instance
      */
     public function bind(InputDefinition $definition);
 

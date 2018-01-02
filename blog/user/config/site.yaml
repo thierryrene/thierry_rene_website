@@ -1,7 +1,24 @@
-title: Grav
+title: 'thierry rene web dev blog'
+default_lang: en
 author:
-  name: Joe Bloggs
-  email: 'joe@test.com'
+  name: 'Thierry Rene Matos'
+  email: td_matos@terra.com.br
+taxonomies:
+  - webdev
+  - frontend
+  - backend
+  - php
+  - js
+  - html
+  - css
+  - jquery
 metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-
+  site-author: '@thierryrenemts'
+  description: 'compartilhar é aprender'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

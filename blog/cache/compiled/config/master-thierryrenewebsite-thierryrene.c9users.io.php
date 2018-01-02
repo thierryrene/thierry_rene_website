@@ -1,77 +1,77 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1514908826,
-    'checksum' => 'd4f643438065d2a17b1aa938b30cc90c',
+    'timestamp' => 1514913583,
+    'checksum' => 'df74b3bb576664e55b9b403d092d91d8',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1514862129
+                'modified' => 1514912906
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1514862129
+                'modified' => 1514912802
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1514862129
+                'modified' => 1514913545
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1514862129
+                'modified' => 1514912906
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1514864441
+                'modified' => 1514913583
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1514862129
+                'modified' => 1512567817
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1514862129
+                'modified' => 1512567817
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1514862129
+                'modified' => 1512567817
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1514862129
+                'modified' => 1512567817
             ]
         ],
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1514864441
+                'modified' => 1514912898
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1514862129
+                'modified' => 1514912895
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1514862129
+                'modified' => 1514912780
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1514862129
+                'modified' => 1514912780
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1514862129
+                'modified' => 1514912893
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1514864429
+                'modified' => 1514912891
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
-                'modified' => 1514862129
+                'modified' => 1514912780
             ]
         ]
     ],
@@ -514,18 +514,25 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'Grav',
+            'title' => 'thierry rene web dev blog',
             'default_lang' => 'en',
             'author' => [
-                'name' => 'Joe Bloggs',
-                'email' => 'joe@test.com'
+                'name' => 'Thierry Rene Matos',
+                'email' => 'td_matos@terra.com.br'
             ],
             'taxonomies' => [
-                0 => 'category',
-                1 => 'tag'
+                0 => 'webdev',
+                1 => 'frontend',
+                2 => 'backend',
+                3 => 'php',
+                4 => 'js',
+                5 => 'html',
+                6 => 'css',
+                7 => 'jquery'
             ],
             'metadata' => [
-                'description' => 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+                'site-author' => '@thierryrenemts',
+                'description' => 'compartilhar é aprender'
             ],
             'summary' => [
                 'enabled' => true,
@@ -564,7 +571,7 @@ return [
         ],
         'system' => [
             'absolute_urls' => false,
-            'timezone' => '',
+            'timezone' => 'America/Sao_Paulo',
             'default_locale' => NULL,
             'param_sep' => ':',
             'wrapped_site' => false,
@@ -593,24 +600,24 @@ return [
             'pages' => [
                 'theme' => 'antimatter',
                 'order' => [
-                    'by' => 'default',
+                    'by' => 'date',
                     'dir' => 'asc'
                 ],
                 'list' => [
                     'count' => 20
                 ],
                 'dateformat' => [
-                    'default' => NULL,
-                    'short' => 'jS M Y',
-                    'long' => 'F jS \\a\\t g:ia'
+                    'default' => 'd-m-Y H:i',
+                    'short' => 'd-m-y G:i',
+                    'long' => 'D, d M Y G:i:s'
                 ],
                 'publish_dates' => true,
                 'process' => [
                     'markdown' => true,
-                    'twig' => false
+                    'twig' => true
                 ],
                 'twig_first' => false,
-                'never_cache_twig' => false,
+                'never_cache_twig' => true,
                 'events' => [
                     'page' => true,
                     'twig' => true
@@ -641,7 +648,7 @@ return [
                 'etag' => false,
                 'vary_accept_encoding' => false,
                 'redirect_default_route' => false,
-                'redirect_default_code' => 302,
+                'redirect_default_code' => '302',
                 'redirect_trailing_slash' => true,
                 'ignore_files' => [
                     0 => '.DS_Store'
@@ -661,7 +668,7 @@ return [
                 ]
             ],
             'cache' => [
-                'enabled' => true,
+                'enabled' => false,
                 'check' => [
                     'method' => 'file'
                 ],
@@ -702,7 +709,7 @@ return [
                 ]
             ],
             'errors' => [
-                'display' => true,
+                'display' => '1',
                 'log' => true
             ],
             'debugger' => [
@@ -727,7 +734,8 @@ return [
                 'allowed_fallback_types' => [
                     
                 ],
-                'auto_metadata_exif' => false
+                'auto_metadata_exif' => false,
+                'upload_limit' => 2097152
             ],
             'session' => [
                 'enabled' => true,
@@ -747,7 +755,7 @@ return [
             ]
         ],
         'security' => [
-            'salt' => 'LpANXU3h57Gnaq'
+            'salt' => 'dVDSMt17mra5PC'
         ]
     ]
 ];
