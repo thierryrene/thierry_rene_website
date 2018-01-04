@@ -1,6 +1,0 @@
-enabled: true
-enabled_with_params: true
-enabled_with_query: true
-blacklist:
-  - /error
-  - /random
