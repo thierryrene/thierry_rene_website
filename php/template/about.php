@@ -50,59 +50,63 @@
 
 		</div>
 		
-		<hr>
+		<?php if ($lastFmStatus['status'] == 1) : ?>
 		
-		<div class="row">
+			<hr>
 			
-			<div class="col-md-12 text-center">
-				<p class="lead">More information</p>
+			<div class="row">
+				
+				<div class="col-md-12 text-center">
+					<p class="lead">More information</p>
+				</div>
+				
+				<div class="col-md-12 text-center">
+					<p class="lead">Music Habits <small>(from Last.fm API)</small></p>
+					<p>Recent Tracks</p>
+					<br>
+				</div>
+				
+				<?php
+					
+					$tracks = getLastFmSongs(5);
+					
+					foreach($tracks as $key => $data) {
+						
+					    echo "<div class='col-md-2 col-xs-6 text-center'>";
+					    
+					    	echo "<div class='well'><img class='img-responsive' src='{$data['image'][2]['#text']}'></div>";
+					        echo "<p><a class='music-link' href='{$data['url']}' target='_blank'>{$data['name']}</a></p>";
+					        echo "<p>{$data['artist']['#text']}</p>";
+					        
+					    echo "</div>";    
+					}
+					
+				?>
+				
+				<style type="text/css">
+					.flex-container {
+						display: grid;
+						
+					}
+				</style>
+				
+				<?php
+					
+					$photos = getInsta(5);
+					
+					foreach($photos as $photo) {
+						
+					    echo "<div class='flex-container'>";
+					    
+					    	echo "<div class='well'><img class='img-responsive' src='{$photo['url']}'></div>";
+					        
+					    echo "</div>";    
+					}
+				?>
+				
 			</div>
-			
-			<div class="col-md-12 text-center">
-				<p class="lead">Music Habits <small>(from Last.fm API)</small></p>
-				<p>Recent Tracks</p>
-				<br>
-			</div>
-			
-			<?php
-				
-				$tracks = getLastFmSongs(5);
-				
-				foreach($tracks as $key => $data) {
-					
-				    echo "<div class='col-md-2 col-xs-6 text-center'>";
-				    
-				    	echo "<div class='well'><img class='img-responsive' src='{$data['image'][2]['#text']}'></div>";
-				        echo "<p><a class='music-link' href='{$data['url']}' target='_blank'>{$data['name']}</a></p>";
-				        echo "<p>{$data['artist']['#text']}</p>";
-				        
-				    echo "</div>";    
-				}
-				
-			?>
-			
-			<style type="text/css">
-				.flex-container {
-					display: grid;
-					
-				}
-			</style>
-			
-			<?php
-				
-				$photos = getInsta(5);
-				
-				foreach($photos as $photo) {
-					
-				    echo "<div class='flex-container'>";
-				    
-				    	echo "<div class='well'><img class='img-responsive' src='{$photo['url']}'></div>";
-				        
-				    echo "</div>";    
-				}
-			?>
-			
-		</div>
+		
+		<?php endif; ?>
 
 	</div>
 		

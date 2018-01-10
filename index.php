@@ -17,6 +17,7 @@
 	if (file_exists($cachefilepath) && (time() - $cachetime < filemtime($cachefilepath))) {
 		
 		include_once "php/c.php";
+		include_once "php/functions.php";
 		
 		logAccess();
 		
@@ -35,6 +36,7 @@
 	ob_start();
 	
 	include_once "php/c.php";
+	include_once "php/functions.php";
 
 	logAccess();
 

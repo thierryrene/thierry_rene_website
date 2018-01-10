@@ -2,6 +2,8 @@
 
 $a = getTableContents('seo_content', 'where id = 1');
 
+$lastFmStatus = checkSpecConfig(1);
+
 ?>
 
 <!doctype html>
@@ -165,6 +167,7 @@ $a = getTableContents('seo_content', 'where id = 1');
 
           <div class="intro">
             <span id="name" class="name">Thierry Rene Matos</span>
+            
             <hr id="star-hr" class="star-hr">
             <span id="prof" class="skills">web developer</span>
           </div>

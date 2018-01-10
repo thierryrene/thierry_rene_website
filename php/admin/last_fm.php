@@ -2,9 +2,9 @@
 
 include_once('../c.php');
 
-include_once('../functions.php');
-
 checkLogin();
+
+include_once('../functions.php');
 
 include_once('template/header.php');
 

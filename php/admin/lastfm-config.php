@@ -1,7 +1,8 @@
 <?php
 
 require_once '../c.php';
-require_once '../functions.php';
+
+checkLogin();
 
 if (!empty($_GET['status'])) {
     $status = $_GET['status'];
