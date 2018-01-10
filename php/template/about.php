@@ -43,7 +43,7 @@
 				</div>
 				<div class="col-md-4 text-justify">
 					<p>I made two technicians in Senac, all with full scholarship, computer technician and technical development of web applications.</p>
-					<p>I have a <a href="//websocialdev.com" target="_blank" class="hvr-underline-fro-left"><b>blog</b></a> where i share everything i know about web development.</p>
+					<!--<p>I have a <a href="//websocialdev.com" target="_blank" class="hvr-underline-fro-left"><b>blog</b></a> where i share everything i know about web development.</p>-->
 				</div>
 
 			</article>
