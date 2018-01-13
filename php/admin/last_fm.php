@@ -38,6 +38,7 @@ $lastFmStatus = checkSpecConfig(1);
         
         <div class="box-body">
           <br>
+          
           <a class="btn btn-app" id="click-lastfm-config" href="lastfm-config.php?status=<?php echo $lastFmStatus['status'] ?>">
                 <span class="badge <?php echo $lastFmStatus['status'] != 1 ? 'bg-red' : 'bg-green'  ?>"> <?php echo $lastFmStatus['status'] != 1 ? 'OFF' : 'ON'  ?></span>
                   <i class="fa fa-power-off"></i>turn <?php echo $lastFmStatus['status'] != 1 ? 'on' : 'off'  ?>
