@@ -1,7 +1,18 @@
 <?php
 
-require_once 'env.php';
-require_once 'c.php';
+function checkConfig() {
+  global $pdo;
+  $status = $c->prepare("SELECT * FROM system_config");
+  if ($status->execute()) {
+    $result = $status->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+  } //$status->execute()
+  else {
+    return "erro";
+  }
+}
+
+function checkSpecConfig($id) {
     
     function checkConfig() {
         
@@ -43,6 +54,9 @@ require_once 'c.php';
             } else {
                 // $status = 'off';
                 $turnOn = $pdo->prepare("UPDATE system_config SET status = 1 WHERE id = {$configId}");
+                $turnOn = $pdo->execute();
+            }
+
                 $turnOn = $pdo->execute();
             }
 
