@@ -93,9 +93,7 @@
 				<?php
 					
 					$photos = getInsta(5);
-					if (DEBUG) {
-						r($photos);	
-					}
+					
 					foreach($photos as $photo) {
 						
 					    echo "<div class='flex-container'>";
