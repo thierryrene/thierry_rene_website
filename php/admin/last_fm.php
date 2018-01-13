@@ -56,9 +56,16 @@ $pageDesc = 'lastfm api widget configuration';
         
         <div class="box-body">
           <br>
+<<<<<<< HEAD
           <a class="btn btn-app" id="click-lastfm-config">
                 <span class="badge bg-red">OFF</span>
                   <i class="fa fa-power-off"></i>turn on
+=======
+          
+          <a class="btn btn-app" id="click-lastfm-config" href="lastfm-config.php?status=<?php echo $lastFmStatus['status'] ?>">
+                <span class="badge <?php echo $lastFmStatus['status'] != 1 ? 'bg-red' : 'bg-green'  ?>"> <?php echo $lastFmStatus['status'] != 1 ? 'OFF' : 'ON'  ?></span>
+                  <i class="fa fa-power-off"></i>turn <?php echo $lastFmStatus['status'] != 1 ? 'on' : 'off'  ?>
+>>>>>>> lastfm
                 </a>
           <hr>  
           <!-- =============================================== -->
