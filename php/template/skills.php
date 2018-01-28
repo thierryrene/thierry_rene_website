@@ -8,7 +8,7 @@
 
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<span>
-		              <i class="fa fa-desktop fa-5x"></i>         
+		              <i class="fa fa-desktop fa-5x"></i>
 		              <h3>Design</h3>
 		            </span>
 				</div>

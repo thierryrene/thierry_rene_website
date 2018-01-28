@@ -1,7 +1,8 @@
 <?php
 
-$a = getTableContents('seo_content', 'where id = 1');
+$seoData = getTableContents('seo_content', 'where id = 1');
 
+// check if lastfm api is on or off
 $lastFmStatus = checkSpecConfig(1);
 
 ?>
@@ -27,15 +28,15 @@ $lastFmStatus = checkSpecConfig(1);
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title><?= $a['title']; ?></title>
+  <title><?= $seoData['title']; ?></title>
 
-  <meta name="author" content="<?= $a['author']; ?>">
-  <meta name="title" content="<?= $a['title']; ?>">
-  <meta name="description" content="<?= $a['description']; ?>">
-  <meta name="keywords" content="<?= $a['keywords']; ?>">
-  <meta name="copyright" content="<?= $a['copyright']; ?>">
+  <meta name="author" content="<?= $seoData['author']; ?>">
+  <meta name="title" content="<?= $seoData['title']; ?>">
+  <meta name="description" content="<?= $seoData['description']; ?>">
+  <meta name="keywords" content="<?= $seoData['keywords']; ?>">
+  <meta name="copyright" content="<?= $seoData['copyright']; ?>">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-  
+
   <link rel="manifest" href="manifest.json" />
 
   <meta http-equiv="cleartype" content="on">
@@ -78,32 +79,32 @@ $lastFmStatus = checkSpecConfig(1);
   <![endif]-->
 
   <!-- Windows/MS meta tags -->
-  <meta name="application-name" content="<?= $a['author']; ?>">
+  <meta name="application-name" content="<?= $seoData['author']; ?>">
   <meta name="msapplication-TileColor" content="#424242">
   <meta name="msapplication-TileImage" content="favicons/mstile-150x150.png">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
 
   <!-- Twitter meta tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@thierryrenne">
-  <meta name="twitter:creator" content="<?= $a['author']; ?>">
-  <meta name="twitter:title" content="<?= $a['author']; ?>">
-  <meta name="twitter:description" content="<?= $a['description']; ?>">
+  <meta name="twitter:site" content="@thierryrenemts">
+  <meta name="twitter:creator" content="<?= $seoData['author']; ?>">
+  <meta name="twitter:title" content="<?= $seoData['author']; ?>">
+  <meta name="twitter:description" content="<?= $seoData['description']; ?>">
   <meta name="twitter:url" content="//<?= $_SERVER['SERVER_NAME']; ?>">
   <meta name="twitter:image" content="favicons/favicon-196x196.png">
 
   <!-- Facebook meta tags -->
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="<?= $a['author']; ?>">
+  <meta property="og:site_name" content="<?= $seoData['author']; ?>">
   <meta property="article:author" content="//www.facebook.com/thierryrenesantosmatos">
-  <meta property="og:title" content="<?= $a['title']; ?>">
-  <meta property="og:description" content="<?= $a['description']; ?>">
+  <meta property="og:title" content="<?= $seoData['title']; ?>">
+  <meta property="og:description" content="<?= $seoData['description']; ?>">
   <meta property="og:url" content="//<?= $_SERVER['SERVER_NAME']; ?>">
   <meta property="og:image" content="favicons/favicon-196x196.png">
 
   <!-- Pinterest meta tags -->
   <meta name="p:domain_verify" content="37bc592e8f3676b53f1bf7f2e686ba5b" />
-  
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -115,7 +116,7 @@ $lastFmStatus = checkSpecConfig(1);
 </head>
 
 <body>
-  
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDLCV8Z"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -167,7 +168,7 @@ $lastFmStatus = checkSpecConfig(1);
 
           <div class="intro">
             <span id="name" class="name">Thierry Rene Matos</span>
-            
+
             <hr id="star-hr" class="star-hr">
             <span id="prof" class="skills">web developer</span>
           </div>
