@@ -49,6 +49,9 @@
     padding-right: 5px; }
 
 /* semantic elements */
+@media (max-width: 767px) {
+  h3, .h3 {
+    font-size: 22px; } }
 @media (min-width: 768px) {
   body {
     padding-top: 80px;
@@ -80,16 +83,16 @@ header .intro .skills {
   font-weight: 700;
   font-family: "Quicksand"; }
 
-section #about {
+#about {
   background-color: #EEE;
   padding-top: 20px;
   padding-bottom: 30px; }
 
-section #contact {
+#contact {
   padding-top: 20px;
   padding-bottom: 30px; }
 
-section #resume {
+#resume {
   padding-top: 20px;
   padding-bottom: 10px; }
 
