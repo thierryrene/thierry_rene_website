@@ -126,6 +126,31 @@ $lastFmStatus = checkSpecConfig(1);
             <p class="chromeframe">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor <a href="//browsehappy.com/">atualize o seu navegador</a> ou <a href="//www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar a navegação.</p>
   <![endif]-->
 
+  <script>
+
+    window.fbAsyncInit = function() {
+
+      FB.init({
+        appId      : '173959593242417',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.12'
+      });
+
+      FB.AppEvents.logPageView();
+
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+  </script>
+
   <!-- content goes here -->
 
   <nav id="custom-navbar" class="navbar navbar-inverse navbar-fixed-top">
