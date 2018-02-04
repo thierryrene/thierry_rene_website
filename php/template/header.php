@@ -105,6 +105,9 @@ $lastFmStatus = checkSpecConfig(1);
   <!-- Pinterest meta tags -->
   <meta name="p:domain_verify" content="37bc592e8f3676b53f1bf7f2e686ba5b" />
 
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
