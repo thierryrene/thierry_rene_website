@@ -106,6 +106,8 @@
 <a href="//plus.google.com/117162753365804877029" rel="publisher"></a>
 
 <!-- javascript librarys -->
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script src="//www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>

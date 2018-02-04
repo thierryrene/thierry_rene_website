@@ -15,5 +15,19 @@ $(document).ready(function() {
 
 	$('header').addClass('animated fadeInUp').css('animation-delay', '2s');
 
+		  // Initialize Firebase
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyCCQm910VxUk43w0Psc40nhQPMUvAni18A",
+		    authDomain: "thierryrenematos-webdev.firebaseapp.com",
+		    databaseURL: "https://thierryrenematos-webdev.firebaseio.com",
+		    projectId: "thierryrenematos-webdev",
+		    storageBucket: "thierryrenematos-webdev.appspot.com",
+		    messagingSenderId: "643792613259"
+		  };
+
+		  firebase.initializeApp(firebaseConfig);
+
+		  var database = firebase.database();
+
 });
 
