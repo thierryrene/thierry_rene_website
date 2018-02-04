@@ -112,7 +112,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/sw.js"></script>
+<script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/sw.js"></script>
 <script src="js/plugins.js"></script>
 
 </body>
