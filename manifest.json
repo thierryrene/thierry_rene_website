@@ -5,7 +5,7 @@
   "start_url": "https://thierryrenematoswebdev.me",
   "theme_color": "#424242",
   "display": "fullscreen",
-  "background_color": "#111111",
+  "background_color": "#fff",
   "icons": [
     {
       "src": "/favicons/android-chrome-192x192.png",
