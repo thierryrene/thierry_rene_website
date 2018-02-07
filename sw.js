@@ -17,10 +17,10 @@ self.addEventListener('activate', function(e) {
     caches.keys().then(function(keyList) {
       return Promise.all(keyList.map(function(key) {
         console.log(key);
-        if (key !== cacheName) {
-          console.log('[ServiceWorker] Removing old cache', key);
-          return caches.delete(key);
-        }
+        // if (key !== cacheName) {
+        //   console.log('[ServiceWorker] Removing old cache', key);
+        //   return caches.delete(key);
+        // }
       }));
     })
   );
