@@ -36,6 +36,7 @@ $lastFmStatus = checkSpecConfig(1);
   <meta name="keywords" content="<?= $seoData['keywords']; ?>">
   <meta name="copyright" content="<?= $seoData['copyright']; ?>">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+  <meta name="theme-color" content="#424242"/>
 
   <link rel="manifest" href="manifest.json" />
 
