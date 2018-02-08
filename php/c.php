@@ -29,9 +29,9 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('HOST', $_SERVER['SERVER_NAME']);
 }
 
-// if (DEBUG) {
+if ($_SERVER['SERVER_NAME'] != "thierryrenematoswebdev.me") {
   require_once 'testando_composer/vendor/autoload.php';
-// }
+}
 
 function connect() {
   try {
