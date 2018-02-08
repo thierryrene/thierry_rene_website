@@ -29,7 +29,9 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('HOST', $_SERVER['SERVER_NAME']);
 }
 
-require_once 'testando_composer/vendor/autoload.php';
+if (DEBUG) {
+  require_once 'testando_composer/vendor/autoload.php';
+}
 
 function connect() {
   try {

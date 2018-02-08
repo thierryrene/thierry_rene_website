@@ -299,6 +299,8 @@ function getFirstProfileId($analytics) {
   }
 }
 
+
+
 function getResults($analytics, $profileId) {
 
   $t = date('Y-m-d', strtotime('-3000 days'));
@@ -306,7 +308,7 @@ function getResults($analytics, $profileId) {
 
   $params = array(
               'max-results' => 10,
-              'dimensions' => 'ga:pagePath',
+              'dimensions' => 'ga:pagePath,ga:pageTitle',
               'sort' => '-ga:pageviews',
           );
 
@@ -314,12 +316,14 @@ function getResults($analytics, $profileId) {
        'ga:' . $profileId,
        $t,
        $t2,
-       'ga:pageviews,ga:pageviewsPerSession',
+       'ga:pageviews',
        $params);
-// r($a['rows']);
+r($a['rows']);
 
-   return $a;
+   return $a['rows'];
 }
+
+$teste = getResults($analytics, $profile);
 
 // function printResults($results) {
 //   // Parses the response from the Core Reporting API and prints
