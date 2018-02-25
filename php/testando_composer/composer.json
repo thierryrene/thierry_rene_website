@@ -9,7 +9,8 @@
         "digitalnature/php-ref": "dev-master",
         "twig/twig": "~2.0",
         "sentry/sentry": "^1.8",
-        "google/apiclient": "^2.0"
+        "google/apiclient": "^2.0",
+        "fabpot/goutte": "^3.2"
     },
     "authors": [
         {

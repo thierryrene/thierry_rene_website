@@ -1,60 +1,32 @@
 <?php
 
-require_once 'php/c.php';
-require_once 'php/functions.php';
+$data_hoje = date('d-m-Y');
 
-function getJson() {
+$data_inicio = '22/02/2018';
 
-            global $pdo;
+$data_fim = '28/08/2018';
 
-            $status = $pdo->prepare("SELECT * FROM access_log limit 10");
+if ( ($data_inicio <= $data_hoje) && ($data_hoje <= $data_fim) ) {
+  echo "ta dentro do tempo";
+} else {
+  echo "fora do range";
+}
 
-            if ($status->execute()) {
-                $result = $status->fetchAll(PDO::FETCH_ASSOC);
-                // json_encode($result);
-                return $result;
-            } else {
-                return "erro";
-            }
-    }
-
-$a = getJson();
-
-echo "<pre>";
-var_dump(json_encode($a, JSON_FORCE_OBJECT));
+die();
 
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>jQuery.getJSON demo</title>
-  <style>
-  img {
-    height: 100px;
-    float: left;
-  }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 
-<div id="text" ></div>
 
-<script>
-(function() {
-  var flickerAPI = "<?php echo json_encode($a); ?>";
-  $.getJSON( flickerAPI, {
-    tags: "id",
-    format: "json"
-  })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $( "<p>" ).appendTo( "#text" );
-      });
-    });
-})();
-</script>
+
+
 
 </body>
+
 </html>

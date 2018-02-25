@@ -215,27 +215,92 @@ function fileOpen($a) {
 
 // get lasfm last songs
 function getLastFmSongs($limit) {
-					$lasfmApiKey = "2f6af24843eea696c30ffcb0bb425bde";
-					$secret = "2dd6c019e21201dfac20a227bb66131f";
-					$url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thiiiii&api_key=2f6af24843eea696c30ffcb0bb425bde&format=json&limit={$limit}";
-					$result = file_get_contents($url);
-					$json = json_decode($result, true);
-					$tracks = $json['recenttracks']['track'];
-					return $tracks;
-				}
+		$lasfmApiKey = "2f6af24843eea696c30ffcb0bb425bde";
+		$secret = "2dd6c019e21201dfac20a227bb66131f";
+		$url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=thiiiii&api_key=2f6af24843eea696c30ffcb0bb425bde&format=json&limit={$limit}";
+		$result = file_get_contents($url);
+		$json = json_decode($result, true);
+		$tracks = $json['recenttracks']['track'];
+		return $tracks;
+	}
+
+// get lasfm last songs
+function getTopArtists($file, $limit, $hours = 24) {
+	$lasfmApiKey = "2f6af24843eea696c30ffcb0bb425bde";
+	$secret = "2dd6c019e21201dfac20a227bb66131f";
+	$user = "thiiiii";
+	$method = "user.gettopartists";
+
+	$url = "http://ws.audioscrobbler.com/2.0/?method={$method}&user={$user}&api_key={$lasfmApiKey}&format=json&limit={$limit}";
+
+	$current_time = time();
+	$expire_time = $hours * 0.1;
+
+	$file_time = filemtime($file);
+
+	//decisions, decisions
+	if(file_exists($file) && ($current_time - $expire_time < $file_time)) {
+		//echo 'returning from cached file';
+		return file_get_contents($file);
+	}	else {
+		$content = get_url($url);
+		// $content.= '<!-- cached:  '.time().'-->';
+		file_put_contents($file,$content);
+		//echo 'retrieved fresh from '.$url.':: '.$content;
+		return $content;
+	}
+
+}
 
 function getInsta($limit) {
-					$accessToken = "30604045.bf289e2.1ea23109549e464d83d4c41eef6df6c1";
-					$url = "https://api.instagram.com/v1/users/self/media/recent/?access_token={$accessToken}";
-					$result = file_get_contents($url);
-					$json = json_decode($result, true);
-					$photos = array();
-					for ($a = 0; $a == $limit; $a++) {
-					    $photosResult = $json['data'][$a]['images']['thumbnail'];
-					    $photos[] = $photosResult;
-					}
-					return $photos;
-				}
+		$accessToken = "30604045.bf289e2.1ea23109549e464d83d4c41eef6df6c1";
+		$url = "https://api.instagram.com/v1/users/self/media/recent/?access_token={$accessToken}";
+		$result = file_get_contents($url);
+		$json = json_decode($result, true);
+		$photos = array();
+		for ($a = 0; $a == $limit; $a++) {
+		    $photosResult = $json['data'][$a]['images']['thumbnail'];
+		    $photos[] = $photosResult;
+		}
+		return $photos;
+	}
+
+/* gets the contents of a file if it exists, otherwise grabs and caches */
+function get_content($file,$url,$hours = 24) {
+
+	//vars
+	$current_time = time();
+	$expire_time = $hours * 60;
+	$file_time = filemtime($file);
+
+	//decisions, decisions
+	if(file_exists($file) && ($current_time - $expire_time < $file_time)) {
+		//echo 'returning from cached file';
+		return file_get_contents($file);
+	}	else {
+		$content = get_url($url);
+		// $content.= '<!-- cached:  '.time().'-->';
+		file_put_contents($file,$content);
+		//echo 'retrieved fresh from '.$url.':: '.$content;
+		return $content;
+	}
+
+}
+
+/* gets content from a URL via curl */
+function get_url($url) {
+	$ch = curl_init();
+	curl_setopt($ch,CURLOPT_URL,$url);
+	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,5);
+	$content = curl_exec($ch);
+	curl_close($ch);
+	return $content;
+}
+
+// $h = get_url($h);
+
+// r($h);
 
 // $analytics = initializeAnalytics();
 // $profile = getFirstProfileId($analytics);
@@ -307,23 +372,39 @@ function getInsta($limit) {
 //   $t2 = date('Y-m-d');
 
 //   $params = array(
-//               'max-results' => 10,
-//               'dimensions' => 'ga:pagePath,ga:pageTitle',
-//               'sort' => '-ga:pageviews',
-//           );
+//     'max-results' => 10,
+//     'dimensions' => 'ga:pagePath,ga:pageTitle',
+//     'sort' => '-ga:pageviews',
+//   );
 
-//   $a = $analytics->data_ga->get(
+//   $file = 'cache/google_analytics.json';
+
+// 	$current_time = time();
+// 	$hours = 24;
+// 	$expire_time = $hours * 0.1;
+// 	$file_time = filemtime($file);
+
+// 	if(file_exists($file) && ($current_time - $expire_time < $file_time)) {
+// 		//echo 'returning from cached file';
+// 		return file_get_contents($file);
+// 		echo "rá";
+// 	}	else {
+// 	  $a = $analytics->data_ga->get(
 //       'ga:' . $profileId,
 //       $t,
 //       $t2,
 //       'ga:pageviews',
 //       $params);
-// r($a['rows']);
 
-//   return $a['rows'];
+// 		$content = $a['rows'];
+//     // json_decode($content, true);
+// 		// $content.= '// <!-- cached:  '.time().'-->';
+// 		file_put_contents($file, $content);
+// 		//echo 'retrieved fresh from '.$url.':: '.$content;
+// 		return $content;
+// 	}
+
 // }
-
-// $teste = getResults($analytics, $profile);
 
 // function printResults($results) {
 //   // Parses the response from the Core Reporting API and prints
