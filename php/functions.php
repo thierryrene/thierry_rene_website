@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
     function checkConfig() {
 
             global $pdo;
@@ -298,9 +302,16 @@ function get_url($url) {
 	return $content;
 }
 
-// $h = get_url($h);
+$pinterest = get_url('https://api.pinterest.com/v1/users/thierryrenematos/?access_token=ATf3Zszvh2Dcnim-k1JesVoVn8YCFRawPywPS19Eu2t_PUBH1AAAAAA&fields=first_name%2Cid%2Clast_name%2Curl%2Caccount_type%2Cusername%2Ccreated_at%2Cbio%2Ccounts%2Cimage');
 
-// r($h);
+r($pinterest);
+
+// // Login
+// $bot->auth->login('td_matos@terra.com.br', '*th241089');
+
+// // Get lists of your boards
+// $boards = $bot->boards->forUser('thierryrenematos');
+
 
 // $analytics = initializeAnalytics();
 // $profile = getFirstProfileId($analytics);
@@ -431,3 +442,5 @@ function get_url($url) {
 //     print "No results found.\n";
 //   }
 // }
+
+

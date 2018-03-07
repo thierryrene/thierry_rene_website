@@ -13,9 +13,14 @@ class ComposerStaticInita1f060cca460c0aec66e6f3e0ed6d674
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
         '7cca0da9604df282f16d129f538c9833' => __DIR__ . '/..' . '/digitalnature/php-ref/ref.php',
+        '5c2defbf7f7cf93c47ed4965a7eb595e' => __DIR__ . '/..' . '/seregazhuk/pinterest-bot/src/Helpers/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        's' => 
+        array (
+            'seregazhuk\\PinterestBot\\' => 24,
+        ),
         'p' => 
         array (
             'phpseclib\\' => 10,
@@ -65,9 +70,17 @@ class ComposerStaticInita1f060cca460c0aec66e6f3e0ed6d674
             'Firebase\\JWT\\' => 13,
             'Faker\\' => 6,
         ),
+        'D' => 
+        array (
+            'DirkGroenen\\Pinterest\\' => 22,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'seregazhuk\\PinterestBot\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/seregazhuk/pinterest-bot/src',
+        ),
         'phpseclib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
@@ -155,6 +168,10 @@ class ComposerStaticInita1f060cca460c0aec66e6f3e0ed6d674
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
+        ),
+        'DirkGroenen\\Pinterest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dirkgroenen/pinterest-api-php/src/Pinterest',
         ),
     );
 
