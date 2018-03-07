@@ -5,6 +5,7 @@ namespace Lumen\Installer\Console;
 use ZipArchive;
 use RuntimeException;
 use GuzzleHttp\Client;
+use Symfony\Component\Process\Process;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -39,8 +40,7 @@ class NewCommand extends Command
         }
 
         $this->verifyApplicationDoesntExist(
-            $directory = getcwd().'/'.$input->getArgument('name'),
-            $output
+            $directory = getcwd().'/'.$input->getArgument('name')
         );
 
         $output->writeln('<info>Crafting application...</info>');
@@ -48,6 +48,28 @@ class NewCommand extends Command
         $this->download($zipFile = $this->makeFilename())
              ->extract($zipFile, $directory)
              ->cleanUp($zipFile);
+
+        $composer = $this->findComposer();
+
+        $commands = [
+            $composer.' install --no-scripts',
+        ];
+
+        if ($input->getOption('no-ansi')) {
+            $commands = array_map(function ($value) {
+                return $value.' --no-ansi';
+            }, $commands);
+        }
+
+        $process = new Process(implode(' && ', $commands), $directory, null, null, null);
+
+        if ('\\' !== DIRECTORY_SEPARATOR && file_exists('/dev/tty') && is_readable('/dev/tty')) {
+            $process->setTty(true);
+        }
+
+        $process->run(function ($type, $line) use ($output) {
+            $output->write($line);
+        });
 
         $output->writeln('<comment>Application ready! Build something amazing.</comment>');
     }
@@ -58,7 +80,7 @@ class NewCommand extends Command
      * @param  string  $directory
      * @return void
      */
-    protected function verifyApplicationDoesntExist($directory, OutputInterface $output)
+    protected function verifyApplicationDoesntExist($directory)
     {
         if (is_dir($directory)) {
             throw new RuntimeException('Application already exists!');
@@ -123,5 +145,19 @@ class NewCommand extends Command
         @unlink($zipFile);
 
         return $this;
+    }
+
+    /**
+     * Get the composer command for the environment.
+     *
+     * @return string
+     */
+    protected function findComposer()
+    {
+        if (file_exists(getcwd().'/composer.phar')) {
+            return '"'.PHP_BINARY.'" composer.phar';
+        }
+
+        return 'composer';
     }
 }

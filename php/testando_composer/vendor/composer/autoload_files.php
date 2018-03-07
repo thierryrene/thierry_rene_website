@@ -12,5 +12,4 @@ return array(
     '37a3dc5111fe8f707ab4c132ef1dbc62' => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php',
     'decc78cc4436b1292c6c0d151b19445c' => $vendorDir . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
     '7cca0da9604df282f16d129f538c9833' => $vendorDir . '/digitalnature/php-ref/ref.php',
-    '5c2defbf7f7cf93c47ed4965a7eb595e' => $vendorDir . '/seregazhuk/pinterest-bot/src/Helpers/functions.php',
 );

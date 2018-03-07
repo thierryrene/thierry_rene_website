@@ -6,10 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'seregazhuk\\PinterestBot\\' => array($vendorDir . '/seregazhuk/pinterest-bot/src'),
     'phpseclib\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
-    'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
     'Symfony\\Component\\DomCrawler\\' => array($vendorDir . '/symfony/dom-crawler'),
