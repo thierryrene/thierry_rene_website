@@ -29,8 +29,16 @@ $(document).ready(function() {
 
 		  var database = firebase.database();
 		  
-	ga('send', 'event', 'Videos', 'play', 'Fall Campaign');
 	
+	var n = 0;
+	
+	$('body, img, div')
+	  .mouseenter(function() {
+	  	var el = $(this);
+	    n += 1;
+	    ga('send', 'event', 'Imagem Animada', 'Passou o Mouse', 'Campanha do Nada');
+	    console.log('mouse hahaha! [' + n + ']' + el.attr('name'));
+	  });
 
 });
 

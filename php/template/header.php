@@ -134,6 +134,9 @@ $lastFmStatus = checkSpecConfig(1);
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MDLCV8Z');</script>
   <!-- End Google Tag Manager -->
+
+  <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
   
   <!-- Google Analytics -->
   <script>
@@ -143,6 +146,7 @@ $lastFmStatus = checkSpecConfig(1);
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
+
 
 </head>
 
