@@ -12,7 +12,7 @@ $lastFmStatus = checkSpecConfig(1);
 <html lang="pt-br">
 <!--
   _________________________________
-/ Desenvolvido por Thierry Rene Web \
+/ Desenvolvido por @thierryrenemts \
 | Developer | <?= $_SERVER['SERVER_NAME']; ?> |
 \ @thierryrenne                     /
   ---------------------------------
@@ -135,17 +135,21 @@ $lastFmStatus = checkSpecConfig(1);
   })(window,document,'script','dataLayer','GTM-MDLCV8Z');</script>
   <!-- End Google Tag Manager -->
 
+  <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
+
 </head>
 
 <body>
 
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDLCV8Z"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDLCV8Z" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!--[if lt IE 7]>
-            <p class="chromeframe">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor <a href="//browsehappy.com/">atualize o seu navegador</a> ou <a href="//www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar a navegação.</p>
+    <p class="chromeframe">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor <a href="//browsehappy.com/">atualize o seu navegador</a> ou <a href="//www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar a navegação.</p>
   <![endif]-->
 
   <!-- content goes here -->
@@ -186,11 +190,10 @@ $lastFmStatus = checkSpecConfig(1);
 
         <div class="col-md-12">
 
-          <img id="thierry-photo" class="img-responsive img-circle" src="https://avatars1.githubusercontent.com/u/1225308?s=400&u=5b7f93504bc654c9f6076e1b1b4a249a2a0ab697&v=4" alt="Thierry Rene Web Developer">
+          <img data-anijs="if: mouseover, on: img, do: swing animated" id="thierry-photo" class="img-responsive img-circle" src="https://avatars1.githubusercontent.com/u/1225308?s=400&u=5b7f93504bc654c9f6076e1b1b4a249a2a0ab697&v=4" alt="Thierry Rene Web Developer">
 
           <div class="intro">
             <span id="name" class="name">Thierry Rene Matos</span>
-
             <hr id="star-hr" class="star-hr">
             <span id="prof" class="skills">web developer</span>
           </div>

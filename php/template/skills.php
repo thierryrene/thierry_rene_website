@@ -15,7 +15,7 @@
 
 				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 					<span>
-		              <i class="fa fa-thumbs-o-up fa-4x"></i>
+		              <i data-anijs="if: mouseover, on:i, do: pulse animated, to:i" class="fa fa-thumbs-o-up fa-4x"></i>
 		              <h3>UI & UX</h3>
 		            </span>
 				</div>

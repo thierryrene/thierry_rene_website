@@ -29,7 +29,7 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('HOST', $_SERVER['SERVER_NAME']);
 }
 
-require_once 'testando_composer/vendor/autoload.php';
+require_once 'composer/vendor/autoload.php';
 
 function connect() {
   try {
@@ -37,7 +37,7 @@ function connect() {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->exec('set names utf8');
   } catch (PDOexception $e) {
-    "erro: {$e->getMessage()}";
+    echo "erro: {$e->getMessage()}";
   }
   return $pdo;
 }
