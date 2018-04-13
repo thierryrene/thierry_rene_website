@@ -28,6 +28,9 @@ $(document).ready(function() {
 		  firebase.initializeApp(firebaseConfig);
 
 		  var database = firebase.database();
+		  
+	ga('send', 'event', 'Videos', 'play', 'Fall Campaign');
+	
 
 });
 
