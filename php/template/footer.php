@@ -89,7 +89,6 @@
 				<div class="col-lg-12">
 					<h5>Copyright &copy; <br class="visible-xs"><a style="color:snow; text-decoration:none;" href="/?drop=1"><?= $seoData['author']; ?></a> 2009 / <?= date('Y'); ?></h5>
 				</div>
-				<button id="addToCartButton">test</button>
 			</div>
 
 		</div>

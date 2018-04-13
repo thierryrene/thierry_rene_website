@@ -39,6 +39,31 @@ $(document).ready(function() {
 	    ga('send', 'event', 'Imagem Animada', 'Passou o Mouse', 'Campanha do Nada');
 	    console.log('passou o mouse hahaha! [' + n + ']');
 	  });
-
+	  
+	$(document).on('click', 'i.fa.fa-facebook', function () {
+		ga('send', 'event', 'social-link-click', 'facebook-link-click');
+		console.log('facebook link click!');
+	});
+	
+	$(document).on('click', 'i.fa.fa-linkedin', function () {
+		ga('send', 'event', 'social-link-click', 'linkedin-link-click');
+		console.log('linkedin link click!');
+	});
+	
+	$(document).on('click', 'i.fa.fa-twitter', function () {
+		ga('send', 'event', 'social-link-click', 'twitter-link-click');
+		console.log('twitter link click!');
+	});
+	
+	$(document).on('click', 'i.fa.fa-google-plus', function () {
+		ga('send', 'event', 'social-link-click', 'google-plus-link-click');
+		console.log('google-plus link click!');
+	});
+	
+	$(document).on('click', 'i.fa.fa-github', function () {
+		ga('send', 'event', 'social-link-click', 'github-plus-link-click');
+		console.log('github link click!');
+	});
+	
 });
 
