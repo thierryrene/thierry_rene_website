@@ -26,20 +26,20 @@
 class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Resource
 {
   /**
-   * Creates a job to run DLP actions such as scanning storage for sensitive
-   * information on a set schedule. (jobTriggers.create)
+   * Creates a job trigger to run DLP actions such as scanning storage for
+   * sensitive information on a set schedule. (jobTriggers.create)
    *
    * @param string $parent The parent resource name, for example projects/my-
    * project-id.
-   * @param Google_Service_DLP_GooglePrivacyDlpV2beta2CreateJobTriggerRequest $postBody
+   * @param Google_Service_DLP_GooglePrivacyDlpV2CreateJobTriggerRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DLP_GooglePrivacyDlpV2beta2JobTrigger
+   * @return Google_Service_DLP_GooglePrivacyDlpV2JobTrigger
    */
-  public function create($parent, Google_Service_DLP_GooglePrivacyDlpV2beta2CreateJobTriggerRequest $postBody, $optParams = array())
+  public function create($parent, Google_Service_DLP_GooglePrivacyDlpV2CreateJobTriggerRequest $postBody, $optParams = array())
   {
     $params = array('parent' => $parent, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_DLP_GooglePrivacyDlpV2beta2JobTrigger");
+    return $this->call('create', array($params), "Google_Service_DLP_GooglePrivacyDlpV2JobTrigger");
   }
   /**
    * Deletes a job trigger. (jobTriggers.delete)
@@ -61,13 +61,13 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * @param string $name Resource name of the project and the triggeredJob, for
    * example `projects/dlp-test-project/jobTriggers/53234423`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DLP_GooglePrivacyDlpV2beta2JobTrigger
+   * @return Google_Service_DLP_GooglePrivacyDlpV2JobTrigger
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_DLP_GooglePrivacyDlpV2beta2JobTrigger");
+    return $this->call('get', array($params), "Google_Service_DLP_GooglePrivacyDlpV2JobTrigger");
   }
   /**
    * Lists job triggers. (jobTriggers.listProjectsJobTriggers)
@@ -93,27 +93,27 @@ class Google_Service_DLP_Resource_ProjectsJobTriggers extends Google_Service_Res
    * the triggeredJob status.
    * @opt_param int pageSize Optional size of the page, can be limited by a
    * server.
-   * @return Google_Service_DLP_GooglePrivacyDlpV2beta2ListJobTriggersResponse
+   * @return Google_Service_DLP_GooglePrivacyDlpV2ListJobTriggersResponse
    */
   public function listProjectsJobTriggers($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_DLP_GooglePrivacyDlpV2beta2ListJobTriggersResponse");
+    return $this->call('list', array($params), "Google_Service_DLP_GooglePrivacyDlpV2ListJobTriggersResponse");
   }
   /**
    * Updates a job trigger. (jobTriggers.patch)
    *
    * @param string $name Resource name of the project and the triggeredJob, for
    * example `projects/dlp-test-project/jobTriggers/53234423`.
-   * @param Google_Service_DLP_GooglePrivacyDlpV2beta2UpdateJobTriggerRequest $postBody
+   * @param Google_Service_DLP_GooglePrivacyDlpV2UpdateJobTriggerRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DLP_GooglePrivacyDlpV2beta2JobTrigger
+   * @return Google_Service_DLP_GooglePrivacyDlpV2JobTrigger
    */
-  public function patch($name, Google_Service_DLP_GooglePrivacyDlpV2beta2UpdateJobTriggerRequest $postBody, $optParams = array())
+  public function patch($name, Google_Service_DLP_GooglePrivacyDlpV2UpdateJobTriggerRequest $postBody, $optParams = array())
   {
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_DLP_GooglePrivacyDlpV2beta2JobTrigger");
+    return $this->call('patch', array($params), "Google_Service_DLP_GooglePrivacyDlpV2JobTrigger");
   }
 }

@@ -95,6 +95,8 @@ class Google_Service_DeploymentManager_Resource_Deployments extends Google_Servi
    * @param Google_Service_DeploymentManager_Deployment $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string createPolicy Sets the policy to use for creating new
+   * resources.
    * @opt_param bool preview If set to true, creates a deployment and creates
    * "shell" resources but does not actually instantiate these resources. This
    * allows you to preview what your deployment looks like. After previewing a

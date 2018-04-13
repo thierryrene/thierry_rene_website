@@ -24,6 +24,7 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   protected $alwaysOnVpnPackageType = 'Google_Service_AndroidManagement_AlwaysOnVpnPackage';
   protected $alwaysOnVpnPackageDataType = '';
   public $androidDevicePolicyTracks;
+  public $appAutoUpdatePolicy;
   protected $applicationsType = 'Google_Service_AndroidManagement_ApplicationPolicy';
   protected $applicationsDataType = 'array';
   public $autoTimeRequired;
@@ -40,6 +41,9 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public $dataRoamingDisabled;
   public $debuggingFeaturesAllowed;
   public $defaultPermissionPolicy;
+  protected $deviceOwnerLockScreenInfoType = 'Google_Service_AndroidManagement_UserFacingMessage';
+  protected $deviceOwnerLockScreenInfoDataType = '';
+  public $encryptionPolicy;
   public $ensureVerifyAppsEnabled;
   public $factoryResetDisabled;
   public $frpAdminEmails;
@@ -49,6 +53,7 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public $keyguardDisabled;
   public $keyguardDisabledFeatures;
   public $kioskCustomLauncherEnabled;
+  public $locationMode;
   protected $longSupportMessageType = 'Google_Service_AndroidManagement_UserFacingMessage';
   protected $longSupportMessageDataType = '';
   public $maximumTimeToLock;
@@ -74,8 +79,10 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public $screenCaptureDisabled;
   public $setUserIconDisabled;
   public $setWallpaperDisabled;
+  public $shareLocationDisabled;
   protected $shortSupportMessageType = 'Google_Service_AndroidManagement_UserFacingMessage';
   protected $shortSupportMessageDataType = '';
+  public $skipFirstUseHintsEnabled;
   public $smsDisabled;
   public $statusBarDisabled;
   protected $statusReportingSettingsType = 'Google_Service_AndroidManagement_StatusReportingSettings';
@@ -87,6 +94,7 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public $uninstallAppsDisabled;
   public $unmuteMicrophoneDisabled;
   public $usbFileTransferDisabled;
+  public $usbMassStorageEnabled;
   public $version;
   public $vpnConfigDisabled;
   public $wifiConfigDisabled;
@@ -137,6 +145,14 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public function getAndroidDevicePolicyTracks()
   {
     return $this->androidDevicePolicyTracks;
+  }
+  public function setAppAutoUpdatePolicy($appAutoUpdatePolicy)
+  {
+    $this->appAutoUpdatePolicy = $appAutoUpdatePolicy;
+  }
+  public function getAppAutoUpdatePolicy()
+  {
+    return $this->appAutoUpdatePolicy;
   }
   /**
    * @param Google_Service_AndroidManagement_ApplicationPolicy
@@ -262,6 +278,28 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   {
     return $this->defaultPermissionPolicy;
   }
+  /**
+   * @param Google_Service_AndroidManagement_UserFacingMessage
+   */
+  public function setDeviceOwnerLockScreenInfo(Google_Service_AndroidManagement_UserFacingMessage $deviceOwnerLockScreenInfo)
+  {
+    $this->deviceOwnerLockScreenInfo = $deviceOwnerLockScreenInfo;
+  }
+  /**
+   * @return Google_Service_AndroidManagement_UserFacingMessage
+   */
+  public function getDeviceOwnerLockScreenInfo()
+  {
+    return $this->deviceOwnerLockScreenInfo;
+  }
+  public function setEncryptionPolicy($encryptionPolicy)
+  {
+    $this->encryptionPolicy = $encryptionPolicy;
+  }
+  public function getEncryptionPolicy()
+  {
+    return $this->encryptionPolicy;
+  }
   public function setEnsureVerifyAppsEnabled($ensureVerifyAppsEnabled)
   {
     $this->ensureVerifyAppsEnabled = $ensureVerifyAppsEnabled;
@@ -333,6 +371,14 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public function getKioskCustomLauncherEnabled()
   {
     return $this->kioskCustomLauncherEnabled;
+  }
+  public function setLocationMode($locationMode)
+  {
+    $this->locationMode = $locationMode;
+  }
+  public function getLocationMode()
+  {
+    return $this->locationMode;
   }
   /**
    * @param Google_Service_AndroidManagement_UserFacingMessage
@@ -524,6 +570,14 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   {
     return $this->setWallpaperDisabled;
   }
+  public function setShareLocationDisabled($shareLocationDisabled)
+  {
+    $this->shareLocationDisabled = $shareLocationDisabled;
+  }
+  public function getShareLocationDisabled()
+  {
+    return $this->shareLocationDisabled;
+  }
   /**
    * @param Google_Service_AndroidManagement_UserFacingMessage
    */
@@ -537,6 +591,14 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public function getShortSupportMessage()
   {
     return $this->shortSupportMessage;
+  }
+  public function setSkipFirstUseHintsEnabled($skipFirstUseHintsEnabled)
+  {
+    $this->skipFirstUseHintsEnabled = $skipFirstUseHintsEnabled;
+  }
+  public function getSkipFirstUseHintsEnabled()
+  {
+    return $this->skipFirstUseHintsEnabled;
   }
   public function setSmsDisabled($smsDisabled)
   {
@@ -621,6 +683,14 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public function getUsbFileTransferDisabled()
   {
     return $this->usbFileTransferDisabled;
+  }
+  public function setUsbMassStorageEnabled($usbMassStorageEnabled)
+  {
+    $this->usbMassStorageEnabled = $usbMassStorageEnabled;
+  }
+  public function getUsbMassStorageEnabled()
+  {
+    return $this->usbMassStorageEnabled;
   }
   public function setVersion($version)
   {
