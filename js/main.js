@@ -32,12 +32,12 @@ $(document).ready(function() {
 	
 	var n = 0;
 	
-	$('body, img, div')
+	$('img#thierry-photo')
 	  .mouseenter(function() {
 	  	var el = $(this);
 	    n += 1;
 	    ga('send', 'event', 'Imagem Animada', 'Passou o Mouse', 'Campanha do Nada');
-	    console.log('mouse hahaha! [' + n + ']' + el.attr('name'));
+	    console.log('passou o mouse hahaha! [' + n + ']');
 	  });
 
 });
