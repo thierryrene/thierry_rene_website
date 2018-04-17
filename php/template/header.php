@@ -144,7 +144,7 @@ $lastFmStatus = checkSpecConfig(1);
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-44800877-1', 'auto');
     ga('send', 'pageview');
-    
+    ga('set', 'userId', 'USER_ID');
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
