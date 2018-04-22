@@ -55,7 +55,7 @@ $lastFmStatus = checkSpecConfig(1);
 
   <!-- links -->
   <link rel="author" type="text/plain" href="//<?= $_SERVER['SERVER_NAME']; ?>/humans.txt">
-  <link rel="canonical" href="//<?= $_SERVER['SERVER_NAME']; ?>/">
+  <link rel="canonical" href="https://<?= $_SERVER['SERVER_NAME']; ?>/">
 
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="jFl3YjCJQwqPYXLZxiOXjt1ekyfxmDcLZNFukIWZLSY" />

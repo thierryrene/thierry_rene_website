@@ -6,10 +6,14 @@
  */
 
 $(document).ready(function() {
-
-	navigator.serviceWorker && navigator.serviceWorker.register('https://' + window.location.hostname + '/sw.js').then(function(registration) {
-		console.log('Excellent, registered with scope: ', registration.scope);
-	});
+	
+	if('serviceWorker' in navigator) {
+		navigator.serviceWorker
+		.register('https://' + window.location.hostname + '/sw.js')
+		.then(function(registration) {
+			console.log('Excellent, registered with scope: ', registration.scope);
+		});
+	}
 
 	$('.navbar').addClass('animated fadeInUp').css('animation-delay', '1s');
 
