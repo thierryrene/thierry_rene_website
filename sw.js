@@ -8,6 +8,7 @@ self.addEventListener('install', function(e) {
         '/js/main.js',
         '/js/cache-polyfill.js',
         '/css/app.css',
+        '/',
         'cache/index.html'
       ]);
     })
