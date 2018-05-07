@@ -8,7 +8,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('SERVERNAME', '127.0.0.1');
-  define('USERNAME', 'thierryrene');
+  define('USERNAME', 'root');
   define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
   define('DEBUG', false);
