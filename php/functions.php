@@ -18,7 +18,7 @@ error_reporting(E_ALL);
             }
     }
 
-    function checkSpecConfig($id) {
+     function checkSpecConfig($id) {
 
             global $pdo;
 
@@ -291,20 +291,20 @@ function get_content($file,$url,$hours = 24) {
 
 }
 
-/* gets content from a URL via curl */
-function get_url($url) {
-	$ch = curl_init();
-	curl_setopt($ch,CURLOPT_URL,$url);
-	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-	curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,5);
-	$content = curl_exec($ch);
-	curl_close($ch);
-	return $content;
-}
+// /* gets content from a URL via curl */
+// function get_url($url) {
+// 	$ch = curl_init();
+// 	curl_setopt($ch,CURLOPT_URL,$url);
+// 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+// 	curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,5);
+// 	$content = curl_exec($ch);
+// 	curl_close($ch);
+// 	return $content;
+// }
 
-$pinterest = get_url('https://api.pinterest.com/v1/users/thierryrenematos/?access_token=ATf3Zszvh2Dcnim-k1JesVoVn8YCFRawPywPS19Eu2t_PUBH1AAAAAA&fields=first_name%2Cid%2Clast_name%2Curl%2Caccount_type%2Cusername%2Ccreated_at%2Cbio%2Ccounts%2Cimage');
+// $pinterest = get_url('https://api.pinterest.com/v1/users/thierryrenematos/?access_token=ATf3Zszvh2Dcnim-k1JesVoVn8YCFRawPywPS19Eu2t_PUBH1AAAAAA&fields=first_name%2Cid%2Clast_name%2Curl%2Caccount_type%2Cusername%2Ccreated_at%2Cbio%2Ccounts%2Cimage');
 
-r($pinterest);
+// r($pinterest);
 
 // // Login
 // $bot->auth->login('td_matos@terra.com.br', '*th241089');
