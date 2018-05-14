@@ -26,14 +26,14 @@
 
 					<div class="list-icons">
 
-						<a target="_blank" href="//www.facebook.com/thierryrenesantosmatos" class="facebook">
+						<a target="_blank" href="//facebook.com/thierryrenesantosmatos" class="facebook">
 							<span class="fa-stack fa-lg">
                   <i class="fa fa-square-o fa-stack-2x"></i>
                   <i class="fa fa-facebook fa-stack-1x"></i>
                 </span>
 						</a>
 
-						<a target="_blank" href="//br.linkedin.com/pub/thierry-rene/2a/a7a/a7a" class="linkedin">
+						<a target="_blank" href="//linkedin.com/in/thierryrenematos/" class="linkedin">
 							<span class="fa-stack fa-lg">
                   <i class="fa fa-square-o fa-stack-2x"></i>
                   <i class="fa fa-linkedin fa-stack-1x"></i>
@@ -47,7 +47,7 @@
                 </span>
 						</a>
 
-						<a target="_blank" href="//plus.google.com/u/0/115712645340506483249" class="googleplus">
+						<a target="_blank" href="//plus.google.com/u/0/+ThierryReneSantosMatos" class="googleplus">
 							<span class="fa-stack fa-lg">
                   <i class="fa fa-square-o fa-stack-2x"></i>
                   <i class="fa fa-google-plus fa-stack-1x"></i>
@@ -89,7 +89,6 @@
 				<div class="col-lg-12">
 					<h5>Copyright &copy; <br class="visible-xs"><a style="color:snow; text-decoration:none;" href="/?drop=1"><?= $seoData['author']; ?></a> 2009 / <?= date('Y'); ?></h5>
 				</div>
-				<button id="addToCartButton">test</button>
 			</div>
 
 		</div>

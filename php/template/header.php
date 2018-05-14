@@ -12,7 +12,7 @@ $lastFmStatus = checkSpecConfig(1);
 <html lang="pt-br">
 <!--
   _________________________________
-/ Desenvolvido por Thierry Rene Web \
+/ Desenvolvido por @thierryrenemts \
 | Developer | <?= $_SERVER['SERVER_NAME']; ?> |
 \ @thierryrenne                     /
   ---------------------------------
@@ -55,10 +55,10 @@ $lastFmStatus = checkSpecConfig(1);
 
   <!-- links -->
   <link rel="author" type="text/plain" href="//<?= $_SERVER['SERVER_NAME']; ?>/humans.txt">
-  <link rel="canonical" href="//<?= $_SERVER['SERVER_NAME']; ?>/">
+  <link rel="canonical" href="https://<?= $_SERVER['SERVER_NAME']; ?>/">
 
   <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="ZjrrHSVfP-yMddXTenY3nS4XmBFmJmJYMAx1tML0AtM" />
+  <meta name="google-site-verification" content="jFl3YjCJQwqPYXLZxiOXjt1ekyfxmDcLZNFukIWZLSY" />
 
   <!-- <link rel="stylesheet" href="css/base/normalize.css"> -->
   <!-- <link rel="stylesheet" href="css/base/main.css"> -->
@@ -109,6 +109,24 @@ $lastFmStatus = checkSpecConfig(1);
 
   <!-- jQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  
+  <!--FULLSTORY SNIPPET-->
+  <script>
+    window['_fs_debug'] = false;
+    window['_fs_host'] = 'fullstory.com';
+    window['_fs_org'] = 'AWZRQ';
+    window['_fs_namespace'] = 'FS';
+    (function(m,n,e,t,l,o,g,y){
+        if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+        g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+        o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+        y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+        g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+        y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+        g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+        g.clearUserCookie=function(){};
+    })(window,document,window['_fs_namespace'],'script','user');
+  </script>
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -118,17 +136,31 @@ $lastFmStatus = checkSpecConfig(1);
   })(window,document,'script','dataLayer','GTM-MDLCV8Z');</script>
   <!-- End Google Tag Manager -->
 
+  <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
+  
+  <!-- Google Analytics -->
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-44800877-1', 'auto');
+    ga('send', 'pageview');
+    ga('set', 'userId', 'USER_ID');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
+
 </head>
 
 <body>
 
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDLCV8Z"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDLCV8Z" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!--[if lt IE 7]>
-            <p class="chromeframe">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor <a href="//browsehappy.com/">atualize o seu navegador</a> ou <a href="//www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar a navegação.</p>
+    <p class="chromeframe">Você está utilizando um navegador <strong>desatualizado</strong>. Por favor <a href="//browsehappy.com/">atualize o seu navegador</a> ou <a href="//www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar a navegação.</p>
   <![endif]-->
 
   <!-- content goes here -->
@@ -169,11 +201,10 @@ $lastFmStatus = checkSpecConfig(1);
 
         <div class="col-md-12">
 
-          <img id="thierry-photo" class="img-responsive img-circle" src="https://avatars1.githubusercontent.com/u/1225308?s=400&u=5b7f93504bc654c9f6076e1b1b4a249a2a0ab697&v=4" alt="Thierry Rene Web Developer">
+          <img data-anijs="if: mouseover, on: img, do: swing animated" id="thierry-photo" class="img-responsive img-circle" src="https://avatars1.githubusercontent.com/u/1225308?s=400&u=5b7f93504bc654c9f6076e1b1b4a249a2a0ab697&v=4" alt="Thierry Rene Web Developer">
 
           <div class="intro">
             <span id="name" class="name">Thierry Rene Matos</span>
-
             <hr id="star-hr" class="star-hr">
             <span id="prof" class="skills">web developer</span>
           </div>

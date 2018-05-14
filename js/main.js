@@ -7,9 +7,13 @@
 
 $(document).ready(function() {
 
-	navigator.serviceWorker && navigator.serviceWorker.register('https://' + window.location.hostname + '/sw.js').then(function(registration) {
-		console.log('Excellent, registered with scope: ', registration.scope);
-	});
+	// if('serviceWorker' in navigator) {
+	// 	navigator.serviceWorker
+	// 	.register('https://' + window.location.hostname + '/sw.js')
+	// 	.then(function(registration) {
+	// 		console.log('Excellent, registered with scope: ', registration.scope);
+	// 	});
+	// }
 
 	$('.navbar').addClass('animated fadeInUp').css('animation-delay', '1s');
 
@@ -28,6 +32,42 @@ $(document).ready(function() {
 		  firebase.initializeApp(firebaseConfig);
 
 		  var database = firebase.database();
+
+
+	var n = 0;
+
+	$('img#thierry-photo')
+	  .mouseenter(function() {
+	  	var el = $(this);
+	    n += 1;
+	    ga('send', 'event', 'Imagem Animada', 'Passou o Mouse', 'Campanha do Nada');
+	    console.log('passou o mouse hahaha! [' + n + ']');
+	  });
+
+	$(document).on('click', 'i.fa.fa-facebook', function () {
+		ga('send', 'event', 'social-link-click', 'facebook-link-click');
+		console.log('facebook link click!');
+	});
+
+	$(document).on('click', 'i.fa.fa-linkedin', function () {
+		ga('send', 'event', 'social-link-click', 'linkedin-link-click');
+		console.log('linkedin link click!');
+	});
+
+	$(document).on('click', 'i.fa.fa-twitter', function () {
+		ga('send', 'event', 'social-link-click', 'twitter-link-click');
+		console.log('twitter link click!');
+	});
+
+	$(document).on('click', 'i.fa.fa-google-plus', function () {
+		ga('send', 'event', 'social-link-click', 'google-plus-link-click');
+		console.log('google-plus link click!');
+	});
+
+	$(document).on('click', 'i.fa.fa-github', function () {
+		ga('send', 'event', 'social-link-click', 'github-plus-link-click');
+		console.log('github link click!');
+	});
 
 });
 
