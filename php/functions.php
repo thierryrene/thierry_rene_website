@@ -6,11 +6,11 @@ error_reporting(E_ALL);
 
 function checkConfig()
 {
-    
+
     global $pdo;
-    
+
     $status = $pdo->prepare("SELECT * FROM sis_config");
-    
+
     if ($status->execute()) {
         $result = $status->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -19,42 +19,27 @@ function checkConfig()
     }
 }
 
-<<<<<<< HEAD
-     function checkSpecConfig($id) {
-
-            global $pdo;
-
-            $status = $pdo->prepare("SELECT status FROM sis_config WHERE id = {$id}");
-
-            if ($status->execute()) {
-                $result = $status->fetch(PDO::FETCH_ASSOC);
-                return $result;
-            } else {
-                return "erro";
-            }
-=======
 function checkSpecConfig($id)
 {
-    
+
     global $pdo;
-    
+
     $status = $pdo->prepare("SELECT status FROM sis_config WHERE id = {$id}");
-    
+
     if ($status->execute()) {
         $result = $status->fetch(PDO::FETCH_ASSOC);
         return $result;
     } else {
         return "erro";
->>>>>>> e8292898dec14980511a518e4d1ff08dce97ebfd
     }
 }
 
 function powerConfig($configId)
 {
     global $pdo;
-    
+
     $query = $pdo->prepare("SELECT status FROM sis_config WHERE id = {$configId}");
-    
+
     if ($query->execute() == 1) {
         // $status = 'on';
         $turnOff = $pdo->prepare("UPDATE system_config SET status = 0 WHERE id = {$configId}");
@@ -64,7 +49,7 @@ function powerConfig($configId)
         $turnOn = $pdo->prepare("UPDATE system_config SET status = 1 WHERE id = {$configId}");
         $turnOn = $pdo->execute();
     }
-    
+
 }
 
 function getTableContents($table, $where = '')
@@ -178,7 +163,7 @@ function listActiveUsers()
                   <td><a href='http://" . HOST . "/php/admin/delete_user.php?id={$row['id']}'><button class='btn btn-danger btn-xs'>delete</button></a></td>
                   <td></td>
                 </tr>";
-                
+
             } else {
                 echo "<tr>
                   <td>{$row['id']}</td>
@@ -274,14 +259,14 @@ function getTopArtists($file, $limit, $hours = 24)
     $secret      = "2dd6c019e21201dfac20a227bb66131f";
     $user        = "thiiiii";
     $method      = "user.gettopartists";
-    
+
     $url = "http://ws.audioscrobbler.com/2.0/?method={$method}&user={$user}&api_key={$lasfmApiKey}&format=json&limit={$limit}";
-    
+
     $current_time = time();
     $expire_time  = $hours * 0.1;
-    
+
     $file_time = filemtime($file);
-    
+
     //decisions, decisions
     if (file_exists($file) && ($current_time - $expire_time < $file_time)) {
         //echo 'returning from cached file';
@@ -293,7 +278,7 @@ function getTopArtists($file, $limit, $hours = 24)
         //echo 'retrieved fresh from '.$url.':: '.$content;
         return $content;
     }
-    
+
 }
 
 function getInsta($limit)
@@ -313,12 +298,12 @@ function getInsta($limit)
 /* gets the contents of a file if it exists, otherwise grabs and caches */
 function get_content($file, $url, $hours = 24)
 {
-    
+
     //vars
     $current_time = time();
     $expire_time  = $hours * 60;
     $file_time    = filemtime($file);
-    
+
     //decisions, decisions
     if (file_exists($file) && ($current_time - $expire_time < $file_time)) {
         //echo 'returning from cached file';
@@ -330,7 +315,7 @@ function get_content($file, $url, $hours = 24)
         //echo 'retrieved fresh from '.$url.':: '.$content;
         return $content;
     }
-    
+
 }
 
 // /* gets content from a URL via curl */
