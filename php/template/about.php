@@ -71,7 +71,7 @@
 				<style type="text/css">
 				  	.swiper-container {
 				      width: 100%;
-				      height: auto;
+				      height: 200px;
 				    }
 				    .swiper-wrapper{
 				    	-webkit-transition-timing-function:linear!important;
