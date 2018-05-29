@@ -52,7 +52,7 @@
 
 
 		
-		<?php if ($lastFmStatus['status'] == 0) : ?>
+		<?php if ($lastFmStatus['status'] == 1) : ?>
 		
 			<hr>
 			
