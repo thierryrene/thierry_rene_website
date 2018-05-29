@@ -52,7 +52,7 @@
 
 
 		
-		<?php if ($lastFmStatus['status'] == 1) : ?>
+		<?php if ($lastFmStatus['status'] == 0) : ?>
 		
 			<hr>
 			
@@ -81,8 +81,8 @@
 				    .swiper-slide {
 				      text-align: center;
 				      font-size: 18px;
-				      width: 200px !important;
-				      height: 200px !important;
+				      width: 180px !important;
+				      height: 180px !important;
 				      background-size: cover;
 				      display: flex;
 				      justify-content: center;
@@ -98,15 +98,23 @@
 						
 								$tracks = getLastFmSongs(20);
 								
+								$imgSize = '200px';
 								foreach($tracks as $key => $data) : 
 
 							?>
 							
 								<div class="swiper-slide" style="background:url(<?php echo $data['image'][3]['#text']; ?>); background-size: cover;">
 									
-									<div style="width: 100%; padding: 10px 0px; background-color:#00000042;">
-										<p style="color: white; text-shadow: -5px 5px 10px #333333;"><?php echo $data['artist']['#text']; ?></p>
-										<p><a style="color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='<?php echo $data['url']; ?>' target='_blank'><?php echo $data['name']; ?></a></p>
+									<div style="width: 100%;
+											    position: absolute;
+											    padding: 5px 0px;
+											    bottom: 0%;
+											    background-color: #00000042;
+											    font-weight: bold;
+											    
+									">
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;"><?php echo $data['artist']['#text']; ?></p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='<?php echo $data['url']; ?>' target='_blank'><?php echo $data['name']; ?></a></p>
 									</div>
 
 								</div>
@@ -125,18 +133,18 @@
 					      mousewheel: true,
 					      loopFillGroupWithBlank: true,
 					      freeMode: true,
-					      effect: 'coverflow',
+					      // effect: 'coverflow',
 					      grabCursor: true,
 					      centeredSlides: true,
 					      slidesPerView: 'auto',
 					      speed: 6000,
-					      coverflowEffect: {
-					        rotate: 50,
-					        stretch: 0,
-					        depth: 100,
-					        modifier: 1,
-					        slideShadows : true,
-					      },
+					      // coverflowEffect: {
+					      //   rotate: 50,
+					      //   stretch: 0,
+					      //   depth: 100,
+					      //   modifier: 1,
+					      //   slideShadows : true,
+					      // },
 					      autoplay: {
 						    delay: 1,
 						  },
