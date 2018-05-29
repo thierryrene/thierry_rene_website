@@ -1,114 +1,43 @@
-// importScripts('js/cache-polyfill.js');
+//This is the "Offline copy of pages" service worker
 
-// var cacheName = 1;
+//Install stage sets up the index page (home page) in the cache and opens a new cache
+self.addEventListener('install', function(event) {
+  var indexPage = new Request('index.html');
+  event.waitUntil(
+    fetch(indexPage).then(function(response) {
+      return caches.open('pwabuilder-offline').then(function(cache) {
+        console.log('[PWA Builder] Cached index page during Install'+ response.url);
+        return cache.put(indexPage, response);
+      });
+  }));
+});
 
-// var filesToCache = [
-//         'cache/index.html',
-//         // '/',
-//         // 'js/main.js',
-//         // 'js/plugins.js',
-//         // '/manifest.json',
-//         // 'img/photo.webp',
-//         // 'favicons/favicons.ico',
-//         // 'css/app.css'
-// ];
+//If any fetch fails, it will look for the request in the cache and serve it from there first
+self.addEventListener('fetch', function(event) {
+  var updateCache = function(request){
+    return caches.open('pwabuilder-offline').then(function (cache) {
+      return fetch(request).then(function (response) {
+        console.log('[PWA Builder] add page to offline'+response.url)
+        return cache.put(request, response);
+      });
+    });
+  };
 
-// self.addEventListener('activate', function(e) {
-//   console.log('[ServiceWorker] Activate');
-//   e.waitUntil(
-//     caches.keys().then(function(keyList) {
-//       return Promise.all(keyList.map(function(key) {
-//         if (key !== cacheName) {
-//           console.log('[ServiceWorker] Removing old cache', key);
-//           return caches.delete(key);
-//         }
-//       }));
+  event.waitUntil(updateCache(event.request));
 
-// self.addEventListener('install', function(e) {
-//     e.waitUntil(
-//       caches.open('airhorner').then(function(cache) {
-//       return cache.addAll([
-//         '/js/cache-polyfill.js',
-//         '/js/main.js',
-//         '/js/cache-polyfill.js',
-//         '/css/app.css',
-//         '/',
-//         'cache/index.html'
-//       ]);
+  event.respondWith(
+    fetch(event.request).catch(function(error) {
+      console.log( '[PWA Builder] Network request Failed. Serving content from cache: ' + error );
 
-//     })
-//   );
-// });
-
-// self.addEventListener('fetch', function(event) {
-//   console.log(event.request.url);
-//   event.respondWith(
-//     caches.match(event.request).then(function(response) {
-//     return response || fetch(event.request);
-//   })
-// );
-
-// });
-
-
-
-// var filesToCache = [
-//         '/',
-//         'cache/index.html',
-//         'js/main.js',
-//         'js/plugins.js',
-//         '/manifest.json',
-//         'img/photo.webp',
-//         'favicons/favicons.ico',
-//         'css/app.css'
-// ];
-
-// self.addEventListener('activate', function(e) {
-//   console.log('[ServiceWorker] Activate');
-//   e.waitUntil(
-//     caches.keys().then(function(keyList) {
-//       return Promise.all(keyList.map(function(key) {
-//         if (key !== cacheName) {
-//           console.log('[ServiceWorker] Removing old cache', key);
-//           return caches.delete(key);
-//         }
-//       }));
-//     })
-//   );
-//   return self.clients.claim();
-// });
-
-// self.addEventListener('fetch', function(e) {
-//   console.log('[ServiceWorker] Fetch', e.request.url);
-//   e.respondWith(
-//     caches.match(e.request).then(function(response) {
-//       return response || fetch(e.request);
-//     })
-//   );
-// });
-
-// self.addEventListener('fetch', function(event) {
-//   event.respondWith(
-//     caches.match(event.request).then(function(response) {
-//       return response || fetch(event.request);
-//     })
-//   );
-// });
-
-// self.addEventListener('install', function(e) {
-//   e.waitUntil(
-//     caches.open('the-magic-cache').then(function(cache) {
-//       return cache.addAll([
-//         '/',
-//         'cache/index.html',
-//         'js/main.js',
-//         'js/plugins.js',
-//         '/manifest.json',
-//         'img/photo.webp',
-//         'favicons/favicons.ico',
-//         'css/app.css'
-//       ]);
-//     })
-//   );
-// });
->>>>>>> e8292898dec14980511a518e4d1ff08dce97ebfd
+      //Check to see if you have it in the cache
+      //Return response
+      //If not in the cache, then return error page
+      return caches.open('pwabuilder-offline').then(function (cache) {
+        return cache.match(event.request).then(function (matching) {
+          var report =  !matching || matching.status == 404?Promise.reject('no-match'): matching;
+          return report
+        });
+      });
+    })
+  );
+})
