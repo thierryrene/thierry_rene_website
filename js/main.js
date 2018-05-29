@@ -74,7 +74,7 @@ $(document).ready(function() {
 	    outClass: 'fade-out',
 	    inDuration: 1500,
 	    outDuration: 800,
-	    linkElement: '.animsition-link',
+	    // linkElement: '.animsition-link',
 	    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
 	    loading: true,
 	    loadingParentElement: 'body', //animsition wrapper element

@@ -175,7 +175,7 @@ $lastFmStatus = checkSpecConfig(1);
 
 </head>
 
-<body>
+<body class="animsition">
 
   <!-- Google Tag Manager (noscript) -->
   <noscript>
