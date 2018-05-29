@@ -119,6 +119,10 @@ $lastFmStatus = checkSpecConfig(1);
   <script src="//<?php echo ($_SERVER['SERVER_NAME'] == 'localhost' ? $_SERVER['SERVER_NAME'] . '/thierryrenewebdev' : $_SERVER['SERVER_NAME'] ); ?>/js/libs/swiper.min.js"></script>
   <script src="//<?php echo ($_SERVER['SERVER_NAME'] == 'localhost' ? $_SERVER['SERVER_NAME'] . '/thierryrenewebdev' : $_SERVER['SERVER_NAME'] ); ?>/js/libs/swiper.esm.bundle.js"></script>
   
+  <!-- animsition -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+  
   <!--FULLSTORY SNIPPET-->
   <script>
     window['_fs_debug'] = false;
