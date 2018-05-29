@@ -49,6 +49,8 @@
 			</article>
 
 		</div>
+
+
 		
 		<?php if ($lastFmStatus['status'] == 1) : ?>
 		
@@ -66,22 +68,90 @@
 					<br>
 				</div>
 				
-				<?php
-					
-					$tracks = getLastFmSongs(5);
-					
-					foreach($tracks as $key => $data) {
-						
-					    echo "<div class='col-md-2 col-xs-6 text-center'>";
-					    
-					    	echo "<div class='well'><img class='img-responsive' src='{$data['image'][2]['#text']}'></div>";
-					        echo "<p><a class='music-link' href='{$data['url']}' target='_blank'>{$data['name']}</a></p>";
-					        echo "<p>{$data['artist']['#text']}</p>";
-					        
-					    echo "</div>";    
+				<style type="text/css">
+				  	.swiper-container {
+				      width: 100%;
+				      height: auto;
+				    }
+				    .swiper-wrapper{
+				    	-webkit-transition-timing-function:linear!important;
+						-o-transition-timing-function:linear!important;
+						transition-timing-function:linear!important;
 					}
-					
-				?>
+				    .swiper-slide {
+				      text-align: center;
+				      font-size: 18px;
+				      width: 200px !important;
+				      height: 200px !important;
+				      background-size: cover;
+				      display: flex;
+				      justify-content: center;
+				      align-items: center;
+				    }
+				  </style>
+			
+				<div class="col-md-12">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+
+							<?php
+						
+								$tracks = getLastFmSongs(20);
+								
+								foreach($tracks as $key => $data) : 
+
+							?>
+							
+								<div class="swiper-slide" style="background:url(<?php echo $data['image'][3]['#text']; ?>); background-size: cover;">
+									
+									<div style="width: 100%; padding: 10px 0px; background-color:#00000042;">
+										<p style="color: white; text-shadow: -5px 5px 10px #333333;"><?php echo $data['artist']['#text']; ?></p>
+										<p><a style="color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='<?php echo $data['url']; ?>' target='_blank'><?php echo $data['name']; ?></a></p>
+									</div>
+
+								</div>
+
+							<?php endforeach; ?>
+							
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+
+					<script>
+					    var swiper = new Swiper('.swiper-container', {
+					      slidesPerView: 6,
+					      spaceBetween: 10,
+					      loop: true,
+					      mousewheel: true,
+					      loopFillGroupWithBlank: true,
+					      freeMode: true,
+					      effect: 'coverflow',
+					      grabCursor: true,
+					      centeredSlides: true,
+					      slidesPerView: 'auto',
+					      speed: 6000,
+					      coverflowEffect: {
+					        rotate: 50,
+					        stretch: 0,
+					        depth: 100,
+					        modifier: 1,
+					        slideShadows : true,
+					      },
+					      autoplay: {
+						    delay: 1,
+						  },
+					      navigation: {
+					        nextEl: '.swiper-button-next',
+					        prevEl: '.swiper-button-prev',
+					      },
+					    });
+					  </script>
+
+				  
+				
+				</div>
+
+				
 				
 				<style type="text/css">
 					.flex-container {
@@ -113,4 +183,10 @@
 		
 
 </section>
+
+<section>
+
+
+
+		</section>
 

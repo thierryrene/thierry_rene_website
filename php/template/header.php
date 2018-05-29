@@ -109,6 +109,15 @@ $lastFmStatus = checkSpecConfig(1);
 
   <!-- jQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+  <!-- ANIJS -->
+  <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
+
+  <!-- SWIPER  -->
+  <link rel="stylesheet" href="//<?php echo ($_SERVER['SERVER_NAME'] == 'localhost' ? $_SERVER['SERVER_NAME'] . '/thierryrenewebdev' : $_SERVER['SERVER_NAME'] ); ?>/css/libs/swiper.min.css">
+  <script src="//<?php echo ($_SERVER['SERVER_NAME'] == 'localhost' ? $_SERVER['SERVER_NAME'] . '/thierryrenewebdev' : $_SERVER['SERVER_NAME'] ); ?>/js/libs/swiper.min.js"></script>
+  <script src="//<?php echo ($_SERVER['SERVER_NAME'] == 'localhost' ? $_SERVER['SERVER_NAME'] . '/thierryrenewebdev' : $_SERVER['SERVER_NAME'] ); ?>/js/libs/swiper.esm.bundle.js"></script>
   
   <!--FULLSTORY SNIPPET-->
   <script>
@@ -135,9 +144,6 @@ $lastFmStatus = checkSpecConfig(1);
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MDLCV8Z');</script>
   <!-- End Google Tag Manager -->
-
-  <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
   
   <!-- Google Analytics -->
   <script>
