@@ -70,6 +70,7 @@
 				
 				<style type="text/css">
 				  	.swiper-container {
+				  		
 				      width: 100%;
 				      height: 200px;
 				    }
