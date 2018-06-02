@@ -111,35 +111,17 @@ $lastFmStatus = checkSpecConfig(1);
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
   <!-- ANIJS -->
-  <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
+  <link rel="stylesheet" href="//anijs.github.io/lib/anicollection/anicollection.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
 
   <!-- SWIPER  -->
   <link rel="stylesheet" href="//<?php echo ($_SERVER['SERVER_NAME'] == 'localhost' ? $_SERVER['SERVER_NAME'] . '/thierryrenewebdev' : $_SERVER['SERVER_NAME'] ); ?>/css/libs/swiper.min.css">
   <script src="//<?php echo ($_SERVER['SERVER_NAME'] == 'localhost' ? $_SERVER['SERVER_NAME'] . '/thierryrenewebdev' : $_SERVER['SERVER_NAME'] ); ?>/js/libs/swiper.min.js"></script>
   <script src="//<?php echo ($_SERVER['SERVER_NAME'] == 'localhost' ? $_SERVER['SERVER_NAME'] . '/thierryrenewebdev' : $_SERVER['SERVER_NAME'] ); ?>/js/libs/swiper.esm.bundle.js"></script>
-  
+
   <!-- animsition -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
-  
-  <!--FULLSTORY SNIPPET-->
-  <script>
-    window['_fs_debug'] = false;
-    window['_fs_host'] = 'fullstory.com';
-    window['_fs_org'] = 'AWZRQ';
-    window['_fs_namespace'] = 'FS';
-    (function(m,n,e,t,l,o,g,y){
-        if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-        g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
-        o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
-        y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-        g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
-        y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
-        g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-        g.clearUserCookie=function(){};
-    })(window,document,window['_fs_namespace'],'script','user');
-  </script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -148,7 +130,7 @@ $lastFmStatus = checkSpecConfig(1);
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MDLCV8Z');</script>
   <!-- End Google Tag Manager -->
-  
+
   <!-- Google Analytics -->
   <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -156,7 +138,7 @@ $lastFmStatus = checkSpecConfig(1);
     ga('send', 'pageview');
     ga('set', 'userId', 'USER_ID');
   </script>
-  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <script async src='//www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
 
   <!-- PWA -->
@@ -179,7 +161,7 @@ $lastFmStatus = checkSpecConfig(1);
 
   <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDLCV8Z" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MDLCV8Z" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
@@ -225,7 +207,7 @@ $lastFmStatus = checkSpecConfig(1);
 
         <div class="col-md-12">
 
-          <img data-anijs="if: mouseover, on: img, do: swing animated" id="thierry-photo" class="img-responsive img-circle" src="https://avatars1.githubusercontent.com/u/1225308?s=400&u=5b7f93504bc654c9f6076e1b1b4a249a2a0ab697&v=4" alt="Thierry Rene Web Developer">
+          <img data-anijs="if: mouseover, on: img, do: swing animated" id="thierry-photo" class="img-responsive img-circle" src="//avatars1.githubusercontent.com/u/1225308?s=400&u=5b7f93504bc654c9f6076e1b1b4a249a2a0ab697&v=4" alt="Thierry Rene Web Developer">
 
           <div class="intro">
             <span id="name" class="name">Thierry Rene Matos</span>
