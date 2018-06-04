@@ -107,9 +107,16 @@
 <script>
   var butter = Butter('36d03d2361e593b1823870c260219ab9670128c1');
 
-  butter.post.list({page: 1, page_size: 10}).then(function(response) {
-	  console.log(response)
-	})
+ //  butter.post.list({page: 1, page_size: 10}).then(function(response) {
+	//   console.log(response)
+	// })
+
+	butter.page.retrieve('*', 'test')
+	  .then(function(resp) {
+	    console.log(resp.data)
+	  }).catch(function(resp) {
+	    console.log(resp)
+	  });
 </script>
 
 <!-- Google Tag Manager -->
