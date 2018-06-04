@@ -74,13 +74,7 @@
 
 <!-- javascript librarys -->
 
-<!-- FIREBASE -->
-<script src="//www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-<script src="//www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/plugins.js"></script>
+<?php require_once 'js_libs.php'; ?>
 
 </body>
 

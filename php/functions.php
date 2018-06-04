@@ -82,8 +82,8 @@ function logAccess()
 
 function checkHost($path)
 {
-    if (HOST == $_SERVER['SERVER_NAME']) {
-        header("location:http://" . HOST . "/php/{$path}");
+    if ($_SERVER['SERVER_NAME'] != 'localhost') {
+        header("location:http://" . $_SERVER['SERVER_NAME'] . "/php/{$path}");
     } else {
         header("location:http://localhost/thierryrenewebdev/php/{$path}");
     }

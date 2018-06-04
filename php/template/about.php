@@ -125,42 +125,8 @@
 						</div>
 						<div class="swiper-pagination"></div>
 					</div>
-
-					<script>
-					    var swiper = new Swiper('.swiper-container', {
-					      slidesPerView: 6,
-					      spaceBetween: 10,
-					      loop: true,
-					      mousewheel: true,
-					      loopFillGroupWithBlank: true,
-					      freeMode: true,
-					      // effect: 'coverflow',
-					      grabCursor: true,
-					      centeredSlides: true,
-					      slidesPerView: 'auto',
-					      speed: 6000,
-					      // coverflowEffect: {
-					      //   rotate: 50,
-					      //   stretch: 0,
-					      //   depth: 100,
-					      //   modifier: 1,
-					      //   slideShadows : true,
-					      // },
-					      autoplay: {
-						    delay: 1,
-						  },
-					      navigation: {
-					        nextEl: '.swiper-button-next',
-					        prevEl: '.swiper-button-prev',
-					      },
-					    });
-					  </script>
-
-				  
-				
+									
 				</div>
-
-				
 				
 				<style type="text/css">
 					.flex-container {

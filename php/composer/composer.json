@@ -7,10 +7,10 @@
         "fzaninotto/faker": "^1.6",
         "stefangabos/zebra_image": "^2.2",
         "digitalnature/php-ref": "dev-master",
-        "sentry/sentry": "^1.8",
         "google/apiclient": "^2.0",
         "fabpot/goutte": "^3.2",
-        "dirkgroenen/Pinterest-API-PHP": "^0.2.11"
+        "dirkgroenen/Pinterest-API-PHP": "^0.2.11",
+        "buttercms/buttercms-php": "~2.2.0"
     },
     "authors": [
         {

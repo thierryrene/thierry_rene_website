@@ -7,29 +7,6 @@
 
 $(document).ready(function() {
 
-	$(".animsition").animsition({
-	    inClass: 'fade-in',
-	    outClass: 'fade-out',
-	    inDuration: 1500,
-	    outDuration: 800,
-	    // linkElement: '.animsition-link',
-	    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-	    loading: true,
-	    loadingParentElement: 'body', //animsition wrapper element
-	    loadingClass: 'animsition-loading',
-	    loadingInner: '', // e.g '<img src="loading.svg" />'
-	    timeout: false,
-	    timeoutCountdown: 5000,
-	    onLoadEvent: true,
-	    browser: [ 'animation-duration', '-webkit-animation-duration'],
-	    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-	    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-	    overlay : false,
-	    overlayClass : 'animsition-overlay-slide',
-	    overlayParentElement : 'body',
-	    transition: function(url){ window.location.href = url; }
-	  });
-
 	// if('serviceWorker' in navigator) {
 	// 	navigator.serviceWorker
 	// 	.register('https://' + window.location.hostname + '/sw.js')
@@ -42,22 +19,46 @@ $(document).ready(function() {
 
 	$('header').addClass('animated fadeInUp').css('animation-delay', '2s');
 
-		  // Initialize Firebase
-		  var firebaseConfig = {
-		    apiKey: "AIzaSyCCQm910VxUk43w0Psc40nhQPMUvAni18A",
-		    authDomain: "thierryrenematos-webdev.firebaseapp.com",
-		    databaseURL: "https://thierryrenematos-webdev.firebaseio.com",
-		    projectId: "thierryrenematos-webdev",
-		    storageBucket: "thierryrenematos-webdev.appspot.com",
-		    messagingSenderId: "643792613259"
-		  };
-
-		  firebase.initializeApp(firebaseConfig);
-
-		  var database = firebase.database();
-
-
-	var n = 0;
+	var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 6,
+      spaceBetween: 10,
+      loop: true,
+      mousewheel: true,
+      loopFillGroupWithBlank: true,
+      freeMode: true,
+      // effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      speed: 6000,
+      // coverflowEffect: {
+      //   rotate: 50,
+      //   stretch: 0,
+      //   depth: 100,
+      //   modifier: 1,
+      //   slideShadows : true,
+      // },
+      autoplay: {
+	    delay: 1,
+	  },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+	
+	// // Initialize Firebase
+	// var firebaseConfig = {
+	// apiKey: "AIzaSyCCQm910VxUk43w0Psc40nhQPMUvAni18A",
+	// authDomain: "thierryrenematos-webdev.firebaseapp.com",
+	// databaseURL: "https://thierryrenematos-webdev.firebaseio.com",
+	// projectId: "thierryrenematos-webdev",
+	// storageBucket: "thierryrenematos-webdev.appspot.com",
+	// messagingSenderId: "643792613259"
+	// };
+	// firebase.initializeApp(firebaseConfig);
+	// var database = firebase.database();
+	// var n = 0;
 
 	$('img#thierry-photo')
 	  .mouseenter(function() {
@@ -91,6 +92,8 @@ $(document).ready(function() {
 		ga('send', 'event', 'social-link-click', 'github-plus-link-click');
 		console.log('github link click!');
 	});
+
+	
 
 	
 
