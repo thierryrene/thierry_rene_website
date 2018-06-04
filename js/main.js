@@ -61,11 +61,10 @@ $(document).ready(function() {
 	// firebase.initializeApp(firebaseConfig);
 	// var database = firebase.database();
 	
-
-
+	var n = 0;
+	
 	$('img#thierry-photo')
 	  .mouseenter(function() {
-	  	var n = 0;
 	  	var el = $(this);
 	    n += 1;
 	    ga('send', 'event', 'Imagem Animada', 'Passou o Mouse', 'Campanha do Nada');
