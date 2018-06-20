@@ -5,8 +5,6 @@
  * Time: 09:31 PM
  */
 
-
-
 $(document).ready(function() {
 
 	// if('serviceWorker' in navigator) {
@@ -28,18 +26,10 @@ $(document).ready(function() {
       mousewheel: true,
       loopFillGroupWithBlank: true,
       freeMode: true,
-      // effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
       speed: 6000,
-      // coverflowEffect: {
-      //   rotate: 50,
-      //   stretch: 0,
-      //   depth: 100,
-      //   modifier: 1,
-      //   slideShadows : true,
-      // },
       autoplay: {
 	    delay: 1,
 	  },

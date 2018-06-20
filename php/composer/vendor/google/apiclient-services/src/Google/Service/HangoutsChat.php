@@ -19,8 +19,7 @@
  * Service definition for HangoutsChat (v1).
  *
  * <p>
- * Enables bots to fetch information and perform actions in the new Hangouts
- * Chat.</p>
+ * Enables bots to fetch information and perform actions in Hangouts Chat.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -70,13 +69,13 @@ class Google_Service_HangoutsChat extends Google_Service
               'path' => 'v1/spaces',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

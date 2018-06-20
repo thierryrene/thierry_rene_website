@@ -20,4 +20,4 @@
 <script src="./js/plugins.js"></script>
 
 <!-- main js -->
-<script src="./js/main.js"></script>
+<script src="./js/bundle.js"></script>

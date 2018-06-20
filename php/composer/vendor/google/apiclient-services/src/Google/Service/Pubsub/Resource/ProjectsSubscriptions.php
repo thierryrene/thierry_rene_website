@@ -47,9 +47,9 @@ class Google_Service_Pubsub_Resource_ProjectsSubscriptions extends Google_Servic
     return $this->call('acknowledge', array($params), "Google_Service_Pubsub_PubsubEmpty");
   }
   /**
-   * Creates a subscription to a given topic. If the subscription already exists,
-   * returns `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns
-   * `NOT_FOUND`.
+   * Creates a subscription to a given topic. See the  resource name rules. If the
+   * subscription already exists, returns `ALREADY_EXISTS`. If the corresponding
+   * topic doesn't exist, returns `NOT_FOUND`.
    *
    * If the name is not provided in the request, the server will assign a random
    * name for this subscription on the same project as the topic, conforming to
@@ -129,11 +129,11 @@ class Google_Service_Pubsub_Resource_ProjectsSubscriptions extends Google_Servic
    * belong to. Format is `projects/{project}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of subscriptions to return.
    * @opt_param string pageToken The value returned by the last
    * `ListSubscriptionsResponse`; indicates that this is a continuation of a prior
    * `ListSubscriptions` call, and that the system should return the next page of
    * data.
+   * @opt_param int pageSize Maximum number of subscriptions to return.
    * @return Google_Service_Pubsub_ListSubscriptionsResponse
    */
   public function listProjectsSubscriptions($project, $optParams = array())
@@ -223,8 +223,10 @@ class Google_Service_Pubsub_Resource_ProjectsSubscriptions extends Google_Servic
   }
   /**
    * Seeks an existing subscription to a point in time or to a given snapshot,
-   * whichever is provided in the request. [ALPHA] This method is a part of a
-   * closed Alpha API. (subscriptions.seek)
+   * whichever is provided in the request. ALPHA: This feature is part of an alpha
+   * release. This API might be changed in backward-incompatible ways and is not
+   * recommended for production use. It is not subject to any SLA or deprecation
+   * policy. (subscriptions.seek)
    *
    * @param string $subscription The subscription to affect.
    * @param Google_Service_Pubsub_SeekRequest $postBody

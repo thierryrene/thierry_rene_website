@@ -56,7 +56,7 @@ class Google_Service_Compute_Resource_SslPolicies extends Google_Service_Resourc
     return $this->call('delete', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * List all of the ordered rules present in a single specified policy.
+   * Lists all of the ordered rules present in a single specified policy.
    * (sslPolicies.get)
    *
    * @param string $project Project ID for this request.
@@ -72,7 +72,7 @@ class Google_Service_Compute_Resource_SslPolicies extends Google_Service_Resourc
     return $this->call('get', array($params), "Google_Service_Compute_SslPolicy");
   }
   /**
-   * Returns the specified SSL policy resource. Get a list of available SSL
+   * Returns the specified SSL policy resource. Gets a list of available SSL
    * policies by making a list() request. (sslPolicies.insert)
    *
    * @param string $project Project ID for this request.
@@ -100,7 +100,7 @@ class Google_Service_Compute_Resource_SslPolicies extends Google_Service_Resourc
     return $this->call('insert', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * List all the SSL policies that have been configured for the specified
+   * Lists all the SSL policies that have been configured for the specified
    * project. (sslPolicies.listSslPolicies)
    *
    * @param string $project Project ID for this request.

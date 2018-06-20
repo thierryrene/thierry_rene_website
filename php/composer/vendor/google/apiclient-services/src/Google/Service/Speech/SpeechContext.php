@@ -18,8 +18,17 @@
 class Google_Service_Speech_SpeechContext extends Google_Collection
 {
   protected $collection_key = 'phrases';
+  public $biasingStrength;
   public $phrases;
 
+  public function setBiasingStrength($biasingStrength)
+  {
+    $this->biasingStrength = $biasingStrength;
+  }
+  public function getBiasingStrength()
+  {
+    return $this->biasingStrength;
+  }
   public function setPhrases($phrases)
   {
     $this->phrases = $phrases;

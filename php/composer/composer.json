@@ -1,16 +1,9 @@
 {
     "name": "root/testando_composer",
     "require": {
-        "filp/whoops": "^2.1",
-        "laravel/lumen-installer": "^1.0",
-        "monolog/monolog": "^1.22",
-        "fzaninotto/faker": "^1.6",
-        "stefangabos/zebra_image": "^2.2",
-        "digitalnature/php-ref": "dev-master",
+        "digitalnature/php-ref": "^1.2",
         "google/apiclient": "^2.0",
-        "fabpot/goutte": "^3.2",
-        "dirkgroenen/Pinterest-API-PHP": "^0.2.11",
-        "buttercms/buttercms-php": "~2.2.0"
+        "fabpot/goutte": "^3.2"
     },
     "authors": [
         {
