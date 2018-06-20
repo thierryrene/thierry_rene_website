@@ -5,20 +5,23 @@
  * Time: 09:31 PM
  */
 
-$(document).ready(function() {
+// import plugins file
+require('./plugins.js');
 
-	// if('serviceWorker' in navigator) {
-	// 	navigator.serviceWorker
-	// 	.register('https://' + window.location.hostname + '/sw.js')
-	// 	.then(function(registration) {
-	// 		console.log('Excellent, registered with scope: ', registration.scope);
-	// 	});
-	// }
+// import lib anijs
+require('./libs/anijs.js');
+
+// import lib swiper
+require('./libs/swiper.min.js');
+
+// code that is executed after documents load
+$(document).ready(function() {
 
 	$('.navbar').addClass('animated fadeInUp').css('animation-delay', '1s');
 
 	$('header').addClass('animated fadeInUp').css('animation-delay', '2s');
 
+	// swiper container configuration
 	var swiper = new Swiper('.swiper-container', {
       slidesPerView: 6,
       spaceBetween: 10,
@@ -39,20 +42,19 @@ $(document).ready(function() {
       },
     });
 	
-	// // Initialize Firebase
-	// var firebaseConfig = {
-	// apiKey: "AIzaSyCCQm910VxUk43w0Psc40nhQPMUvAni18A",
-	// authDomain: "thierryrenematos-webdev.firebaseapp.com",
-	// databaseURL: "https://thierryrenematos-webdev.firebaseio.com",
-	// projectId: "thierryrenematos-webdev",
-	// storageBucket: "thierryrenematos-webdev.appspot.com",
-	// messagingSenderId: "643792613259"
-	// };
-	// firebase.initializeApp(firebaseConfig);
-	// var database = firebase.database();
+	// firebase initial setup
+	var firebaseConfig = {
+	apiKey: "AIzaSyCCQm910VxUk43w0Psc40nhQPMUvAni18A",
+	authDomain: "thierryrenematos-webdev.firebaseapp.com",
+	databaseURL: "https://thierryrenematos-webdev.firebaseio.com",
+	projectId: "thierryrenematos-webdev",
+	storageBucket: "thierryrenematos-webdev.appspot.com",
+	messagingSenderId: "643792613259"
+	};
+	firebase.initializeApp(firebaseConfig);
+	var database = firebase.database();
 	
-	var n = 0;
-	
+	var n = 0;	
 	$('img#thierry-photo')
 	  .mouseenter(function() {
 	  	var el = $(this);
@@ -85,10 +87,6 @@ $(document).ready(function() {
 		ga('send', 'event', 'social-link-click', 'github-plus-link-click');
 		console.log('github link click!');
 	});
-
-
-
-	
 
 });
 

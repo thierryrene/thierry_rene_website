@@ -11,13 +11,8 @@
 <!-- anijs -->
 <script async src="//cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
 
-<!-- swiper -->
-<script src="./js/libs/swiper.min.js"></script>
-
+<!-- vue js -->
 <script src="//cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-
-<!-- plugins js -->
-<script src="./js/plugins.js"></script>
 
 <!-- main js -->
 <script src="./js/bundle.js"></script>
