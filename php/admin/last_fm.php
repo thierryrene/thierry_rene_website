@@ -4,8 +4,6 @@ include_once('../c.php');
 
 checkLogin();
 
-include_once('../functions.php');
-
 include_once('template/header.php');
 
 $pageTitle = 'Last FM API';

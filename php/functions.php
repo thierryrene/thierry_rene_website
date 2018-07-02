@@ -295,6 +295,17 @@ function getInsta($limit)
     return $photos;
 }
 
+// /* gets content from a URL via curl */
+function get_url($url) {
+	$ch = curl_init();
+	curl_setopt($ch,CURLOPT_URL,$url);
+	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,5);
+	$content = curl_exec($ch);
+	curl_close($ch);
+	return $content;
+}
+
 /* gets the contents of a file if it exists, otherwise grabs and caches */
 function get_content($file, $url, $hours = 24)
 {
@@ -318,16 +329,32 @@ function get_content($file, $url, $hours = 24)
 
 }
 
-// /* gets content from a URL via curl */
-// function get_url($url) {
-// 	$ch = curl_init();
-// 	curl_setopt($ch,CURLOPT_URL,$url);
-// 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-// 	curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,5);
-// 	$content = curl_exec($ch);
-// 	curl_close($ch);
-// 	return $content;
-// }
+function getTwitterApiData($url, $getfield = '', $requestMethod) {
+    
+    $current_time = time();
+    $expire_time  = 24 * 60;
+    $file = '../../cache/twitter_data_' . date('d_m_Y') . '.json';
+    
+    //decisions, decisions
+    if (file_exists($file) && ($current_time - $expire_time < filemtime($file))) {
+        //echo 'returning from cached file';
+        return file_get_contents($file);
+    } else {
+         $settings = array(
+            'oauth_access_token' => "2371870274-pauCnj8970ebKGniGcGRrkEKTGQkARDWjcAtw0W",
+            'oauth_access_token_secret' => "Vs9u3OANgFMIzj9VzSojfqGUkIBh3IqBbZoSvd8NJC13L",
+            'consumer_key' => "392KPuwv9jI7mDNG4w1oJ5L6Y",
+            'consumer_secret' => "9XwB2bJWLIrvxuHEEuFYMcgxXxKXNIgAXOdjM1OP9QpGs7jJRb"
+        );
+        $twitter = new TwitterAPIExchange($settings);
+        $data = $twitter->setGetfield($getfield)->buildOauth($url, $requestMethod)->performRequest();
+        // $content.= '<!-- cached:  '.time().'-->';
+        file_put_contents($file, $data);
+        //echo 'retrieved fresh from '.$url.':: '.$content;
+        return $data;
+    }
+}
+
 
 // $pinterest = get_url('https://api.pinterest.com/v1/users/thierryrenematos/?access_token=ATf3Zszvh2Dcnim-k1JesVoVn8YCFRawPywPS19Eu2t_PUBH1AAAAAA&fields=first_name%2Cid%2Clast_name%2Curl%2Caccount_type%2Cusername%2Ccreated_at%2Cbio%2Ccounts%2Cimage');
 

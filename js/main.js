@@ -75,7 +75,7 @@ $(document).ready(function() {
 		ga('send', 'event', 'social-link-click', 'twitter-link-click');
 		console.log('twitter link click!');
 	});
-
+	
 	$(document).on('click', 'i.fa.fa-google-plus', function () {
 		ga('send', 'event', 'social-link-click', 'google-plus-link-click');
 		console.log('google-plus link click!');

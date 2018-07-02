@@ -5,8 +5,6 @@
  * Time: 09:31 PM
  */
 
-
-
 $(document).ready(function() {
 
 	// if('serviceWorker' in navigator) {

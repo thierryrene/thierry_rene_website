@@ -2,7 +2,9 @@
 
 session_start();
 
-require 'env.php';
+require_once 'env.php';
+
+require_once 'composer/vendor/autoload.php';
 
 date_default_timezone_set('America/Sao_Paulo');
 
@@ -29,8 +31,6 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('HOST', $_SERVER['SERVER_NAME']);
 }
 
-require_once 'composer/vendor/autoload.php';
-
 function connect() {
   try {
     $pdo = new PDO('mysql:host=' . SERVERNAME . ';dbname=' . DB, USERNAME, PASSWORD);
@@ -44,4 +44,4 @@ function connect() {
 
 $pdo = connect();
 
-require 'functions.php';
+require_once 'functions.php';

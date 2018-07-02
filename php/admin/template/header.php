@@ -324,8 +324,13 @@
           </a>
         </li>
         <li>
+          <a href="twitter_api.php">
+            <i class="fa fa-twitter"></i> <span>Twitter API</span>
+          </a>
+        </li>
+        <li>
           <a href="last_fm.php">
-            <i class="fa fa-music"></i> <span>Last FM</span>
+            <i class="fa fa-music"></i> <span>Last FM API</span>
           </a>
         </li>
         <li>
