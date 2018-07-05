@@ -72,10 +72,6 @@
 <a href="//plus.google.com/115712645340506483249?rel=author"></a>
 <a href="//plus.google.com/117162753365804877029" rel="publisher"></a>
 
-<!-- javascript librarys -->
-
-<?php require_once 'js_libs.php'; ?>
-
 </body>
 
 </html>

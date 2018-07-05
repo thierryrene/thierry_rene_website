@@ -5,14 +5,15 @@
  * Time: 09:31 PM
  */
 
-// import plugins file
-require('./plugins.js');
 
 // import lib anijs
 require('./libs/anijs.js');
 
 // import lib swiper
 require('./libs/swiper.min.js');
+
+// import plugins file
+require('./plugins.js');
 
 // code that is executed after documents load
 $(document).ready(function() {
@@ -55,8 +56,7 @@ $(document).ready(function() {
 	var database = firebase.database();
 	
 	var n = 0;	
-	$('img#thierry-photo')
-	  .mouseenter(function() {
+	$('img#thierry-photo').mouseenter(function() {
 	  	var el = $(this);
 	    n += 1;
 	    ga('send', 'event', 'Imagem Animada', 'Passou o Mouse', 'Campanha do Nada');
@@ -87,6 +87,18 @@ $(document).ready(function() {
 		ga('send', 'event', 'social-link-click', 'github-plus-link-click');
 		console.log('github link click!');
 	});
+	
+	$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1500);
+        return false;
+      }
+    }
+  });
 
 });
-

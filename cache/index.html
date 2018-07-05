@@ -101,24 +101,6 @@
   <!-- jQuery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
-<!-- buttercms -->
-<script src="https://cdnjs.buttercms.com/buttercms-1.1.1.min.js"></script>
-
-<script>
-  var butter = Butter('36d03d2361e593b1823870c260219ab9670128c1');
-
- //  butter.post.list({page: 1, page_size: 10}).then(function(response) {
-	//   console.log(response)
-	// })
-
-	butter.page.retrieve('*', 'test')
-	  .then(function(resp) {
-	    console.log(resp.data)
-	  }).catch(function(resp) {
-	    console.log(resp)
-	  });
-</script>
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -152,7 +134,19 @@ if (navigator.serviceWorker.controller) {
 </script>
 
     
+    
+  <!-- javascript librarys -->
+  <!-- modernizr -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 
+<!-- bootstrap js -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!--swiper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+
+<!-- main js -->
+<script src="./js/bundle.js"></script>
 </head>
 
 <body>
@@ -354,7 +348,7 @@ if (navigator.serviceWorker.controller) {
 						<div class="swiper-wrapper">
 
 														
-								<div class="swiper-slide" style="background:url(); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/e4dffccbab1941c197847b8a2a20f701.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -364,14 +358,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Jim Cooper</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Jim+Cooper/_/Creating+Your+First+Component' target='_blank'>Creating Your First Component</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Untitled+1' target='_blank'>Untitled 1</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/e4dffccbab1941c197847b8a2a20f701.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -381,14 +375,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Rapsody</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Rapsody/_/Where+Flowers+Bloom' target='_blank'>Where Flowers Bloom</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/A+Heart+To+Hold+You++-+Jo+Whiley+Show+-+BBC+Session+24%2F11%2F2004' target='_blank'>A Heart To Hold You  - Jo Whiley Show - BBC Session 24/11/2004</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/e4dffccbab1941c197847b8a2a20f701.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -398,14 +392,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Global Components vs. Single</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Global+Components+vs.+Single/_/file+Components' target='_blank'>file Components</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Into+The+Light+-+Demo' target='_blank'>Into The Light - Demo</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/e4dffccbab1941c197847b8a2a20f701.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -415,14 +409,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Jim Cooper</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Jim+Cooper/_/Creating+the+Home+Page' target='_blank'>Creating the Home Page</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Snowed+Under' target='_blank'>Snowed Under</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/e4dffccbab1941c197847b8a2a20f701.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -432,14 +426,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Jim Cooper</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Jim+Cooper/_/Creating+a+New+Project+with+the+Vue+CLI' target='_blank'>Creating a New Project with the Vue CLI</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/This+Is+The+Last+Time+-+Acoustic,+Mill+St+Brewery,+Toronto+20%2F9%2F04' target='_blank'>This Is The Last Time - Acoustic, Mill St Brewery, Toronto 20/9/04</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/e4dffccbab1941c197847b8a2a20f701.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -449,14 +443,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Rapsody</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Rapsody/_/Where+Flowers+Bloom' target='_blank'>Where Flowers Bloom</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Untitled+1' target='_blank'>Untitled 1</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/c029857140d9576589decfc924c65ab5.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/e4dffccbab1941c197847b8a2a20f701.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -466,14 +460,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Jay-Z</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Jay-Z/_/In+My+Lifetime+(Remix)' target='_blank'>In My Lifetime (Remix)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/A+Heart+To+Hold+You++-+Jo+Whiley+Show+-+BBC+Session+24%2F11%2F2004' target='_blank'>A Heart To Hold You  - Jo Whiley Show - BBC Session 24/11/2004</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/c029857140d9576589decfc924c65ab5.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/e4dffccbab1941c197847b8a2a20f701.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -483,14 +477,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Jay-Z</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Jay-Z/_/In+My+Lifetime+(Remix)' target='_blank'>In My Lifetime (Remix)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Snowed+Under' target='_blank'>Snowed Under</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/1e9c7c5d135b3162b20d63540c99f0cb.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -500,14 +494,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Oasis</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Oasis/_/Cast+No+Shadow+(Remastered)' target='_blank'>Cast No Shadow (Remastered)</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/1e9c7c5d135b3162b20d63540c99f0cb.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -517,14 +511,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Oasis</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Oasis/_/Some+Might+Say+(Remastered)' target='_blank'>Some Might Say (Remastered)</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/1e9c7c5d135b3162b20d63540c99f0cb.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -534,14 +528,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Oasis</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Oasis/_/Untitled+(Remastered)' target='_blank'>Untitled (Remastered)</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/169b0487483541a4c1dc8465c23d6c2b.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -551,14 +545,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Oasis</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Oasis/_/Slide+Away+(Remastered)' target='_blank'>Slide Away (Remastered)</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/b1c293cf761849949c20dc3b9d0ef514.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -568,14 +562,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/The+Frog+Prince' target='_blank'>The Frog Prince</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/b1c293cf761849949c20dc3b9d0ef514.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -585,14 +579,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Broken+Toy' target='_blank'>Broken Toy</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/b1c293cf761849949c20dc3b9d0ef514.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -602,14 +596,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Try+Again' target='_blank'>Try Again</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/b1c293cf761849949c20dc3b9d0ef514.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -619,14 +613,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Crystal+Ball' target='_blank'>Crystal Ball</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/b1c293cf761849949c20dc3b9d0ef514.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -636,14 +630,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Put+It+Behind+You' target='_blank'>Put It Behind You</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/b1c293cf761849949c20dc3b9d0ef514.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -653,14 +647,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Hamburg+Song' target='_blank'>Hamburg Song</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/b1c293cf761849949c20dc3b9d0ef514.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -670,14 +664,14 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/A+Bad+Dream' target='_blank'>A Bad Dream</a></p>
 									</div>
 
 								</div>
 
 														
-								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/6d9f06200d85475cbd970f3437997979.png); background-size: cover;">
+								<div class="swiper-slide" style="background:url(https://lastfm-img2.akamaized.net/i/u/300x300/b1c293cf761849949c20dc3b9d0ef514.png); background-size: cover;">
 									
 									<div style="width: 100%;
 											    position: absolute;
@@ -687,8 +681,8 @@ if (navigator.serviceWorker.controller) {
 											    font-weight: bold;
 											    
 									">
-										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Interpol</p>
-										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Interpol/_/Precipitate+(Second+Demo)' target='_blank'>Precipitate (Second Demo)</a></p>
+										<p style="z-index: 9999;color: white; text-shadow: -5px 5px 10px #333333;">Keane</p>
+										<p><a style="-index: 9999; color: white; text-shadow: -5px 5px 10px #333333;" class='music-link' href='https://www.last.fm/music/Keane/_/Put+It+Behind+You' target='_blank'>Put It Behind You</a></p>
 									</div>
 
 								</div>
@@ -1051,31 +1045,6 @@ if (navigator.serviceWorker.controller) {
 <a href="//plus.google.com/115712645340506483249?rel=author"></a>
 <a href="//plus.google.com/117162753365804877029" rel="publisher"></a>
 
-<!-- javascript librarys -->
-
-<!-- firebase -->
-<!-- <script src="//www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-<script src="//www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script> -->
-
-<!-- modernizr -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
-
-<!-- bootstrap js -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-<!-- anijs -->
-<script async src="//cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js"></script>
-
-<!-- swiper -->
-<script src="./js/libs/swiper.min.js"></script>
-
-<script src="//cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-
-<!-- plugins js -->
-<script src="./js/plugins.js"></script>
-
-<!-- main js -->
-<script src="./js/bundle.js"></script>
 </body>
 
 </html>

@@ -1,24 +1,6 @@
 <!-- jQuery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
-<!-- buttercms -->
-<script src="https://cdnjs.buttercms.com/buttercms-1.1.1.min.js"></script>
-
-<script>
-  var butter = Butter('36d03d2361e593b1823870c260219ab9670128c1');
-
- //  butter.post.list({page: 1, page_size: 10}).then(function(response) {
-	//   console.log(response)
-	// })
-
-	butter.page.retrieve('*', 'test')
-	  .then(function(resp) {
-	    console.log(resp.data)
-	  }).catch(function(resp) {
-	    console.log(resp)
-	  });
-</script>
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

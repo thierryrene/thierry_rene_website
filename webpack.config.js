@@ -7,4 +7,5 @@ module.exports = {
     path: path.resolve(__dirname, 'js')
   },
   watch: true,
+  mode: 'development',
 };

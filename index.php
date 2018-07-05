@@ -3,6 +3,7 @@
 	// created in 2014 and continuosly developed until now | date('d/m/Y');
 
 	$dir = 'cache/' ;
+	$d = date('d_m_Y_H_i_s');
 
 	if(!is_dir($dir)) {
 		mkdir($dir, 755);
@@ -20,7 +21,7 @@
 		include_once "php/functions.php";
 
 		logAccess();
-
+		
 		$log = "<!-- cached " . date('d-m-Y H:i:s', filemtime($cachefilepath)) . " -->";
 
 		echo "<script> console.log('{$log}'); </script>";
@@ -66,7 +67,7 @@
 	$content = ob_get_contents();
 
 	if (fwrite($fp, $content)) {
-		echo "<script> console.log('page cached'); </script>";
+		echo "<script> console.log('page cached - {$d}'); </script>";
 	}
 
 	fclose($fp);
