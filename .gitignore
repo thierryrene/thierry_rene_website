@@ -9,3 +9,4 @@ blog/logs/popularity
 wp-content
 cache
 composer
+package-lock.json

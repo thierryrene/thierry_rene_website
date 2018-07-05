@@ -5,16 +5,6 @@
  * Time: 09:31 PM
  */
 
-
-// import lib anijs
-require('./libs/anijs.js');
-
-// import lib swiper
-require('./libs/swiper.min.js');
-
-// import plugins file
-require('./plugins.js');
-
 // code that is executed after documents load
 $(document).ready(function() {
 
@@ -44,16 +34,16 @@ $(document).ready(function() {
     });
 	
 	// firebase initial setup
-	var firebaseConfig = {
-	apiKey: "AIzaSyCCQm910VxUk43w0Psc40nhQPMUvAni18A",
-	authDomain: "thierryrenematos-webdev.firebaseapp.com",
-	databaseURL: "https://thierryrenematos-webdev.firebaseio.com",
-	projectId: "thierryrenematos-webdev",
-	storageBucket: "thierryrenematos-webdev.appspot.com",
-	messagingSenderId: "643792613259"
-	};
-	firebase.initializeApp(firebaseConfig);
-	var database = firebase.database();
+	// var firebaseConfig = {
+	// apiKey: "AIzaSyCCQm910VxUk43w0Psc40nhQPMUvAni18A",
+	// authDomain: "thierryrenematos-webdev.firebaseapp.com",
+	// databaseURL: "https://thierryrenematos-webdev.firebaseio.com",
+	// projectId: "thierryrenematos-webdev",
+	// storageBucket: "thierryrenematos-webdev.appspot.com",
+	// messagingSenderId: "643792613259"
+	// };
+	// firebase.initializeApp(firebaseConfig);
+	// var database = firebase.database();
 	
 	var n = 0;	
 	$('img#thierry-photo').mouseenter(function() {
@@ -100,5 +90,19 @@ $(document).ready(function() {
       }
     }
   });
+  
+  /* SMOOTH SCROLL CSS TRICKS CODE SNIPPET */
+	$('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1500);
+	        return false;
+	      }
+	    }
+	  });
 
 });

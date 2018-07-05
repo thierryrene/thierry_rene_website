@@ -22,8 +22,6 @@
 /*jshint browser: true, strict: true, undef: true */
 /*global define: false */
 
-console.log("puglins loaded.");
-
 ( function( window ) {
 
 'use strict';
@@ -140,80 +138,3 @@ var cbpAnimatedHeader = (function() {
 	init();
 
 })();
-
-/********************************************************/
-/********************************************************/
-
-/* SMOOTH SCROLL CSS TRICKS CODE SNIPPET */
-
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1500);
-        return false;
-      }
-    }
-  });
-});
-
-/********************************************************/
-/********************************************************/
-
-// /* MANDRIL EMAIL API HUB */
-
-// // Criada uma função para armazenar o log da API do Mandrill
-
-// function log(obj) {
-//   $('#response').text(JSON.stringify(obj));
-// }
-
-// // Criada uma nova instancia da class Mandrill, com base na biblioteca do Mandrill. 
-// //Aqui é necessário informar a API KEY.
-// var m = new mandrill.Mandrill('nRsrJlO-ZN7rIe78Re0Hhw');
-
-
-// // Testamos a conta com o metodo ping
-
-// // * m.users.ping(function(res) {
-// //   log(res);
-// // }, function(err) {
-// //   log(err);
-// // });
-
-// // Variável params utilizada para determinar as ações da API
-
-// var params = {
-//   "message": {
-//     "from_email": "ola@thierryrenewebdev.com",
-//     "to": [{
-//       "email": "contato@thierryrenewebdev.com"
-//     }],
-//     "subject": "Confirmation for Social Media Course.",
-//     "html": "<p>texto html</p>",
-//     "autotext": true,
-//     "track_opens": true,
-//     "track_clicks": true
-//   }
-// };
-
-// function sendTheMail() {
-//   // Função para enviar email
-
-//   m.messages.send(params, function(res) {
-//     log(res);
-//   }, function(err) {
-//     log(err);
-//   });
-// }
-
-
-
-
-
-
-

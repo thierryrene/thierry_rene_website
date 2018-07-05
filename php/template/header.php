@@ -39,10 +39,7 @@ $lastFmStatus = checkSpecConfig(1);
   <?php require_once 'css.php'; ?>  
   
   <!-- js deps -->
-  <?php require_once 'js_deps.php'; ?>    
-    
-  <!-- javascript librarys -->
-  <?php require_once 'js_libs.php'; ?>
+  <?php require_once 'js_deps.php'; ?>
 
 </head>
 
