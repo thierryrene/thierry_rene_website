@@ -39,58 +39,63 @@ checkLogin();
       </div>
       <div class="box-body">
 
-        <!-- Horizontal Form -->
-        <div class="box box-info">
-          <div class="box-header with-border">
-            <h3 class="box-title">Horizontal Form</h3>
-          </div>
           <!-- /.box-header -->
           <!-- form start -->
-          <form action="../signup.php" method="post" class="form-horizontal">
+          <form action="../signup.php" method="post" class="form-vertical">
 
             <div class="box-body">
-
-              <div class="form-group">
-                <label for="" class="col-sm-2 control-label">Name</label>
-                <div class="col-sm-4">
-                  <input type="text" name="first" class="form-control" id="" placeholder="name">
+              
+              <div class="row">
+                <div class="col-md-6">
+                  
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="first" class="form-control" id="">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="" >Last Name</label>
+                    <input type="text" name="last" class="form-control" id="">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="" >Job Position</label>
+                    <input type="text" name="job" class="form-control" id="">
+                  </div>
+                
                 </div>
-              </div>
-
-              <div class="form-group">
-                <label for="" class="col-sm-2 control-label">Last Name</label>
-                <div class="col-sm-4">
-                  <input type="text" name="last" class="form-control" id="" placeholder="last name">
+                
+                <div class="col-md-6">
+                  
+                  <div class="form-group">
+                    <label for="" >Image URL</label>
+                    <input type="text" name="image_url" class="form-control" id="">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="" >Username</label>
+                    <input type="text" name="uid" class="form-control" id="">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="" >Password</label>
+                    <input type="password" name="pwd" class="form-control" id="">
+                  </div>
+                  
                 </div>
-              </div>
-
-              <div class="form-group">
-                <label for="" class="col-sm-2 control-label">Username</label>
-                <div class="col-sm-4">
-                  <input type="text" name="uid" class="form-control" id="" placeholder="username">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-4">
-                  <input type="password" name="pwd" class="form-control" id="" placeholder="password">
-                </div>
+                
               </div>
               
             </div>
             <!-- /.box-body -->
+            
             <div class="box-footer">
-              
               <button type="submit" class="btn btn-primary">Create</button>
-              
             </div>
             <!-- /.box-footer -->
+          
           </form>
         </div>
-
-      </div>
-      <!-- /.box-body -->
       
     </div>
     <!-- /.box -->

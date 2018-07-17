@@ -10,6 +10,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('SERVERNAME', '127.0.0.1');
+  define('SYSTEM_NAME', 'Havana');
   define('USERNAME', 'root');
   define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
@@ -17,6 +18,7 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('HOST', $_SERVER['SERVER_NAME']);
 } elseif ( $_SERVER['SERVER_NAME'] == 'thierryrenematoswebdev-site-ok-thierryrene.c9users.io')  {
   define('SERVERNAME', '127.0.0.1');
+  define('SYSTEM_NAME', 'Havana');
   define('USERNAME', 'root');
   define('PASSWORD', '');
   define('DB', 'thierryrenewebdev');
@@ -24,6 +26,7 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
   define('SERVERNAME', 'db');
+  define('SYSTEM_NAME', 'Havana');
   define('USERNAME', 'root');
   define('PASSWORD', 'umdoistres');
   define('DB', 'thierryrenedb');
