@@ -1,0 +1,12 @@
+{
+    "name": "ubuntu/php",
+    "require": {
+        "catfan/medoo": "^1.5"
+    },
+    "authors": [
+        {
+            "name": "thierry rene matos",
+            "email": "td_matos@terra.com.br"
+        }
+    ]
+}

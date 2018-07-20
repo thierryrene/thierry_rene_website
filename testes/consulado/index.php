@@ -1,3 +1,8 @@
+<?php
+
+require_once 'php/functions.php';
+
+?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -7,7 +12,7 @@
 <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>Pivot - Multipurpose HTML Template</title>
+        <title>Consulado</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,8 +44,6 @@
 								<div class="pull-right">
 									<a href="login.html" class="btn btn-primary login-button btn-xs">Login</a>
 									<a href="#" class="btn btn-primary btn-filled btn-xs">Signup</a>
-									<a href="#" class="language"><img alt="English" src="img/english.png"></a>
-									<a href="#" class="language"><img alt="English" src="img/denmark.png"></a>
 								</div>
 							</div>
 						</div>
