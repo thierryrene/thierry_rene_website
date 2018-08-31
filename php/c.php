@@ -25,10 +25,10 @@ if ($_SERVER['SERVER_NAME'] == "thierryrenematoswebdev.me") {
   define('DEBUG', true);
   define('HOST', $_SERVER['SERVER_NAME']);
 } else {
-  define('SERVERNAME', 'db');
+  define('SERVERNAME', '127.0.0.1');
   define('SYSTEM_NAME', 'Havana');
   define('USERNAME', 'root');
-  define('PASSWORD', 'umdoistres');
+  define('PASSWORD', '*casa123');
   define('DB', 'thierryrenedb');
   define('DEBUG', false);
   define('HOST', $_SERVER['SERVER_NAME']);

@@ -19,12 +19,11 @@
  * Service definition for CloudTasks (v2beta2).
  *
  * <p>
- * Manages the execution of large numbers of distributed requests. Cloud Tasks
- * is in Alpha.</p>
+ * Manages the execution of large numbers of distributed requests.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/cloud-tasks/" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/tasks/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -309,21 +308,17 @@ class Google_Service_CloudTasks extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'responseView' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
-                'orderBy' => array(
+                'responseView' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),'renewLease' => array(

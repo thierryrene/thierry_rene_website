@@ -39,6 +39,7 @@ class Google_Service_CloudResourceManager extends Google_Service
       "https://www.googleapis.com/auth/cloud-platform.read-only";
 
   public $folders;
+  public $operations;
   
   /**
    * Constructs the internal representation of the CloudResourceManager service.
@@ -102,6 +103,10 @@ class Google_Service_CloudResourceManager extends Google_Service
               'path' => 'v2/folders',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -113,10 +118,6 @@ class Google_Service_CloudResourceManager extends Google_Service
                 'showDeleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'move' => array(
@@ -170,6 +171,26 @@ class Google_Service_CloudResourceManager extends Google_Service
             ),'undelete' => array(
               'path' => 'v2/{+name}:undelete',
               'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->operations = new Google_Service_CloudResourceManager_Resource_Operations(
+        $this,
+        $this->serviceName,
+        'operations',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
