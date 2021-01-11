@@ -16,8 +16,8 @@
     "url": "https://github.com/thierryrene/thierry_rene_website/issues"
   },
   "devDependencies": {
-      "webpack": "^4.0.1",
-      "webpack-cli": "^2.0.9"
-    },
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9"
+  },
   "homepage": "https://github.com/thierryrene/thierry_rene_website#readme"
 }
